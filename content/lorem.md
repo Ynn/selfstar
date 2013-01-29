@@ -1,5 +1,5 @@
 <article  markdown="1">
-#Writing a Follow-Me with Lorem and Ipsum
+#Writing a Follow-Me with Lorem and Ipsum !
 {lorem}
 
 This is a test file by phla
