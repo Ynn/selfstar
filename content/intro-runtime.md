@@ -13,7 +13,7 @@ The purpose of this section is to provide a quick introduction to OSGi and Felix
 + use the Felix Web Console to manage your applications,
 + use basic commands to get information about the running applications.
 
-This knowledge is NOT absolutely necessary to code and run the examples presented here - most operations are hidden or abstracted by the provided IDE (iCASA IDE). However, it constitutes a background which can be very useful when trying to understand what's really going on during deployment and execution. 
+This knowledge is NOT absolutely necessary to code and run the examples presented here - most operations are hidden or abstracted by the provided IDE. However, it constitutes a background which can be very useful when trying to understand what's really going on during deployment and execution. 
 
 
 
