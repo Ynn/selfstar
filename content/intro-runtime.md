@@ -1,3 +1,6 @@
+{* Variables(DO NOT DELETE): *}
+{assign var="workdir" value="{#dir_runtime_wks#}/first-runtime"}
+
 <article  markdown="1">
 
 # Introduction to OSGi
