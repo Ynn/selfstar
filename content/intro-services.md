@@ -79,10 +79,77 @@ We will start by creating our service provider. The service provider is a compon
 
 In the "Provided Service" section click on add. This will let you choose the service interface. Select org.example.hello.service.Hello
 
-![Project name]({#img#}/intro-services/providingService.png)
+![providing field]({#img#}/intro-services/providingService.png)
 
 
+![add property]({#img#}/intro-services/addProperty.png)
 
 
+Leave the property field to blank, we won't use it this time.
+
+![add property]({#img#}/intro-services/propertyForm.png)
+
+![add property]({#img#}/intro-services/browseProperty.png)
+
+Also add a start and stop method (as seen on the first tutorial)
+
+No you can generate the class
+![add property]({#img#}/intro-services/generation.png)
+
+
+{code lang=java}
+package org.example.hello.service.impl;
+
+import org.example.hello.service.Hello;
+
+public class HelloProviderImpl implements Hello {
+
+	@Override
+	public void sayHello(String name) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		// TODO: Add your implementation code here
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		// TODO: Add your implementation code here
+	}
+
+}
+{/code}
+
+
+The implementation is quite simple. We will implement an english Hello World :
+
+{code lang=java}
+package org.example.hello.service.impl;
+
+import org.example.hello.service.Hello;
+
+public class HelloProviderImpl implements Hello {
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println("Hello "+name);
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		System.out.println("The english hello service is stopping");
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		System.out.println("The english hello service is starting");
+	}
+
+}
+
+{/code}
 
 </article>
