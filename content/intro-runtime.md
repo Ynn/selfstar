@@ -4,7 +4,7 @@
 
 ![{#runtime#} in action](img/intro-runtime/console2.png)
 
-Our execution platform is based on OSGi (see Chapter 6 - section 4 of the Autonomic Computing book). More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific components already deployed. 
+Our execution platform is based on OSGi (see Chapter 6 - section 4 of our Autonomic Computing book). More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific components already deployed. 
 
 The purpose of this section is to provide a quick introduction to OSGi and Felix. Specifically, it teaches you to :
 
@@ -23,18 +23,16 @@ This knowledge is NOT absolutely necessary to code and run the examples presente
 
 OSGi is an execution framework developed on top of Java. It builds on the Java’s dynamic features (on demand class loading, multiple class loaders, typing verification before loading) to provide a coarse-grained level of modularity. OSGi is a [specification](http://www.osgi.org/Specifications/HomePage) with several popular implementations like [Equinox](http://www.eclipse.org/equinox/), [Felix]({#link_felix#}) or [Knopflerfish](http://www.knopflerfish.org/). 
 
-OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. To do so, OSGi introduces a strong versioning of the different part of the applications so that it is easy to know which version of a component is in use and avoid conflicts between incompatible versions. 
+OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. OSGi also supports the service-oriented programming style as we will later on. 
 
 <div style="margin:auto;width : 60%;"/>
 <img src="img/intro-runtime/OSGi.png"/>
 </div>
 
+OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a Java archive containing executable code, resources, and meta-data (name, version, dependencies to other bundles, etc.). In other words, all the files required to implement a module. 
 
+## Applications in OSGi 
 
-## OSGi fundamentals
-
-OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a Java archive containing executable code, resources, and meta-data (name, version, dependencies, etc.). In other words, all the files required to implement a module. 
- 
 A bundle is both a deployment unit and a composition unit :
 
 + It is used to package classes and resources so that they can be deployed on one or more execution platforms. 
