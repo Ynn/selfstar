@@ -4,7 +4,7 @@
 
 ![{#runtime#} in action](img/intro-runtime/console2.png)
 
-The iCASA runtime is based on OSGi (see Chapter 6 - section 4 of the Autonomic Computing book). More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific components already deployed. 
+Our execution platform is based on OSGi (see Chapter 6 - section 4 of the Autonomic Computing book). More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific components already deployed. 
 
 The purpose of this section is to provide a quick introduction to OSGi and Felix. Specifically, it teaches you to :
 
@@ -52,6 +52,8 @@ For clarity, we distinguish the system bundles (already installed in our case) a
 
 
 ## iCASA and OSGi
+
+iCASA is then 
 
 We advise you to store your workspaces (Eclipse and {#runtime#}) in a "workspaces" directory ({#dir_eclipse_wks#} and {#dir_runtime_wks#}). It is then easier to switch between workspaces and organize your work. In these tutorials, we will be using {#dir_runtime_wks#}.
 
@@ -394,8 +396,9 @@ If you want unsintall an automatically installed bundle, just remove the bundle.
 
 ### Bibliography
 
-You can find a lot of information on OSGi :
+More information about OSGi can be found in:
 
++ Autonomic Computing by Lalanda, MacCann and Diaconescu, Springer Verlag, Chapter 6.
 + [Felix documentation](http://felix.apache.org/site/documentation.html)
 + [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
 + [Felix OSGi tutorials](http://felix.apache.org/site/apache-felix-osgi-tutorial.html)
