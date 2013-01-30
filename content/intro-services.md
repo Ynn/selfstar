@@ -322,6 +322,6 @@ Bonjour client
 ### Download
 
 + The hello world using services [project]({#bin#}/intro-services/hello.using.services.zip).
-+ The hello world using services [bundle]({#bin#}/hello-world/hello.using.services.jar).
++ The hello world using services [bundle]({#bin#}/intro-services/hello.using.services.jar).
 
 </aside>
