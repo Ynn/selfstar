@@ -398,7 +398,7 @@ If you want unsintall an automatically installed bundle, just remove the bundle.
 
 More information about OSGi can be found in:
 
-+ [Autonomic Computing by Lalanda, MacCann and Diaconescu, Springer Verlag, Chapter 6.]
++ [Autonomic Computing by Lalanda, McCann and Diaconescu, Springer Verlag, Chapter 6]
 + [Felix documentation](http://felix.apache.org/site/documentation.html)
 + [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
 + [Felix OSGi tutorials](http://felix.apache.org/site/apache-felix-osgi-tutorial.html)
