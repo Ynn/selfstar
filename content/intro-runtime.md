@@ -51,7 +51,7 @@ For clarity, we distinguish the system bundles (already installed in our case) a
 
 
 
-## Organize your directories
+## iCASA and OSGi
 
 We advise you to store your workspaces (Eclipse and {#runtime#}) in a "workspaces" directory ({#dir_eclipse_wks#} and {#dir_runtime_wks#}). It is then easier to switch between workspaces and organize your work. In these tutorials, we will be using {#dir_runtime_wks#}.
 
