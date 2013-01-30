@@ -40,17 +40,13 @@ A bundle is both a deployment unit and a composition unit :
 + It is used to package classes and resources so that they can be deployed on one or more execution platforms. 
 + It is also used as building blocks to form modular Java applications. The purpose is to organize Java applications into a set of loosely coupled, highly coherent interacting modules.
 
-An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). For clarity, we can distinguish the following bundles:
-
-+ System bundles: the bundles provided with the {#runtime#} distribution.
-+ Library bundles: the bundles providing a library.
-+ Application bundles: the other bundles (i.e the bundle you will create).
+An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). 
 
 <div style="margin:auto;width : 70%;"/>
 <img src="img/intro-runtime/OSGi2.png"/>
 </div>
 
-Thereafter, an application will mean all the bundles that you have written plus the libraries that are not provided by the framework. In the first exercices, applications are made of one bundle so that simple : the bundle is the application.
+For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. In the first exercices, applications are made of one bundle so that simple : the bundle is the application.
 
 
 
