@@ -35,4 +35,54 @@ Services are :
 
 {/note}
 
+<!-- ###################################################### -->
+
+## Create a new project
+
+We will use a single bundle to contains our service and components. As the project is quite different from the previous "Hello World", we advise you to start from a new project. 
+
+First, create an iPOJO project call "hello.using.service". 
+
+![Project name]({#img#}/intro-services/project_name.png)
+
+
+We will give our bundle a different symbolic name from the previous one to avoid conflicts. Let's name it : "Hello World Using Service"
+
+![Bundle name]({#img#}/intro-services/bundle_name.png)
+
+## The Hello service interface
+
+The service interface is at the core of the exchange between components.
+
+Before creating any new component, we will start by creating the service interface. 
+
+![Project name]({#img#}/intro-services/HelloItf.png)
+
+The Hello service is very simple and 
+
+
+{code lang=java}
+package org.example.hello.service;
+
+public interface Hello {
+	void sayHello(String name);
+}
+{/code}
+
+
+## The service provider
+
+We will start by creating our service provider. The service provider is a component that implement the service interface.
+
+![Project name]({#img#}/intro-services/providerName.png)
+
+
+In the "Provided Service" section click on add. This will let you choose the service interface. Select org.example.hello.service.Hello
+
+![Project name]({#img#}/intro-services/providingService.png)
+
+
+
+
+
 </article>
