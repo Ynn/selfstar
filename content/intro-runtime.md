@@ -50,29 +50,6 @@ For clarity, we distinguish the system bundles (already installed in our case) a
 We advise you to store your workspaces (Eclipse and {#runtime#}) in a "workspaces" directory ({#dir_eclipse_wks#} and {#dir_runtime_wks#}). It is then easier to switch between workspaces and organize your work. In these tutorials, we will be using {#dir_runtime_wks#}.
 
 
-## iCASA and OSGi
-
-iCASA is then 
-
-We advise you to store your workspaces (Eclipse and {#runtime#}) in a "workspaces" directory ({#dir_eclipse_wks#} and {#dir_runtime_wks#}). It is then easier to switch between workspaces and organize your work. In these tutorials, we will be using {#dir_runtime_wks#}.
-
-{note}
-**Can i use multiple version of {#runtime#} ?**
-
-Yes, you can. The {#runtime#} is basically just a big zip file containing the files you need. Configuration information is kept in the directory and there is no external configuration (apart from a simple configuration of the {#ide#} that we will introduce later).
-
-In fact, we recommand to have different versions of the framework when creating and testing new applications. This way, the current working environment is preserved and side effects on already installed applications are avoided. You can also copy a working {#runtime#} to keep your configuration and the installed bundles.
-
-Keep the different versions in your {#dir_runtime_wks#} directory.
-{/note}
-
-{assign var="workdir" value="{#dir_runtime_wks#}/first-runtime"}
-
-[Donwload]({#link_runtime#}) and unzip the runtime in {#runtime#} directory.
-Rename the runtime directory to "first-runtime".
-
-In the rest of this introduction, it is assumed that {$workdir} is the runtime directory.
-
 ## Starting the framework 
 
 The framework has to be run from a terminal. 
