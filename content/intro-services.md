@@ -152,4 +152,117 @@ public class HelloProviderImpl implements Hello {
 
 {/code}
 
+![add property]({#img#}/intro-services/englishInstance.png)
+
+## Implementing a Hello Client
+
+![add property]({#img#}/intro-services/clientComponent.png)
+
+![add property]({#img#}/intro-services/requiredService1.png)
+
+![add property]({#img#}/intro-services/requiredService2.png)
+
+![add property]({#img#}/intro-services/generationClient.png)
+
+{code lang=java}
+package org.example.hello.client;
+
+import org.example.hello.service.Hello;
+import java.util.Map;
+
+public class HelloClientImpl {
+
+	/** Field for helloServices dependency */
+	private Hello[] helloServices;
+
+	/** Bind Method for null dependency */
+	public void bindHello(Hello hello, Map properties) {
+		// TODO: Add your implementation code here
+	}
+
+	/** Unbind Method for null dependency */
+	public void unbindHello(Hello hello, Map properties) {
+		// TODO: Add your implementation code here
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		// TODO: Add your implementation code here
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		// TODO: Add your implementation code here
+	}
+
+}
+{/code}
+
+
+{code lang=java}
+package org.example.hello.client;
+
+import org.example.hello.service.Hello;
+import java.util.Map;
+
+public class HelloClientImpl implements Runnable {
+
+	/** Field for helloServices dependency */
+	private Hello[] helloServices;
+
+	/** Bind Method for null dependency */
+	public void bindHello(Hello hello, Map properties) {
+		System.out.println("New Provider language = " + properties.get("lang"));
+	}
+
+	/** Unbind Method for null dependency */
+	public void unbindHello(Hello hello, Map properties) {
+		System.out.println("Provider leaving language = "
+				+ properties.get("lang"));
+	}
+
+	private void askProvidersToSayHello() {
+		for (int i = 0; i < helloServices.length; i++) {
+			helloServices[i].sayHello("client");
+		}
+	}
+
+	/**
+	 * When m_end is false and the component is started, the component ask
+	 * providers to say hello on a regular basis. When m_end is true, the thread
+	 * is stopped
+	 */
+	private boolean m_end = false;
+
+	/** Component Lifecycle Method */
+	public void start() {
+		Thread t = new Thread(this);
+		m_end = false;
+		t.start();
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		m_end = true;
+	}
+
+	@Override
+	public void run() {
+		try {
+			while (!m_end) {
+				askProvidersToSayHello();
+				Thread.sleep(1000);
+			}
+		} catch (InterruptedException e) {
+			stop();
+		}
+	}
+
+}
+{/code}
+
+
+![client instance]({#img#}/intro-services/clientInstance.png)
+
+
 </article>
