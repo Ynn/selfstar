@@ -8,9 +8,9 @@ The iCASA runtime is based on OSGi (see Chapter 6 - section 4 of the Autonomic C
 
 The purpose of this section is to provide a quick introduction to OSGi and Felix. Specifically, it teaches you to :
 
-+ start and stop the Felix framework,
-+ deploy, install and start applications,
-+ use the Felix Web Console to manage your applications,
++ start and stop the Felix framework.
++ deploy, install and start applications.
++ use the Felix Web Console to manage your applications.
 + use basic commands to get information about the running applications.
 
 This knowledge is NOT absolutely necessary to code and run the examples presented here - most operations are hidden or abstracted by the provided IDE. However, it constitutes a background which can be very useful when trying to understand what's really going on during deployment and execution. 
