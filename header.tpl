@@ -44,11 +44,11 @@
           <h1 class="title"> <a href="index.php"><span id="autonomic"/>Pervasive Computing </span><span id="practice">in Practice!</span></a></h1>
               <nav>
                   <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="index.php?p=download&s=introduction">Download</a></li>
-                    <li><a href="index.php?p=getting-started">Getting Started</a></li>
-                    <li><a href="index.php?p=play">Play!</a></li>
-                    <li><a href="index.php?p=lorem">About</a></li>
+                    <li><a href="{$smarty.server.PHP_SELF}">Home</a></li>
+                    <li><a href="{$smarty.server.PHP_SELF}?p=download&s=introduction">Download</a></li>
+                    <li><a href="{$smarty.server.PHP_SELF}?p=getting-started">Getting Started</a></li>
+                    <li><a href="{$smarty.server.PHP_SELF}?p=play">Play!</a></li>
+                    <li><a href="{$smarty.server.PHP_SELF}?p=lorem">About</a></li>
                   </ul>
               </nav>
       </header>
