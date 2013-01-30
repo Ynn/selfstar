@@ -262,7 +262,58 @@ public class HelloClientImpl implements Runnable {
 {/code}
 
 
+
 ![client instance]({#img#}/intro-services/clientInstance.png)
 
+
+## Test
+{code lang=bash}
+The english hello service is starting
+New Provider language = en
+Hello client
+Hello client
+Hello client
+Hello client
+...
+{/code}
+
+
+
+##French provider
+
+![client instance]({#img#}/intro-services/frenchComponent.png)
+
+![client instance]({#img#}/intro-services/frenchInstance.png)
+
+##Test
+
+{code lang=bash}
+The english hello service is starting
+New Provider language = en
+The french hello service is starting
+New Provider language = fr
+Hello client
+Bonjour client
+Hello client
+Bonjour client
+Hello client
+{/code}
+
+## Use the service filter
+
+See the [ldap filter syntax](http://www.osgi.org/javadoc/r2/org/osgi/framework/Filter.html).
+
+![client instance]({#img#}/intro-services/filter.png)
+
+{code lang=java}
+The english hello service is starting
+The french hello service is starting
+New Provider language = fr
+Bonjour client
+Bonjour client
+Bonjour client
+Bonjour client
+Bonjour client
+{/code}
 
 </article>
