@@ -317,3 +317,11 @@ Bonjour client
 {/code}
 
 </article>
+
+<aside markdown="1">
+### Download
+
++ The hello world using services [project]({#bin#}/intro-services/hello.using.services.zip).
++ The hello world using services [bundle]({#bin#}/hello-world/hello.using.services.jar).
+
+</aside>
