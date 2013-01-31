@@ -19,11 +19,13 @@ Developing applications requires a minimum understanding of OSGi and iPOJO. The 
 
 + [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals including the notion of bundle and dynamic deployment. It also explains how our OSGi execution platform can be managed (started, stopped, observed, etc.).
 
-+ [Basics about iPOJO](?s=introduction&p=basic-hello-world): This article presents the iPOJO component model and the associated lifecycle. It  shows how to create and deploy components with the IDE and write a basic Hello world component. 
++ [Basics about iPOJO](?s=introduction&p=basic-hello-world): This article presents the iPOJO component model and the associated lifecycle. It shows how to create and deploy components with the IDE and write a basic Hello world component. 
 
-+ [how to use properties to configure iPOJO component instances](?s=introduction&p=component-properties) : in this section you will improve your "Hello World" component by learning how to add configuration properties to an iPOJO component. This will allow you to specialize the behaviour of your component instances.
-+ [Introduction to services](?s=introduction&p=intro-services) (in progress) : in this section, we will introduce the notion of service. Service are at the heart of the dynamism of OSGi platform. You will learn how to implement the multilingual "Hello world" using services.
-+ [Dividing your application into multiple bundles](#) (TODO) : this section improves the previous "Hello World" to separate the component that provide services from the components that use services. We will use two bundle, one for the client, one for the consumer and show you how to configure the dependencies between bundles.
++ [iPOJO component instances](?s=introduction&p=component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties. This allows to specialize the behaviour of your component instances.
+
++ [Introduction to services](?s=introduction&p=intro-services): This article introduces the notion of service, which is at the heart of OSGi dynamism. It shows how to implement a multilingual "Hello world" using services.
+
++ [Dividing your application into multiple bundles](#): This article elaborates on the  "Hello World" and separates out the component providing services from the components using the services. It defines two bundles, one for the client and one for the consumer, and show hows to configure the dependencies between these bundles.
 
 
 
