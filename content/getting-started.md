@@ -17,7 +17,8 @@ The learning environment you have downloaded is made of three complementary tool
 
 Developing applications requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
-+ [a short introduction on OSGi and the notion of bundle](?s=introduction&p=intro-runtime) : in this tutorial you learn how to start and stop the iCASA framework and how to manage your application. You will learn that applications are divided into bundles and what a bundle is.
++ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals including the notion of bundle and dynamic deployment. It also explains how our OSGi execution platform can be managed (started, stopped, observed, etc.).
+
 + [an introduction to iPOJO and how to write a basic Hello world component](?s=introduction&p=basic-hello-world) : in this tutorial, you will learn how to write your first bundle. In that purpose, we will introduce the iPOJO component model. You will learn how to create a component and manage its lifecycle. You will use the IDE to create components.
 + [how to use properties to configure iPOJO component instances](?s=introduction&p=component-properties) : in this section you will improve your "Hello World" component by learning how to add configuration properties to an iPOJO component. This will allow you to specialize the behaviour of your component instances.
 + [Introduction to services](?s=introduction&p=intro-services) (in progress) : in this section, we will introduce the notion of service. Service are at the heart of the dynamism of OSGi platform. You will learn how to implement the multilingual "Hello world" using services.
