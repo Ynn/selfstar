@@ -4,7 +4,7 @@
 
 The learning environment you have downloaded is made of three complementary tools (see figure below):
 
-+ **An Integrated Development Environment**. This IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it facilitates the development of iPOJO components and automates a number of complex tasks like the deployment on the execution platform. 
++ **An Integrated Development Environment**. This EClipse-based IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it includes a source code editor, build automation tool and automated deployment on the execution platform.
 
 + **An Execution platform based on OSGi and iPOJO**. This platform supports the execution of the pervasive applications developed by students.
 
