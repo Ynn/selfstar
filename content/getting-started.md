@@ -2,11 +2,14 @@
 
 # Getting Started
 
-The iCASA environment is based on three tools (as shown on the figure below):
+The learning environment you have downloaded is made of three complementary tools (see figure below):
 
-+ **An Integrated Development Environment (iCASA-IDE)** that ease the creation of pervasive application by automating repetitive task such as deployment. This environment also simplify the creation of components by providing an IDE to graphically declare and instantiate components.
-+ **An Execution platform based on OSGi and iPOJO**. The Execution platform supports the execution of the pervasive application and is provided with a set of simulated devices.
-+ **A graphical interface**, the iCASA simulator GUI, that allows to manage the platform and visualize the action of the applications on the simulated environment.
++ **An Integrated Development Environment**. This IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it facilitates the development of iPOJO components and automates a number of complex tasks like the deployment on the execution platform. 
+
++ **An Execution platform based on OSGi and iPOJO**. This platform supports the execution of the pervasive applications developed by students.
+
++ **A home simulator called iCASA**. This simulator is made of two synchronized parts: a GUI that can be run on any Web browser and a set of OSGi components running on the execution platform linked with the hosted pervasive applications. 
+
 
 <div style="margin:auto;width : 80%;"/>
 <img alt="the iCASA environment" src="{#img#}/getting-started/getting-started.png"/>
