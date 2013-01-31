@@ -3,7 +3,7 @@
 
 <article  markdown="1">
 
-# Introduction to OSGi
+# Introduction to OSGi - pouet
 
 ![{#runtime#} in action](img/intro-runtime/console2.png)
 
