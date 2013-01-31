@@ -2,7 +2,7 @@
 #Writing a Follow-Me with Lorem and Ipsum !
 {lorem}
 
-This is a test file by phla
+This is a test file by phla and VeRIFIed mAil
 
 {code} 
 /**
