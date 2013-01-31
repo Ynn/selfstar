@@ -4,18 +4,18 @@
 
 The learning environment you have downloaded is made of three complementary tools (see figure below):
 
-+ **An Integrated Development Environment**. This EClipse-based IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it includes a source code editor, build automation tool and automated deployment on the execution platform.
++ **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
 + **An Execution platform based on OSGi and iPOJO**. This platform supports the execution of the pervasive applications developed by students.
 
-+ **A home simulator called iCASA**. This simulator is made of two synchronized parts: a GUI that can be run on any Web browser and a set of OSGi components running on the execution platform linked with the hosted pervasive applications. 
++ **A home simulator called iCASA**. This simulator is made of two synchronized parts: a GUI that can be run on any Web browser and a set of OSGi components running on the execution platform linked with the pervasive applications. 
 
 
 <div style="margin:auto;width : 80%;"/>
 <img alt="the iCASA environment" src="{#img#}/getting-started/getting-started.png"/>
 </div>
 
-Developing applications requires some basic knowledge on OSGi and iPOJO. If your are not familiar with OSGi or the iPOJO component model, these knowledge and a presentation of the IDE is provided by these articles :
+Developing applications requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
 + [a short introduction on OSGi and the notion of bundle](?s=introduction&p=intro-runtime) : in this tutorial you learn how to start and stop the iCASA framework and how to manage your application. You will learn that applications are divided into bundles and what a bundle is.
 + [an introduction to iPOJO and how to write a basic Hello world component](?s=introduction&p=basic-hello-world) : in this tutorial, you will learn how to write your first bundle. In that purpose, we will introduce the iPOJO component model. You will learn how to create a component and manage its lifecycle. You will use the IDE to create components.
