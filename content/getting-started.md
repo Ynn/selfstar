@@ -17,15 +17,15 @@ The learning environment you have downloaded is made of three complementary tool
 
 Developing applications requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
-+ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals including the notion of bundle and dynamic deployment. It also explains how our OSGi execution platform can be managed (started, stopped, observed, etc.).
++ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals. It also explains how our OSGi execution platform can be managed (started, stopped, observed, etc.).
 
 + [Basics about iPOJO](?s=introduction&p=basic-hello-world): This article presents the iPOJO component model and the associated lifecycle. It shows how to create and deploy components with the IDE and write a basic Hello world component. 
 
-+ [iPOJO component instances](?s=introduction&p=component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties. This allows to specialize the behaviour of your component instances.
++ [iPOJO component instances](?s=introduction&p=component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties, which allows to specialize the behaviour of component instances.
 
 + [Introduction to services](?s=introduction&p=intro-services): This article introduces the notion of service, which is at the heart of OSGi dynamism. It shows how to implement a multilingual "Hello world" using services.
 
-+ [Dividing your application into multiple bundles](#): This article elaborates on the  "Hello World" and separates out the component providing services from the components using the services. It defines two bundles, one for the client and one for the consumer, and show hows to configure the dependencies between these bundles.
++ [Dividing an application into multiple bundles](#): This article elaborates on the  "Hello World" example and separates out the component providing services from the components using the services. It defines two bundles (client and consumer) and shows how to configure the dependencies between these bundles.
 
 
 
