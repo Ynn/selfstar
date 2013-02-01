@@ -4,13 +4,18 @@
 
 ![Project Name](img/hello-world/Logo.png)
 
+The purpose of this page is to provide a quick introduction to the iPOJO comonent model. Specifically, it teaches you:
 
-In the [first section](?p=intro-runtime&s=introduction), we introduced the notion of bundle. 
-In this section, you will learn how to write a basic follow me application. It introduces :
++ The limits of OSGi in term of programming
++ what is an iPOJO component.
++ what is the lifecycle of an iPOJO component.
 
-+ how to create a new iPOJO project and the notion of iPOJO components
-+ the basic lifecycle of an iPOJO components.
-+ how to deploy your application.
+As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic understanding of the iPOJO principles (modularity, late-binding) is a plus when getting to the exercises. 
+
+## OSGi limits
+
+
+
 
 ## A word on iPOJO
 
