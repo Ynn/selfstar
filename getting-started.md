@@ -4,7 +4,7 @@
 
 The learning environment you have downloaded is made of three complementary tools (see figure below):
 
-+ **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development of pervasive applications based on OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
++ **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
 + **An Execution platform based on OSGi and iPOJO**. This platform supports the execution of the pervasive applications developed by students.
 
@@ -21,13 +21,25 @@ Developing applications requires a minimum understanding of OSGi and iPOJO. The 
 
 + [Basics about iPOJO](?s=introduction&p=basic-hello-world): This article presents the iPOJO component model and the associated lifecycle. It shows how to create and deploy components with the IDE and write a basic Hello world component. 
 
++ [Basics about Services](?s=introduction&p=basic-hello-world): This article introduces the notion of service, which is at the heart of OSGi dynamism. It focuses on the notion of service-oriented components. 
+
+In the context of this site, we have developed an IDE facilitating the development and deployment of iPOJO applications. The following articles teach you how to use this IDE effectively : 
+
++ [Your first iPOJO component](?s=introduction&p=basic-hello-world): This article shows how to create and deploy a simple "Hello World" component with IDE. 
+
 + [iPOJO component instances](?s=introduction&p=component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties, which allows to specialize the behaviour of component instances.
 
-+ [Introduction to services](?s=introduction&p=intro-services): This article introduces the notion of service, which is at the heart of OSGi dynamism. It shows how to implement a multilingual "Hello world" using services.
++ [Using services](?s=introduction&p=intro-services): This article shows how to implement a multilingual "Hello world" using services.
 
 + [Dividing an application into multiple bundles](#): This article elaborates on the  "Hello World" example and separates out the component providing services from the components using the services. It defines two bundles (client and consumer) and shows how to configure the dependencies between these bundles.
 
+Finally, the following articles show how to configure and use the iCASA home simulator:
 
++ [Blablabla]
+
++ [Blablabla]
+
++ [Blablabla]
 
 </article>
 
