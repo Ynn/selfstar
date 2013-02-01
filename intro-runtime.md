@@ -68,7 +68,7 @@ g!
 If successful, you will have a greeting from Felix and access to the Felix console.
 
 
-## Going through the bundles
+## Managing the bundles
 
 Most of OSGi management is concerned with bundles (as said earlier, there is no easy way to list the different applications running on an OSGi framework).
 
