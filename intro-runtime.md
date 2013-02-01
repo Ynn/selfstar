@@ -54,9 +54,9 @@ Open a terminal and navigate to {$workdir}.
 $> cd {$workdir} 
 {/code}
 
-Listing the content of the directory might be intimidating at first but you will need to deal with only a substet of it.
+Listing the content of the directory might be intimidating at first but don't panic!
 
-To start the framework, simply run the script {#start_script#} (or {#start_script#}.bat if you are on Windows) 
+Now, start the Felix framework. You simply have to run the script {#start_script#} (or {#start_script#}.bat on Windows) 
 {code lang=bash}
 $> ./{#start_script#} 
 ____________________________
