@@ -70,7 +70,7 @@ If successful, you have a greeting from Felix and access to the Felix console.
 
 OSGi provides facilities to manage installed bundles. The {#runtime#} comes with the Apache Felix Web Console, a very handy tool to manage the bundles from your Web browser.
 
-Let's see how to get the list of bundles.
+Let's see how to get the list of bundles with this console.
 
 First, open a browser and go to <{#link_web_console#}/bundles>. You have then to provide a username and a password (admin and admin by default!).
 
@@ -88,7 +88,7 @@ The console provides detailed information about bundles, including the following
 
 + **Version** is used to uniquely identify a bundle . For instance Apache Log4J has the version 1.2.16. Multiple bundles with a same name can be installed granted that the version is different.
 
-You can also list the installed bundles directly from a console, using the ***lb command*** :
+You can also list the installed bundles directly from a terminal, using the ***lb command*** :
 
 {code lang=bash}
 g! lb
