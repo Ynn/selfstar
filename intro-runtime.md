@@ -5,8 +5,6 @@
 
 # Introduction to OSGi
 
-![{#runtime#} in action](img/intro-runtime/console2.png)
-
 Our execution platform is based on OSGi. More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific artefacts automatically deployed. 
 
 The purpose of this page is to provide a quick introduction to OSGi/Felix. Specifically, it teaches you to:
