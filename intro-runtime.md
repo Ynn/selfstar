@@ -121,11 +121,9 @@ A bundle can not be installed twice but you can install two bundles with the sam
 In the following, we will use a trivial Hello World application made of one bundle. 
 The bundle can be downloaded here : <{$hello_jar}>.
 
-### Using the Web Console :
+Download this [Hello-World]({$hello_jar}) bundle and store it in an accessible directory.
 
-Download the [Hello-World]({$hello_jar}) bundle and put it in an accessible directory.
-
-To **install the bundle**, open the [web console]({#link_web_console#}) and click Install/Update as shown below : 
+First, we will be using the Felix Web console. To **install the bundle**, open the [web console]({#link_web_console#}) and click Install/Update as shown below : 
 
 ![Install using web console]({#img#}/intro-runtime/install-wc.png)
 
