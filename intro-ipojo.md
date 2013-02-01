@@ -1,6 +1,6 @@
 <article markdown="1">
 
-# Writing an Hello World Component
+# Introduction to iPOJO
 
 ![Project Name](img/hello-world/Logo.png)
 
