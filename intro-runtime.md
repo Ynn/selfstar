@@ -356,8 +356,8 @@ In the [next section](?s=introduction&p=basic-hello-world), you will learn how t
 
 To start the framework, run the script:
 
-+ {#start_script#} on Unix
-+ {#start_script#}.bat on Windows
++ **{#start_script#}** on Unix
++ **{#start_script#}.bat** on Windows
 
 In {#runtime#}, use 
 
