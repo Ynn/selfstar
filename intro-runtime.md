@@ -54,7 +54,7 @@ Open a terminal and navigate to {$workdir}.
 $> cd {$workdir} 
 {/code}
 
-Listing the content of the directory might be intimidating at first but don't panic!
+Listing the content of the directory might be intimidating at first but don't panic! Most files are not in your scope.
 
 Now, start the Felix framework. You simply have to run the script {#start_script#} (or {#start_script#}.bat on Windows) 
 {code lang=bash}
