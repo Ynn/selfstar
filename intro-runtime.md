@@ -55,14 +55,15 @@ OSGi relies on the definition of a service register containing the services avai
 
 To use a service, a consumer has to look for it. Two modes are available to do this: active mode and the passive one. In active mode, the potential consumer explicitly accesses the register to get one or several references to services running at that moment. In passive mode, the consumer subscribes to events corresponding to the arrival, departure or modification of specific services. Thus, a consumer can discover, select, and invoke a service when it becomes available.
 
-Code example
+Code example:
 
+{code lang=bash}
 context.addServiceListener(this); //...
 public void serviceChanged(ServiceEvent event) { //...
 switch (event.getType()) {
 case ServiceEvent.REGISTERED:
 ServiceReference serviceRef = event.getServiceReference(); //...
-
+{/code}
 
 
 ## Starting the framework 
