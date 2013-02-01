@@ -108,11 +108,11 @@ The result is the same as the one given by the webconsole.
 
 ## Install/Uninstall bundles
 
-Now let's see how to install bundles on the {#runtime#}. 
+Now let's see how to install and uninstall bundles. 
 
 {note}
-A bundle is identified uniquely by its name and its version.
-A bundle can not be installed twice but you can install two bundle with the same name and different versions.
+A bundle is uniquely identified by its name and its version.
+A bundle can not be installed twice but you can install two bundles with the same name and different versions.
 {/note}
 
 
