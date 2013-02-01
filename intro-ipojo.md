@@ -4,9 +4,9 @@
 
 ![Project Name](img/hello-world/Logo.png)
 
-The purpose of this page is to provide a quick introduction to the iPOJO comonent model. Specifically, it teaches you:
+The purpose of this page is to provide a quick introduction to the iPOJO component model. Specifically, it teaches you:
 
-+ The limits of OSGi in term of programming
++ The limits of OSGi in term of programming.
 + what is an iPOJO component.
 + what is the lifecycle of an iPOJO component.
 
