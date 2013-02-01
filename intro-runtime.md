@@ -127,7 +127,7 @@ First, we will be using the Felix Web console. To **install the bundle**, open t
 
 ![Install using web console]({#img#}/intro-runtime/install-wc.png)
 
-Then select your bundle in the appropriate directory and click "Install or Update" (note that you can click a check box to also start the bundle). When done, you can check that the bundle is correctly installed by refreshing the bundle list (or loading the page) :
+Then select your bundle in the appropriate directory and click "Install or Update" (note that you can click a check box to also start the bundle). When done, you can check that the bundle is correctly installed by refreshing the bundle list (or loading the page):
 
 ![The World bundle is installed]({#img#}/intro-runtime/install_done.png)
 
