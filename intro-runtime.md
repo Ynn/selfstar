@@ -137,7 +137,7 @@ To **uninstall a bundle** click on the trash icon:
 
 ![Uninstall the bundle]({#img#}/intro-runtime/trash.png)
 
-If you check the bundle list again, you will see that the bundle is gone.
+You can refresh the bundle list to make sure the bundle is gone!
 
 ### Using a terminal
 
