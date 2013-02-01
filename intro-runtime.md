@@ -72,7 +72,7 @@ OSGi provides facilities to manage installed bundles. The {#runtime#} comes with
 
 Let's see how to get the list of bundles.
 
-Open a browser and go to <{#link_web_console#}/bundles>. If the runtime is started, you will be asked for a username and a password. The default user is admin and the default passworld is admin.
+Open a browser and go to <{#link_web_console#}/bundles>. You have then to provide a username and a password (admin and admin bu default!).
 
 ![The Web Management Console](img/intro-runtime/webconsole.png)
 
