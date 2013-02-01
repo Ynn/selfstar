@@ -24,7 +24,9 @@ This knowledge is NOT absolutely necessary to code and run the examples presente
 
 OSGi is an execution framework developed on top of Java. It builds on the Java’s dynamic features (on demand class loading, multiple class loaders, typing verification before loading) to provide a coarse-grained level of modularity. OSGi is a [specification](http://www.osgi.org/Specifications/HomePage) with several popular implementations like [Equinox](http://www.eclipse.org/equinox/), [Felix]({#link_felix#}) or [Knopflerfish](http://www.knopflerfish.org/). 
 
-OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. OSGi also supports the service-oriented programming style as we will see later on. 
+OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. OSGi also supports the service-oriented programming style. 
+
+## The notion of bundle
 
 OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a Java archive containing executable code, resources, and meta-data (name, version, dependencies to other bundles, etc.). In other words, all the files required to implement a module.
 
@@ -40,7 +42,10 @@ A bundle is both a deployment unit and a composition unit :
 
 An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. 
 
-In the first exercices, applications are made of one bundle so that's simple : the bundle is the application.
+
+## The notion of service
+
+
 
 
 ## Starting the framework 
