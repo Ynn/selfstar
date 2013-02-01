@@ -133,16 +133,14 @@ Then select your bundle in the appropriate directory and click "Install or Updat
 
 Bundles are generally ordered according to their id. A newly installed bundle will always have the highest id and appear at the end of the list.
 
-To **uninstall a bundle** click on the trash icon :
+To **uninstall a bundle** click on the trash icon:
 
 ![Uninstall the bundle]({#img#}/intro-runtime/trash.png)
 
 If you check the bundle list again, you will see that the bundle is gone.
 
+As for the listing command, Install/Uninstall commands can be set directly in a terminal. Installation is performed with the **install** command:
 
-### Install/Uninstall using the console
-
-Installation is performed with the **install** command
 {code}
 install path
 {/code}
@@ -152,7 +150,7 @@ You can uninstall the bundle by searching its id with **lb** and then using :
 {code}
 uninstall id
 {/code}
-where id is the id of the bundle you want to uninstall of the bundle.
+
 
 
 
