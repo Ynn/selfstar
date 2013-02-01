@@ -15,7 +15,7 @@ As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic
 
 ## OSGi limits
 
-Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services.This is a pretty complex and error-prone approach that can endanger the applications (events can be missed, concurrency must be managed, bad class versions can be called, references can be forgotten, etc.).
+Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services. This results in pretty complex and error-prone code that can endanger the applications (events can be missed, concurrency must be managed, bad class versions can be called, references can be forgotten, etc.).
 
 Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is certainly the more powerful and robust.
 
