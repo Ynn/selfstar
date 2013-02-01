@@ -49,7 +49,7 @@ Finally, the following articles show how to configure and use the iCASA home sim
 
 Basics: 
 
-+ OSGi 
++ [Basics about OSGi](?s=introduction&p=intro-runtime) 
 + iPOJO 
 + Sercice-oriented programming 
 
