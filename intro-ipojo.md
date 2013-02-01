@@ -12,7 +12,12 @@ The purpose of this page is to provide a quick introduction to the iPOJO comonen
 
 As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic understanding of the iPOJO principles (modularity, late-binding) is a plus when getting to the exercises. 
 
+
 ## OSGi limits
+
+Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services.
+
+This is a pretty error-prone approach that can endanger the applications (events can be missed, bad class versions can be called, references can be forgotten, etc.)
 
 
 
