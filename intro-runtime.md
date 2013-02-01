@@ -28,13 +28,12 @@ OSGi is an execution framework developed on top of Java. It builds on the Javaâ€
 
 OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. OSGi also supports the service-oriented programming style as we will see later on. 
 
-<div style="margin:auto;width : 60%;"/>
-<img src="img/intro-runtime/OSGi.png"/>
+OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a Java archive containing executable code, resources, and meta-data (name, version, dependencies to other bundles, etc.). In other words, all the files required to implement a module.
+
+<div style="margin:auto;width : 70%;"/>
+<img src="img/intro-runtime/OSGi2.png"/>
 </div>
 
-OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a Java archive containing executable code, resources, and meta-data (name, version, dependencies to other bundles, etc.). In other words, all the files required to implement a module. 
-
-## Applications in OSGi 
 
 A bundle is both a deployment unit and a composition unit :
 
@@ -42,10 +41,6 @@ A bundle is both a deployment unit and a composition unit :
 + It is also used as building blocks to form modular Java applications. The purpose is to organize Java applications into a set of loosely coupled, highly coherent interacting modules.
 
 An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). 
-
-<div style="margin:auto;width : 70%;"/>
-<img src="img/intro-runtime/OSGi2.png"/>
-</div>
 
 For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. 
 
