@@ -76,6 +76,8 @@ Open a browser and go to <{#link_web_console#}/bundles>. If the runtime is start
 
 ![The Web Management Console](img/intro-runtime/webconsole.png)
 
+You get the (long) list of all the bundles installed in your OSGi environment. 
+
 What you get is a long list of all the installed bundles in your OSGi environment. As you have not installed any bundle yet, these bundle are what we call the system bundles. You don't need to understand what they are doing but for some of them, the name give a good indication. For instance *Apache Log4J* is obviously a bundle providing the well-known [log4j](http://logging.apache.org/log4j/1.2/) library.
 
 The console provides a lot of information. Only four of them are really interesting for you :
