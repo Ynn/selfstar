@@ -8,7 +8,7 @@ The purpose of this page is to provide a quick introduction to the iPOJO compone
 + what is an iPOJO component.
 + what is the lifecycle of an iPOJO component.
 
-As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic understanding of the iPOJO principles (modularity, late-binding) is a plus when getting to the exercises. 
+As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic understanding of the iPOJO principles (modularity, service-orientation, late-binding) is a plus when getting to the exercises. 
 
 
 ## OSGi limits
