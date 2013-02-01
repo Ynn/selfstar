@@ -88,8 +88,6 @@ The console provides detailed information about bundles, including the following
 
 + **Version** is used to uniquely identify a bundle . For instance Apache Log4J has the version 1.2.16. Multiple bundles with a same name can be installed granted that the version is different.
 
-### Listing bundles using command line 
-
 You can easily list the installed bundles using the ***lb command*** :
 
 {code lang=bash}
