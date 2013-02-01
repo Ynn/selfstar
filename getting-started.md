@@ -35,16 +35,19 @@ Developing applications requires a minimum understanding of OSGi and iPOJO. The 
 
 ### Summary of links
 
-Basics 
+Basics: 
+
 + OSGi 
 + iPOJO 
 + Sercice-oriented programming 
 
-IPOJO IDE
+IPOJO IDE:
+
 + Component properties
 + Multiple bundles
 
-ICASA simualtor
+ICASA simualtor:
+
 + blabla
 + blabla
 
