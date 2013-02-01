@@ -82,7 +82,7 @@ The console provides detailed information about bundles, including the following
 
 + **Name** is the symbolic name of the bundle (Apache Log4J for instance). Different bundles can have a same name because a bundle can be installed multiple times.
 
-+ **ID** is a unique number created by the framework when installing a bundle. Using this id is a convenient way to manage bundles in command lines. For instance the command *stop 3* will stop the *Apache Log4J*.
++ **ID** is a unique number created by the framework when installing a bundle. Using this id is a convenient way to manage bundles in command lines. For instance the command *stop 3* will stop the *Apache Log4J* bundle.
 
 + **Status** provides information about the current state of a bundle. This value is set to INSTALLED or RESOLVED when the bundle is installed but not started, ACTIVE when the bundle has been started, UNRESOLVED if there is something wrong (generally some dependencies are missing).
 
