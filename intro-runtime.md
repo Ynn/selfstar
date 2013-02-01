@@ -131,7 +131,7 @@ Then select your bundle in the appropriate directory and click "Install or Updat
 
 ![The World bundle is installed]({#img#}/intro-runtime/install_done.png)
 
-You can order the list of bundle by ID. A newly installed bundle will always have the highest ID and appear at the end of the list.
+Bundles are generally ordered according to their id. A newly installed bundle will always have the highest ID and appear at the end of the list.
 
 To **uninstall a bundle** click on the trash icon :
 
