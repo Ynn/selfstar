@@ -13,7 +13,7 @@ The purpose of this page is to provide a quick introduction to OSGi/Felix. Speci
 
 + start and stop the Felix framework.
 + deploy, install and start applications.
-+ use the Felix Web Console to manage your applications.
++ use the Felix Web Console.
 + use basic commands to get information about the running applications.
 
 This knowledge is NOT absolutely necessary to code and run the examples presented here - most operations are hidden or abstracted by the provided IDE. However, it constitutes a background which can be very useful when trying to understand what's really going on during deployment and execution. 
