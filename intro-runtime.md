@@ -47,10 +47,9 @@ An application can then be defined as a set of bundles collaborating to provide 
 <img src="img/intro-runtime/OSGi2.png"/>
 </div>
 
-For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. In the first exercices, applications are made of one bundle so that simple : the bundle is the application.
+For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. 
 
-
-We advise you to store your workspaces (Eclipse and {#runtime#}) in a "workspaces" directory ({#dir_eclipse_wks#} and {#dir_runtime_wks#}). It is then easier to switch between workspaces and organize your work. In these tutorials, we will be using {#dir_runtime_wks#}.
+In the first exercices, applications are made of one bundle so that's simple : the bundle is the application.
 
 
 ## Starting the framework 
