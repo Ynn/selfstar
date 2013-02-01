@@ -38,11 +38,9 @@ OSGi relies on the notion of bundle for modularity. Specifically, a bundle is a 
 A bundle is both a deployment unit and a composition unit :
 
 + It is used to package classes and resources so that they can be deployed on one or more execution platforms. 
-+ It is also used as building blocks to form modular Java applications. The purpose is to organize Java applications into a set of loosely coupled, highly coherent interacting modules.
++ It is also used as building blocks to form modular and dynamic Java applications. The purpose is to organize Java applications into a set of loosely coupled, highly coherent interacting modules.
 
-An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). 
-
-For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. 
+An application can then be defined as a set of bundles collaborating to provide a service. The boundaries of an application are often hard to determine since many bundles can be used (and bundles can be shared!). For clarity, we distinguish the system bundles (already installed in our case) and the application bundles. An application then means all the bundles that you have written plus the libraries that are not provided by the framework. 
 
 In the first exercices, applications are made of one bundle so that's simple : the bundle is the application.
 
