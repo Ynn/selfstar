@@ -1,4 +1,4 @@
-<article class="single-column" markdown = "1"/>
+<article markdown = "1"/>
 
 # Getting Started
 
