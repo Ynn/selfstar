@@ -368,7 +368,7 @@ In {#runtime#}, use
 + **install file** to install a bundle from file.
 + **install url** to install a bundle from url.
 + **automatic install** put the bundle jar in the *load* directory
-+ **unsintall** an automatically installed bundle, just remove the bundle
++ **uninstall** an automatically installed bundle, just remove the bundle
 
 </aside>
 
