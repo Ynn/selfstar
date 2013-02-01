@@ -2,8 +2,6 @@
 
 # Introduction to iPOJO
 
-![Project Name](img/hello-world/Logo.png)
-
 The purpose of this page is to provide a quick introduction to the iPOJO component model. Specifically, it teaches you:
 
 + The limits of OSGi in term of programming.
