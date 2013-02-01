@@ -78,9 +78,10 @@ First, open a browser and go to <{#link_web_console#}/bundles>. You have then to
 
 You get the (long) list of the bundles installed in your OSGi environment. There is no bundle of your own so far: all these bundles are system bundles.
 
-The console provides detailed information about bundles. Four attributes are of high interest:
+The console provides detailed information about bundles. Four attributes are highly interesting:
 
-+ **Name** (or Symbolic Name in OSGi terminology): the name is the name of the bundle. Multiple bundle can have the same name because you can install a bundle multiple time.
++ **Name**: is the symbolic name of the bundle. Different bundles can have a same name because you can install a bundle multiple times.
+
 + **ID** : the id is a unique number given to the bundle by the framework when you install it. As you will see it is a convenient way to interact with bundles in command lines. For instance the command *stop 3* will stop the *Apache Log4J*. It is also a way to distinguish to identical bundles installed multiple time.
 + **Status** : will provide you information about the current state of the bundle. Most of the time this value is INSTALLED or RESOLVED when the bundle is installed but not started, ACTIVE when the bundle has been started or UNRESOLVED if something is wrong. The last is often due to a bundle that can not start due to missing dependencies.
 + **Version** : the version is used to identify bundle uniquely. For instance Apache Log4J has the version 1.2.16. Multiple bundle with the same name can be installed granted that the version is different.
