@@ -31,7 +31,7 @@ In the context of this site, we have developed an IDE facilitating the developme
 
 + [Using services](?s=introduction&p=intro-services): This article shows how to implement a multilingual "Hello world" using services.
 
-+ [Dividing an application into multiple bundles](#): This article elaborates on the  "Hello World" example and separates out the component providing services from the components using the services. It defines two bundles (client and consumer) and shows how to configure the dependencies between these bundles.
++ [Dividing an application into multiple bundles](#): This article elaborates on the  "Hello World" and separates out the component providing services from those using the services. It defines two bundles (client and consumer) and shows how to configure the dependencies between these bundles.
 
 Finally, the following articles show how to configure and use the iCASA home simulator:
 
