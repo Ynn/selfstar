@@ -21,7 +21,7 @@ Several approaches have been proposed to improve OSGi in terms of dependency man
 
 
 
-## A word on iPOJO
+## What is iPOJO
 
 As explained in the OSGi introduction, a bundle is a deployment unit but also a composition unit to make up modular, dynamic applications in Java. Bundles are thus used to encapsulate code packages (in the Java sense) that can be shared or kept hidden. This allows two bundles to have a package with a same name without conflicts. When they are shared, packages are versioned (each package has also a version number). 
 
