@@ -118,7 +118,7 @@ A bundle can not be installed twice but you can install two bundles with the sam
 
 {assign var="hello_jar" value="{$ROOT}/{#bin#}/hello-world/hello.world.jar"}
 
-In the following, we will use a trivial Hello World application made of one bundle that is use in the next section. 
+In the following, we will use a trivial Hello World application made of one bundle. 
 The bundle can be downloaded here : <{$hello_jar}>.
 
 ### Using the Web Console :
