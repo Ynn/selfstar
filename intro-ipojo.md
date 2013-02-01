@@ -23,15 +23,10 @@ Several approaches have been proposed to improve OSGi in terms of dependency man
 
 ## A word on iPOJO
 
+As explained in the OSGi introduction, a bundle is used both as a deployment unit and as a composition unit. Bundles can be used to encapsulate code packages (in the Java sense) that can be shared or kept hidden. This allows two bundles to have a package with a same name without conflicts. When they are shared, package are versioned. That means that each package has also a version number. 
 
 
 
-
-
-As we explained, bundle are used :
-
-+ **as deployment unit** : the application is divided into small parts. Each parts are installed separately and you can update a part of the application at runtime with no impact (or small impact) on the application.
-+ **as module to hide and share packages** : each bundle can share and hide package from other bundles. This allow two bundle to have a package with a same name without conflicts. When they are shared, package are versioned. That means that each package has also a version number. This is also to avoid package between shared package.
 
 <div style="margin:auto;width : 70%;"/>
 <img src="img/intro-runtime/OSGi2.png"/>
