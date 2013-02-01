@@ -129,17 +129,15 @@ To **install the bundle**, open the [web console]({#link_web_console#}) and clic
 
 ![Install using web console]({#img#}/intro-runtime/install-wc.png)
 
-Then select your bundle in the file list and click ok. Note that you can also choose to start it automatically.
+Then select your bundle in the list and click *ok* (note that you can also choose to start it automatically). Finally, click on "Install or Update".
 
-Finally, click on "Install or Update".
-
-That's done, you can now check that the bundle is installed by reloading the bundle list (or refreshing the page) :
+WHen done, you can check that the bundle is correctly installed by refreshing the bundle list (or loading the page) :
 
 ![The World bundle is installed]({#img#}/intro-runtime/install_done.png)
 
 You can order the list of bundle by ID. A newly installed bundle will always have the highest ID and appear at the end of the list.
 
-To **uninstall the bundle** click on the trash icon :
+To **uninstall a bundle** click on the trash icon :
 
 ![Uninstall the bundle]({#img#}/intro-runtime/trash.png)
 
