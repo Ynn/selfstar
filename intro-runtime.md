@@ -121,13 +121,13 @@ A bundle can not be installed twice but you can install two bundles with the sam
 In the following, we will use a trivial Hello World application made of one bundle. 
 The bundle can be downloaded here : <{$hello_jar}>.
 
-Download this [Hello-World]({$hello_jar}) bundle and store it in an accessible directory.
+### Using the Felix Web console
 
-First, we will be using the Felix Web console. To **install the bundle**, open the [web console]({#link_web_console#}) and click Install/Update as shown below : 
+First, download the [Hello-World]({$hello_jar}) bundle and store it in an accessible directory. Then, to install the bundle, open the [web console]({#link_web_console#}) and click Install/Update as shown below : 
 
 ![Install using web console]({#img#}/intro-runtime/install-wc.png)
 
-Then select your bundle in the appropriate directory and click "Install or Update" (note that you can click a check box to also start the bundle). When done, you can check that the bundle is correctly installed by refreshing the bundle list (or loading the page):
+Select your bundle in the appropriate directory and click "Install or Update" (note that you can click a check box to also start the bundle). When done, you can check that the bundle is correctly installed by refreshing the bundle list (or loading the page):
 
 ![The World bundle is installed]({#img#}/intro-runtime/install_done.png)
 
@@ -138,6 +138,8 @@ To **uninstall a bundle** click on the trash icon:
 ![Uninstall the bundle]({#img#}/intro-runtime/trash.png)
 
 If you check the bundle list again, you will see that the bundle is gone.
+
+### Using a terminal
 
 As for the listing command, Install/Uninstall commands can be set directly in a terminal. Installation is performed with the **install** command:
 
@@ -150,8 +152,6 @@ You can uninstall the bundle by searching its id with **lb** and then using :
 {code}
 uninstall id
 {/code}
-
-
 
 
 ### Practice : Installing from URLs
