@@ -68,7 +68,7 @@ If successful, you have a greeting from Felix and access to the Felix console.
 
 ## Managing the bundles
 
-OSGi provides facilities to manage installed bundles. The easy way to do so is to use a GUI. The {#runtime#} comes with the Apache Felix Web Management Console, a very handy tool to manage the bundles from your Web browser.
+OSGi provides facilities to manage installed bundles. The easy way to do so is to use a GUI. The {#runtime#} comes with the Apache Felix Web Console, a very handy tool to manage the bundles from your Web browser.
 
 Let's see how to get the list of bundles.
 
