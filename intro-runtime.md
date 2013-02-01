@@ -146,11 +146,11 @@ If you check the bundle list again, you will see that the bundle is gone.
 
 ### Install/Uninstall using the console
 
-Installation is performed with the  **install** command
+Installation is performed with the **install** command
 {code}
 install path
 {/code}
-where ***path*** is the local (begins with file://) or external URL (begins with http:// or ftp://).
+where ***path*** is a local (begins with file://) or external URL (begins with http:// or ftp://).
 
 You can uninstall the bundle by searching its id with **lb** and then using :
 {code}
