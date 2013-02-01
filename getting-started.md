@@ -2,7 +2,7 @@
 
 # Getting Started
 
-The learning environment you have downloaded is made of three complementary tools (see figure below):
+The learning environment you have downloaded is made of three complementary tools (see figure):
 
 + **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
