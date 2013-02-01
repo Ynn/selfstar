@@ -9,7 +9,7 @@
 
 Our execution platform is based on OSGi. More precisely, it is a customized version of a popular OSGi implementation called [Felix]({#link_felix#}) with a set of specific artefacts automatically deployed. 
 
-The purpose of this page is to provide a quick introduction to OSGi and Felix. Specifically, it teaches you to :
+The purpose of this page is to provide a quick introduction to OSGi/Felix. Specifically, it teaches you to:
 
 + start and stop the Felix framework.
 + deploy, install and start applications.
