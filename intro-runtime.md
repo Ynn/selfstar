@@ -72,11 +72,11 @@ OSGi provides facilities to manage installed bundles. The {#runtime#} comes with
 
 Let's see how to get the list of bundles.
 
-Open a browser and go to <{#link_web_console#}/bundles>. You have then to provide a username and a password (admin and admin bu default!).
+Open a browser and go to <{#link_web_console#}/bundles>. You have then to provide a username and a password (admin and admin by default!).
 
 ![The Web Management Console](img/intro-runtime/webconsole.png)
 
-You get the (long) list of all the bundles installed in your OSGi environment. There is no bundle of your own so far: all these bundles are system bundles. You don't really need to know these system bundles! Names can give an indication (*Apache Log4J* is obviously a bundle providing the well-known [log4j](http://logging.apache.org/log4j/1.2/) library).
+You get the (long) list of the bundles installed in your OSGi environment. There is no bundle of your own so far: all these bundles are system bundles (*Apache Log4J* is obviously a bundle providing the well-known [log4j](http://logging.apache.org/log4j/1.2/) library).
 
 The console provides detailed information about bundles. Four attributes are of high interest:
 
