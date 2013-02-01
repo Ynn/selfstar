@@ -45,6 +45,9 @@ An application can then be defined as a set of bundles collaborating to provide 
 
 ## The notion of service
 
+OSGi allows the dynamic management of bundles. This dynamicity only concerns classes and does not imply the dynamic management of applications. As a remedy, a bundle exposes its functions (services) to the other bundles and, conversely, is able to use functions (services) offered by the other bundles. Functions are concerned with the instance level: they correspond to running classes.
+
+
 
 
 
