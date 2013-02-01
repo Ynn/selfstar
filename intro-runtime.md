@@ -80,7 +80,7 @@ You get the (long) list of the bundles installed in your OSGi environment. There
 
 The console provides detailed information about bundles, including the following attributes:
 
-+ **Name** is the symbolic name of the bundle (Apache Log4J for instance). Different bundles can have a same name because a bundle can be installed multiple times.
++ **Name** is the symbolic name of the bundle (Apache Log4J for instance).
 
 + **ID** is a unique number created by the framework when installing a bundle. Using this id is a convenient way to manage bundles in command lines. For instance the command *stop 3* will stop the *Apache Log4J* bundle.
 
