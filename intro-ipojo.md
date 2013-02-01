@@ -15,20 +15,17 @@ As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic
 
 ## OSGi limits
 
-Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services.This is a pretty complex and error-prone approach that can endanger the applications (events can be missed, bad class versions can be called, references can be forgotten, etc.).
+Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services.This is a pretty complex and error-prone approach that can endanger the applications (events can be missed, concurrency must be managed, bad class versions can be called, references can be forgotten, etc.).
 
-Several approaches have been proposed to improve OSGi in terms of dependency management. In the section, we will focus on the iPOJO component model approach. 
+Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is certainly the more powerful and robust.
+
 
 
 ## A word on iPOJO
 
-In the first section, we have introduced the notion of bundle and we claimed that bundles the OSGi environment is very dynamic - you will have proofs of this later. The fact is that writing an OSGi bundle from scratch can be cumbersome and error-proof. It is out of the scope of this introduction but you are skeptical, we encourage you to try the [Felix Tutorial](https://felix.apache.org/site/apache-felix-osgi-tutorial.html). 
 
-<img src="{#img#}/hello-world/ipojo.png" style="float:right;width:20%; margin : 1em;"/>
 
-Managing dynamism is hard as you have to react to multiple events and also deal with the concurrency. This is particularly true for services that we will introduce next section. This is why, new tools have emerged on top of OSGi to simplify the process. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is certainly the more powerful and robust. 
 
-Introducing the motivation behind iPOJO would require a long introduction ([a thesis actually](http://hal.archives-ouvertes.fr/docs/00/34/79/35/PDF/These_-_FINAL.pdf)) on the benefits of using components and component models. Our goal is not to be exhaustive but to start using OSGi and write pervasive applications. So we will largely simplify the different notions.
 
 
 As we explained, bundle are used :
