@@ -363,13 +363,12 @@ In {#runtime#}, use
 
 + **stop 0**  to stop the framework.
 + **lb** to list the installed bundles.
-+ **start x** to start the bundle x.
-+ **stop x** to stop the bundle x.
-+ **install file** to install the bundle from the file.
-+ **install url** to install the bundle from url.
-
-If you want to **install automatically** put the bundle jar in the *load* directory.
-If you want unsintall an automatically installed bundle, just remove the bundle.
++ **start x** to start bundle x.
++ **stop x** to stop bundle x.
++ **install file** to install a bundle from file.
++ **install url** to install a bundle from url.
++ **automatic install** put the bundle jar in the *load* directory
++ **unsintall** an automatically installed bundle, just remove the bundle
 
 </aside>
 
