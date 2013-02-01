@@ -63,14 +63,12 @@ Welcome to Apache Felix Gogo
 g!
 {/code}
 
-If successful, you will have a greeting from Felix and access to the Felix console.
+If successful, you have a greeting from Felix and access to the Felix console.
 
 
 ## Managing the bundles
 
-Most of OSGi management is concerned with bundles (as said earlier, there is no easy way to list the different applications running on an OSGi framework).
-
-OSGi provides facilities to manage installed bundles. The easy way is to use a GUI. The {#runtime#} comes with the Apache Felix Web Management Console. This is a very handy tool to perform all the OSGi management from your browser.
+OSGi provides facilities to manage installed bundles. The easy way to do so is to use a GUI. The {#runtime#} comes with the Apache Felix Web Management Console. This is a very handy tool to perform all the OSGi management from your browser.
 
 Let's see how to get the list of bundles.
 
