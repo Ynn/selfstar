@@ -76,11 +76,9 @@ Open a browser and go to <{#link_web_console#}/bundles>. If the runtime is start
 
 ![The Web Management Console](img/intro-runtime/webconsole.png)
 
-You get the (long) list of all the bundles installed in your OSGi environment. 
+You get the (long) list of all the bundles installed in your OSGi environment. There is no bundle of your own so far: all these bundles are system bundles. You don't really need to know these system bundles! Names can give an indication (*Apache Log4J* is obviously a bundle providing the well-known [log4j](http://logging.apache.org/log4j/1.2/) library).
 
-What you get is a long list of all the installed bundles in your OSGi environment. As you have not installed any bundle yet, these bundle are what we call the system bundles. You don't need to understand what they are doing but for some of them, the name give a good indication. For instance *Apache Log4J* is obviously a bundle providing the well-known [log4j](http://logging.apache.org/log4j/1.2/) library.
-
-The console provides a lot of information. Only four of them are really interesting for you :
+The console provides detailed information about bundles. Four attributes are of high interest:
 
 + **Name** (or Symbolic Name in OSGi terminology): the name is the name of the bundle. Multiple bundle can have the same name because you can install a bundle multiple time.
 + **ID** : the id is a unique number given to the bundle by the framework when you install it. As you will see it is a convenient way to interact with bundles in command lines. For instance the command *stop 3* will stop the *Apache Log4J*. It is also a way to distinguish to identical bundles installed multiple time.
