@@ -141,14 +141,12 @@ To **uninstall a bundle** click on the trash icon :
 
 ![Uninstall the bundle]({#img#}/intro-runtime/trash.png)
 
-If you check the bundle list again. You will see that the bundle is not in the list anymore.
-
-
+If you check the bundle list again, you will see that the bundle is gone.
 
 
 ### Install/Uninstall using the console
 
-Installation is performed via the command **install**
+Installation is performed with the  **install** command
 {code}
 install path
 {/code}
