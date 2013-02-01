@@ -78,7 +78,7 @@ First, open a browser and go to <{#link_web_console#}/bundles>. You have then to
 
 You get the (long) list of the bundles installed in your OSGi environment. There is no bundle of your own so far: all these bundles are system bundles.
 
-The console provides detailed information about bundles. Four attributes are highly interesting:
+The console provides detailed information about bundles, including the following attributes:
 
 + **Name** is the symbolic name of the bundle (Apache Log4J for instance). Different bundles can have a same name because a bundle can be installed multiple times.
 
