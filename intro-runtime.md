@@ -354,7 +354,10 @@ In the [next section](?s=introduction&p=basic-hello-world), you will learn how t
 
 ### Useful Commands Summary
 
-To **start** the framework simply run the script {#start_script#} (or {#start_script#}.bat if you are on Windows).
+To start the framework:
+
++ run the script {#start_script#}
++ {#start_script#}.bat if you are on Windows
 
 In {#runtime#}, use 
 
