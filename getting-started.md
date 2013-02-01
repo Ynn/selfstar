@@ -33,21 +33,20 @@ Developing applications requires a minimum understanding of OSGi and iPOJO. The 
 
 <aside  markdown="1">
 
-### Useful Commands Summary
+### Summary of links
 
-To **start** the framework simply run the script {#start_script#} (or {#start_script#}.bat if you are on Windows).
+Basics 
++ OSGi 
++ iPOJO 
++ Sercice-oriented programming 
 
-In {#runtime#}, use 
+IPOJO IDE
++ Component properties
++ Multiple bundles
 
-+ **stop 0**  to stop the framework.
-+ **lb** to list the installed bundles.
-+ **start x** to start the bundle x.
-+ **stop x** to stop the bundle x.
-+ **install file** to install the bundle from the file.
-+ **install url** to install the bundle from url.
-
-If you want to **install automatically** put the bundle jar in the *load* directory.
-If you want unsintall an automatically installed bundle, just remove the bundle.
+ICASA simualtor
++ blabla
++ blabla
 
 </aside>
 
