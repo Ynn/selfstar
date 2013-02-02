@@ -191,7 +191,7 @@ Search your bundle in the list and use the start/stop button on the right :
 
 ![The World bundle is installed]({#img#}/intro-runtime/stop-start.png)
 
-If you check on the terminal. When the bundle is started it should print "Hello World !" when the bundle is started and "Good bye World !" when the bundle is stopped. 
+Check out your terminal: it should print "Hello World !" when the bundle is started, "Good bye World !" when the bundle is stopped. 
 
 Also pay attention to the bundle state which becomes ACTIVE when started and RESOLVED when the bundle is stopped.
 
