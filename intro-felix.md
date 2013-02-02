@@ -75,7 +75,7 @@ The result is the same as the one given by the webconsole.
 
 
 
-## Install/Uninstall bundles
+## Installing/Uninstalling bundles
 
 Now let's see how to install and uninstall bundles. 
 
