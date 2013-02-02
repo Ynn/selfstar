@@ -55,6 +55,7 @@ Execution platform:
 
 IPOJO IDE:
 
++ [Hello world](?s=introduction&p=ide-hello-world) 
 + Component properties
 + Multiple bundles
 
