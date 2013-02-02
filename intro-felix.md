@@ -193,7 +193,7 @@ Search your bundle in the list and use the start/stop button on the right :
 
 Check out your terminal: it should print "Hello World !" when the bundle is started, "Good bye World !" when the bundle is stopped. 
 
-Also pay attention to the bundle state which becomes ACTIVE when started and RESOLVED when the bundle is stopped.
+Also pay attention to the bundle state which becomes ACTIVE when the bundle started and RESOLVED when the bundle is stopped.
 
 
 ### Stop/start using the command line :
