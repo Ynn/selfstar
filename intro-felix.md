@@ -274,7 +274,7 @@ That's it, there is nothing more to do.
 
 ## Stopping the framework
 
-The OSGi platform is reified by a bundle called the "System Bundle" which always have the 0 id. To stop the framework, you only have to stop that bundle.
+The OSGi platform is reified by a bundle called "System Bundle" which always has the 0 id. To stop the framework, you only have to stop that bundle.
 
 Use the command *stop 0* to stop the framework :
 {code lang=bash}
