@@ -220,8 +220,8 @@ g! lb
 
 From this, we get the webconsole bundle id: 24.
 
-If you have not done it yet, go to the [webconsole]({#link_web_console#}) and check that the site is working.
-Then stop the console&nbsp;:
+Go to the [webconsole]({#link_web_console#}) and check that the site is up and running.
+Then, stop the console&nbsp;:
 
 {code lang="bash"}
 g! stop 24
