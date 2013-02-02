@@ -17,11 +17,11 @@ The learning environment you have downloaded is made of three complementary tool
 
 Developing applications requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
-+ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals. It also explains how our OSGi execution platform can be managed (started, stopped, observed, etc.).
++ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals. Specifically, it discusses the notions of bundles and services, which are at the heart of the OSGi dynamism.
 
-+ [Basics about iPOJO](?s=introduction&p=basic-hello-world): This article presents the iPOJO component model and the associated lifecycle. It shows how to create and deploy components with the IDE and write a basic Hello world component. 
++ [Basics about Felix](?s=introduction&p=intro-felix): This article explains how the Apache Felix OSGi platform can be managed through a terminal or through a Web console.
 
-+ [Basics about Services](?s=introduction&p=basic-hello-world): This article introduces the notion of service, which is at the heart of OSGi dynamism. It focuses on the notion of service-oriented components. 
++ [Basics about iPOJO](?s=introduction&p=basic-ipojo): This article presents the iPOJO component model and the associated lifecycle. It shows how to create and deploy components with the IDE and write a basic Hello world component. 
 
 In the context of this site, we have developed an IDE facilitating the development and deployment of iPOJO applications. The following articles teach you how to use this IDE effectively : 
 
