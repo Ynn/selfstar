@@ -90,8 +90,8 @@ In {#runtime#}, use
 
 More information about OSGi can be found in:
 
-+ [Felix documentation](http://felix.apache.org/site/documentation.html)
++ [OSGi in action by R. Hall, K. Pauls, S. McCulloch, D. Savaga, Manning, 2012]
 + [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
-+ [Felix OSGi tutorials](http://felix.apache.org/site/apache-felix-osgi-tutorial.html)
+
 
 </aside>
