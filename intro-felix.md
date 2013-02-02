@@ -198,7 +198,7 @@ Also pay attention to the bundle state which becomes ACTIVE when the bundle star
 
 ### Stop/start using the command line :
 
-To stop a bundle use the *stop* command (where x is the bundle id):
+To stop a bundle, use the *stop* command (where x is the bundle id):
 {code lang=bash}
 stop X
 {/code}
