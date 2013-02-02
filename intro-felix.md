@@ -253,7 +253,7 @@ Copy the hello-world bundle in the first-runtime/load directory.
 mv hello.world.jar {$workdir}/load
 {/code}
 
-If you look at your console you will see that the bundle as been started.
+If you check the console, you will see that the bundle has been started.
 
 {code lang=bash}
 Hello World !
