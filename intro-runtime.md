@@ -67,6 +67,7 @@ OSGi is one of the few robust platforms explicitly designed to run dynamic appli
 
 OSGi tackles the two main challenges of dynamic applications: the integration of code in both the execution environment and in the running application. Bundles are used to dynamically integrate code on the platform through the advanced use of class loaders while services are used to dynamically upgrade applications.
 
+However, managing dynamism at the application level is hard and result in complex code (reacting to multiple events, dealing with concurrency and synchronisation, etc.). IPOJO, the Apache service-oriented component model, has been designed to deal with that.
 
 </article>
 
