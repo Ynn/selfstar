@@ -299,10 +299,10 @@ In {#runtime#}, use
 + **lb** to list the installed bundles.
 + **start x** to start bundle x.
 + **stop x** to stop bundle x.
-+ **install file** to install a bundle from file.
-+ **install url** to install a bundle from url.
-+ **automatic install** put the bundle jar in the *load* directory
-+ **uninstall** an automatically installed bundle, just remove the bundle
++ **install file** to install a bundle from a file.
++ **install url** to install a bundle from a url.
++ **copy bundle in *load* directory** for automatic install
++ **delete bundle from *load* directory** for automatic uninstall
 
 </aside>
 
