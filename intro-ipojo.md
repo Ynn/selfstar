@@ -88,10 +88,10 @@ In the [next section](?p=component-properties&s=introduction), you will learn ho
 </article>
 
 <aside markdown="1">
-### Download
+### Bibloigraphy
 
-+ The hello world [project]({#bin#}/hello-world/hello.world.zip).
-+ The hello world [bundle]({#bin#}/hello-world/hello.world.jar).
++ iPOJO Web site.
++ Clement Escoffier's PhD thesis (French).
 
 </aside>
 
