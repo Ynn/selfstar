@@ -248,7 +248,7 @@ You have done things the hard way! iCASA actually provides a quick and easy way 
 
 **Let us see that in detail!**
 
-Copy the hello-world bundle first-runtime/load directory. 
+Copy the hello-world bundle in the first-runtime/load directory. 
 {code lang=bash}
 mv hello.world.jar {$workdir}/load
 {/code}
