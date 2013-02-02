@@ -209,9 +209,9 @@ Conversely, to start a bundle use the *start* command :
 start X
 {/code} 
 
-To test that, we will try to stop the Felix Web Management Console. This way you would be able to see that the console is not accessible anymore.
+To illustrate this, we will try to stop the Felix Web Management Console (the console will not be accessible anymore!).
 
-First Use the lb command and search for the "Apache Felix Web Management Console". You will get a line like that : 
+First, use the lb command and search for the "Apache Felix Web Management Console". Here is what tyou get:
 
 {code lang="bash"}
 g! lb
