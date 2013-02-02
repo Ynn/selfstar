@@ -227,14 +227,14 @@ Then, stop the console&nbsp;:
 g! stop 24
 {/code}
 
-If you use lb to check the state of the bundle, you will that something has changed :
+If you use lb to check the state of the bundle, you will see that something has changed :
 {code lang="bash"}
 g! lb
    24|Resolved   |    1|Apache Felix Web Management Console (3.1.6)
 {/code}
 
 
-Now reload the [webconsole]({#link_web_console#}) again, it should not be working anymore. The reason is that the bundle is now considered inactive by the OSGi framework and does not provides its Java servlet anymore.
+Now reload the [webconsole]({#link_web_console#}). It should not be working anymore. The reason is that the bundle is now considered inactive by the OSGi framework (as a consequence, it does not provide its Java servlet anymore).
 
 Restart the webconsole using start :
 {code lang="bash"}
