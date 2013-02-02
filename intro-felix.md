@@ -172,8 +172,7 @@ As explained above, bundles have a lifecycle reflected by their *State* property
 
 Transition states like **starting/stopping/uninstalled** are not detailed here.
 
-Do not worry to much about bundle lifecycle. It is being introduced here for you to have a general understanding of OSGi.
-Most of the time, you will only need to know if your bundle is ACTIVE or not. The IDE and automatic deployment will manage the lifecycle for you. Moreover, when using iPOJO components described later, the activator will be automatically generate. Just keep in mind that UNRESOLVED state stands for something wrong. 
+Do not worry to much about bundle lifecycle! Most ot the time, all you need to know if whether your bundle is ACTIVE or not. The IDE provided in this site and the use of the iPOJO component model will hide most of the complexity related to bundle lifecycle management. Just keep in mind that the UNRESOLVED state stands for something wrong. 
 
 {note}
 **What happens when the bundle becomes ACTIVE ?**
