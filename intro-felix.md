@@ -216,7 +216,7 @@ g! lb
    24|Active     |    1|Apache Felix Web Management Console (3.1.6)
 {/code}
 
-From this, we get the webconsole bundle id: 24.
+The Web console bundle id is 24.
 
 Go to the [webconsole]({#link_web_console#}) and check that the site is up and running.
 Then, stop the console&nbsp;:
