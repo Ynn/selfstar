@@ -246,7 +246,7 @@ All should be now back to normal. Check the [webconsole]({#link_web_console#}) a
 
 You have done things the hard way! iCASA actually provides a quick and easy way to install/unsinstall/start/stop bundles. The quickest way to deploy, start and install a bundle is to copy the bundle in the load directory of your iCASA runtime.
 
-### Practice 
+**Let us see that in detail!**
 
 Copy the hello-world bundle first-runtime/load directory. 
 {code lang=bash}
