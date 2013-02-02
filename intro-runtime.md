@@ -67,7 +67,7 @@ ServiceReference serviceRef = event.getServiceReference(); //...
 
 More information about OSGi can be found in:
 
-+ [OSGi in action by R. Hall, K. Pauls, S. McCulloch, D. Savaga, Manning, 2012]
++ OSGi in action by R. Hall, K. Pauls, S. McCulloch, D. Savaga, Manning, 2012.
 + [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
 
 
