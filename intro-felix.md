@@ -164,7 +164,7 @@ The result will be exactly the same than before.
 
 ## Starting and Stopping bundles
 
-As explained above, bundles have a lifecycle reflected by their *State* property. Here are the most common states :
+As explained above, bundles have a lifecycle reflected by their *State* property. Here are the states you should know:
 
 + **installed**: the bundle has been correctly installed on the platform.
 + **resolved/unresolved**: when a bundle is started, the supporting framework has to check that all dependencies are resolved, that is that the necessary modules and packages are available. If all dependencies are resolved, the state turns to RESOLVED, otherwise the state is set to UNRESOLVED.
