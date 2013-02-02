@@ -244,7 +244,7 @@ All should be now back to normal. Check the [webconsole]({#link_web_console#}) a
 
 ## Automatic deployment, installation and startup :
 
-You have done the things the hard way. iCASA proposes an easier way to install/unsinstall and start/stop bundles. The quickest way to deploy, start and install a bundle is to copy the bundle in the load directory of your iCASA runtime.
+You have done things the hard way! iCASA actually provides a quick and easy way to install/unsinstall/start/stop bundles. The quickest way to deploy, start and install a bundle is to copy the bundle in the load directory of your iCASA runtime.
 
 ### Practice 
 
