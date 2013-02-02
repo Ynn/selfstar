@@ -59,30 +59,7 @@ ServiceReference serviceRef = event.getServiceReference(); //...
 {/code}
 
 
-
 </article>
-
-<aside  markdown="1">
-
-### Useful Commands Summary
-
-To start the framework, run the script:
-
-+ **{#start_script#}** on Unix
-+ **{#start_script#}.bat** on Windows
-
-In {#runtime#}, use 
-
-+ **stop 0**  to stop the framework.
-+ **lb** to list the installed bundles.
-+ **start x** to start bundle x.
-+ **stop x** to stop bundle x.
-+ **install file** to install a bundle from file.
-+ **install url** to install a bundle from url.
-+ **automatic install** put the bundle jar in the *load* directory
-+ **uninstall** an automatically installed bundle, just remove the bundle
-
-</aside>
 
 <aside  markdown="1">
 
