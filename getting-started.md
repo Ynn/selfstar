@@ -17,7 +17,7 @@ The learning environment you have downloaded is made of three complementary tool
 
 Developing applications requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
-+ [Basics about OSGi](?s=introduction&p=intro-runtime): This article reminds you of OSGi fundamentals. Specifically, it discusses the notions of bundles and services, which are at the heart of the OSGi dynamism.
++ [Basics about OSGi](?s=introduction&p=intro-osgi): This article reminds you of OSGi fundamentals. Specifically, it discusses the notions of bundles and services, which are at the heart of the OSGi dynamism.
 
 + [Basics about Felix](?s=introduction&p=intro-felix): This article explains how the Apache Felix OSGi platform can be managed through a terminal or through a Web console.
 
