@@ -177,7 +177,9 @@ Do not worry to much about bundle lifecycle! Most ot the time, all you need to k
 {note}
 **What happens when the bundle becomes ACTIVE ?**
 
-Bundles can be endowed with a small class called an Activator. This activator can be compare to the Main-Class of the bundle. When the bundle is started and is dependencies are OK, the framework tries to find such class and call it if it exists. Reciprocally when the bundle is stopped, this class is called again to allow the bundle to perform cleaning actions (to free resources for instance).
+Bundles can come with an Activator class. This class can be seen as the Main Class of the bundle. When the bundle is started, as soon as the dependencies are resolved, the supporting framework looks for such class and calls it if it exists. 
+
+Conversely, when the bundle is stopped, this class is called again to allow cleaning actions to be carried out (to free resources for instance).
 {/note}
 
 
