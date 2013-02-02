@@ -211,14 +211,14 @@ start X
 
 To illustrate this, we will try to stop the Felix Web Management Console (the console will not be accessible anymore!).
 
-First, use the lb command and search for the "Apache Felix Web Management Console". Here is what tyou get:
+First, use the lb command and search for the "Apache Felix Web Management Console". Here is what you get:
 
 {code lang="bash"}
 g! lb
    24|Active     |    1|Apache Felix Web Management Console (3.1.6)
 {/code}
 
-From this, we see that the webconsole bundle id is 24.
+From this, we get the webconsole bundle id: 24.
 
 If you have not done it yet, go to the [webconsole]({#link_web_console#}) and check that the site is working.
 Then stop the console&nbsp;:
