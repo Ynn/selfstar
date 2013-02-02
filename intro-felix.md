@@ -170,7 +170,7 @@ As explained above, bundles have a lifecycle reflected by their *State* property
 + **resolved/unresolved**: when a bundle is started, the supporting framework has to check that all dependencies are resolved, that is that the necessary modules and packages are available. If all dependencies are resolved, the state turns to RESOLVED, otherwise the state is set to UNRESOLVED.
 + **active**: the bundle has been started.
 
-There also are some transition state such as **starting/stopping/uninstalled** that you can forget.
+Transition states like **starting/stopping/uninstalled** are not detailed here.
 
 Do not worry to much about bundle lifecycle. It is being introduced here for you to have a general understanding of OSGi.
 Most of the time, you will only need to know if your bundle is ACTIVE or not. The IDE and automatic deployment will manage the lifecycle for you. Moreover, when using iPOJO components described later, the activator will be automatically generate. Just keep in mind that UNRESOLVED state stands for something wrong. 
