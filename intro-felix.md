@@ -234,7 +234,7 @@ g! lb
 
 Now reload the [webconsole]({#link_web_console#}). It should not be working anymore. The reason is that the bundle is now considered inactive by the OSGi framework (as a consequence, it does not provide its Java servlet anymore).
 
-Restart the webconsole using start :
+Restart the Web console using start :
 {code lang="bash"}
 g! start 24
 {/code}
