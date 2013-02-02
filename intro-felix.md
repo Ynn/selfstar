@@ -167,7 +167,7 @@ The result will be exactly the same than before.
 As explained above, bundles have a lifecycle reflected by their *State* property. Here are the most common states :
 
 + **installed**: the bundle has been correctly installed on the platform.
-+ **resolved/unresolved**: when a bundle is started, the framework has to check if the dependencies are resolved, that is the necessary modules and  packages are available. If all dependencies are resolved, the state turns to RESOLVED, otherwise the state is set to UNRESOLVED.
++ **resolved/unresolved**: when a bundle is started, the supporting framework has to check that all dependencies are resolved, that is that the necessary modules and packages are available. If all dependencies are resolved, the state turns to RESOLVED, otherwise the state is set to UNRESOLVED.
 + **active**: the bundle has been started.
 
 There also are some transition state such as **starting/stopping/uninstalled** that you can forget.
