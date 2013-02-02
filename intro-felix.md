@@ -123,7 +123,7 @@ uninstall id
 {/code}
 
 
-*Now, let us practice!*
+**Now, let us practice!**
 
 If you are not behind a proxy, you can try to deploy the jar directr
 {code lang=bash}
