@@ -283,15 +283,6 @@ Use the command *stop 0* to stop the framework :
 stop 0
 {/code}
 
-## Conclusion
-
-You have seen that :
-
-+ applications are divided into bundles.
-+ bundles are the deployment unit of OSGi. You have learned how to install/start/stop/uninstall them.
-+ bundles are identified by their Name and Version. When installed, the framework gives them a single ID.
-
-In the [next section](?s=introduction&p=basic-hello-world), you will learn how to write a simple Hello World bundle.
 
 </article>
 
@@ -321,10 +312,9 @@ In {#runtime#}, use
 
 ### Bibliography
 
-More information about OSGi can be found in:
+More information about OSGi/Felix can be found in:
 
 + [Felix documentation](http://felix.apache.org/site/documentation.html)
-+ [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
 + [Felix OSGi tutorials](http://felix.apache.org/site/apache-felix-osgi-tutorial.html)
 
 </aside>
