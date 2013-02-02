@@ -198,14 +198,13 @@ Also pay attention to the bundle state which becomes ACTIVE when started and RES
 
 ### Stop/start using the command line :
 
-To stop an application use the *stop* command :
+To stop a bundle use the *stop* command (where x is the bundle id):
 {code lang=bash}
 stop X
 {/code}
 
-Where the number X is the bundle with ID=X.
 
-Conversely, to start an application use the *start* command : 
+Conversely, to start a bundle use the *start* command : 
 {code lang=bash}
 start X
 {/code} 
