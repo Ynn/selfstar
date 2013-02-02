@@ -47,7 +47,7 @@ Finally, the following articles show how to configure and use the iCASA home sim
 
 ### Summary of links
 
-Basics: 
+Execution platform: 
 
 + [Basics about OSGi](?s=introduction&p=intro-osgi) 
 + [Basics about Felix](?s=introduction&p=intro-felix) 
