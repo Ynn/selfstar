@@ -123,7 +123,7 @@ uninstall id
 {/code}
 
 
-### Practice : Installing from URLs
+Now, let us practice!
 
 If you are not behind a proxy, you can try to deploy the jar directr
 {code lang=bash}
@@ -146,7 +146,7 @@ uninstall 61
 
 And check that the bundle has been uninstalled using lb.
 
-### Practice : Installing from files
+Now, let us use files. 
 
 Download the [bundle]({#bin#}/hello-world/hello.world.jar) and put it in an accessible directory. 
 Then use the install command :
