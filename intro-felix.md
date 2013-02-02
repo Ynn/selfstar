@@ -259,7 +259,7 @@ If you check the console, you will see that the bundle has been started.
 Hello World !
 {/code}
 
-Remove the bundle from the bundle from the load directory : 
+Then, remove the bundle from the load directory : 
 
 {code lang=bash}
 rm {$workdir}/load/hello.world.jar 
