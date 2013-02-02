@@ -8,9 +8,9 @@
 The purpose of this page is to provide a quick introduction to OSGi/Felix. Specifically, it teaches you to:
 
 + start and stop the Felix framework.
-+ deploy, install and start applications.
++ deploy, install and start bundles.
 + use the Felix Web Console.
-+ use basic commands to get information about the running applications.
++ use basic commands to get information about the running bundles.
 
 
 
