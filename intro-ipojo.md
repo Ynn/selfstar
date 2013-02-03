@@ -45,9 +45,8 @@ Components are concerned with *provided and required services* and *code is inst
 
 {/note}
 
-Components have actually been introduced to allow developers to think in term of functionality instead of code. 
-
-Let's make it more concrete and take an example. Imagine that we have a word processor that use a spellchecker. 
+Components have actually been introduced to allow developers to think in term of functionality instead of code. Let us take an example to illustrate that statement. 
+Imagine that we have a word processor that use a spellchecker. 
 
 When using modules, we will most likely have :
 
