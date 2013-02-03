@@ -31,13 +31,6 @@ In particular, code is injected in order to manage all the service-­oriented in
 
 At compilation time, the ipojo framework also creates bundles containing iPOJO components and related metadata. Bundles are used as the deployment unit and to resolve package dependencies, as it is usually done in OSGi.
 
-Insert figure here￼
-
-There are different ways to create an iPOJO component. In particular, a component can be created with specific annotations added in the Java source code. 
-
-In this site, we provide an IDE facilitating the creation and deployment of iPOJO components.
-
-
 ## iPOJO applications
 
 An application is made of a number of iPOJO components. These components are linked at runtime, throuh service interactions, by the execution framework. An application can be run when all service dependencies are resolved.
