@@ -22,7 +22,11 @@ Several approaches have been proposed to improve OSGi in terms of dependency man
 
 iPOJO is a component model: its purpose is to provide programming facilities in order to lower business code complexity. 
 
-. An iPOJO component is a “plain old Java object” (POJO) enriched with meta-data. In particular, these meta-data express service dependencies with resolution policies.
+Specifically, an iPOJO component is a “plain old Java object” (POJO) enriched with meta-data. Meta-data is used to **generate** complex code implementing non functional properties, including service management. Code injection is done at compilation time by the framework.
+
+
+
+In particular, these meta-data express service dependencies with resolution policies.
 
 The iPOJO execution framework automatically manages all the service-­oriented interactions: service publication, service instantiation, service selection, service discovery. 
 
