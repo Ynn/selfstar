@@ -29,7 +29,7 @@ In particular, code is injected in order to manage all the service-­oriented in
 
 
 
-At compilation time, the ipojo framework also creates bundles containing iPOJO components and related metadata. Bundles are used as the deployment unit and to resolve package dependencies, as it is usually done in OSGi.
+At compilation time, the ipojo framework also creates bundles containing iPOJO components (code and metadata). Bundles are used as the deployment unit and to resolve package dependencies, as it is usually done in OSGi.
 
 ## iPOJO applications
 
