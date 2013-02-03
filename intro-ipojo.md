@@ -20,9 +20,9 @@ Several approaches have been proposed to improve OSGi in terms of dependency man
 
 ## What is iPOJO
 
-IPOJO is a service-­oriented component model built on top of OSGi. It automates many aspects of service management in order to lower business code complexity. 
+iPOJO is a component model: its purpose is to provide programming facilities in order to lower business code complexity. 
 
-iPOJO is a component model: its purpose is to provide higher level programming facilities. An iPOJO component is a “plain old Java object” (POJO) enriched with meta-data. In particular, these meta-data express service dependencies with resolution policies.
+. An iPOJO component is a “plain old Java object” (POJO) enriched with meta-data. In particular, these meta-data express service dependencies with resolution policies.
 
 The iPOJO execution framework automatically manages all the service-­oriented interactions: service publication, service instantiation, service selection, service discovery. 
 
