@@ -22,6 +22,7 @@ Several approaches have been proposed to improve OSGi in terms of dependency man
 
 IPOJO is a service-­oriented component model that manages service publications and service dependencies in order to significantly lower business code complexity. 
 
+An ipojo component remains as close to a “plain old Java object” (POJO) as possible. 
 
 
 
