@@ -37,19 +37,11 @@ An application is made of a number of interacting iPOJO components. These compon
 
 
 {note}
-**What is the difference between a Bundle and an iPOJO Component ?**
+**Bundles and an iPOJO Components**
 
 The main purpose of the **bundle** is to deal with code packaging and code dependencies.
 
 iPOJO components are concerned by the *provided and required services* and *how the code is instantiated*.
-
-**What is a service?**
-
-The service is related to *what the code is doing*. It is basically the same notion than in the real world (your bank provides banking services). For instance a spell checker will provide a "spell checking" service, a logger will provide a "logging" service, etc ...
-
-**How a service is described ?**
-
-The components needs standard way of describing and use services from other components. As you will see later, in OSGi a service is described by a java interface and some meta information.
 
 {/note}
 
