@@ -5,10 +5,11 @@
 The purpose of this page is to provide a quick introduction to the iPOJO component model. Specifically, it teaches you:
 
 + The limits of OSGi in term of programming.
-+ what is an iPOJO component.
++ What is an iPOJO component.
++ How to program an iPOJO component.
 + what is the lifecycle of an iPOJO component.
 
-As for OSGi, knowing the intricacies of iPOJO is NOT mandatory. However, a basic understanding of the iPOJO principles (modularity, service-orientation, late-binding) is a plus when getting to the exercises. 
+As for OSGi, knowing the intricacies of iPOJO is NOT mandatory since most complexity is hidden by the IDE. However, understanding the iPOJO principles (modularity, service-orientation, late-binding) is a plus when getting to the exercises. 
 
 
 ## OSGi limits
@@ -17,16 +18,18 @@ Managing service-level dependencies is not managed by the platform. This is left
 
 Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is a solution of choice in the open source world. 
 
-
-
 ## What is iPOJO
 
-As explained in the OSGi introduction, a bundle is a deployment unit but also a composition unit used to make up modular, dynamic applications in Java. Bundles thus encapsulate Java packages that can be shared or kept hidden.  
+Bundle are both a deployment units and composition units. They are used to make up modular, dynamic applications in Java. Bundles encapsulate Java packages that can be shared or kept hidden.  
 
 
-<div style="margin:auto;width : 70%;"/>
-<img src="img/intro-runtime/OSGi2.png"/>
-</div>
+
+
+
+
+
+
+
 
 iPOJO introduces the notion of **service oriented component** that you will use all the time when writing an application. Application are divided (once again) into iPOJO components. This naturally raises the question : 
 
