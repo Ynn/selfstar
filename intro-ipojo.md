@@ -51,7 +51,7 @@ Imagine that we have a word processor that use a spellchecker.
 When using modules, we will most likely have :
 
 + **a word processor module** with several packages and classes. This module provides the class org.example.EnglishSpellCheckerworld processor and depends on the package org.example.english.spellchecker. 
-+ **a spellchecker module** that provides a org.example.english.spellchecker containing the class EnglishSpellChecker and some utility classes. The spellchecker specifies that it provides this package. 
++ **a spellchecker module** that provides an org.example.english.spellchecker containing the class EnglishSpellChecker and some utility classes. The spellchecker specifies that it provides this package. 
 
 If for a reason or another (code refactoring, product renaming, conflict in libraries) you need to change the name of packages, you will have to change the dependencies since dependencies are direct references to the code itself.
 
