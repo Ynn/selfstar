@@ -33,7 +33,7 @@ At compilation time, the ipojo framework also creates bundles containing iPOJO c
 
 ## iPOJO applications
 
-An application is made of a number of iPOJO components. These components are linked at runtime, throuh service interactions, by the execution framework. An application can be run when all service dependencies are resolved.
+An application is made of a number of interacting iPOJO components. These components are linked at runtime, throuh service interactions, by the execution framework. An application can be run when all service dependencies are resolved.
 
 
 {note}
