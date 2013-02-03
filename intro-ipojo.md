@@ -37,11 +37,11 @@ An application is made of a number of interacting iPOJO components. These compon
 
 
 {note}
-**Bundles and an iPOJO Components**
+**Bundles and iPOJO Components**
 
-**Bundles** are concerned with code packaging and code dependencies.
+Bundles are concerned with *code packaging* and *code dependencies*.
 
-**Components** are concerned with  *provided and required services* and *code is instantiation*.
+Components are concerned with *provided and required services* and *code is instantiation*.
 
 {/note}
 
