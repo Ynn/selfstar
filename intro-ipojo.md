@@ -26,7 +26,7 @@ An ipojo component remains as close to a “plain old Java object” (POJO) as p
 
 The link between the “POJO” and its container is transparently created by the supporting framework through analysis and manipulation of the POJO byte code. Code injection is done at compilation time by the framework. At that time, the framework also creates bundles (essentially the manifest part of the bundle) containing iPOJO components and related metadata. Bundles are used as the deployment unit and to resolve package dependencies, as it is usually done in OSGi.
 
-Insert figure here
+Insert figure here￼
 
 There are different ways to create an iPOJO component. In particular, a component can be created with specific annotations added in the Java source code. 
 
