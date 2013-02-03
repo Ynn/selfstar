@@ -45,7 +45,7 @@ Components are concerned with *provided and required services* and *code is inst
 
 {/note}
 
-These two notions are almost orthogonal. You can have components without modules and reciprocally. The whole concept of components has been introduced to allow developers to think in term of functionality instead of code. 
+Components have actually been introduced to allow developers to think in term of functionality instead of code. 
 
 Let's make it more concrete and take an example. Imagine that we have a word processor that use a spellchecker. 
 
