@@ -14,13 +14,13 @@ As for OSGi, knowing the intricacies of iPOJO is NOT mandatory since most comple
 
 ## OSGi limits
 
-Managing service-level dependencies is not managed by the platform. This is left to the developer whose code has to capture events emitted by the platform in order to discover, select, use, and change services. This results in pretty complex and error-prone code that can endanger the applications (events can be missed, concurrency must be managed, bad class versions can be called, references can be forgotten, etc.).
+In OSGi,service management is entirely left to applications programmers. That is, programmers have to insert specific instructions in their code in order to follow the arrival and departure of services of interest and to react accordingly. This code is complex and highly error-prone (events can be missed, synchronisations can fail, bad class versions can be called, references can be forgotten, etc.).
 
 Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is a solution of choice in the open source world. 
 
 ## What is iPOJO
 
-Bundle are both a deployment units and composition units. They are used to make up modular, dynamic applications in Java. Bundles encapsulate Java packages that can be shared or kept hidden.  
+
 
 
 
