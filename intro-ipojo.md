@@ -14,7 +14,7 @@ As for OSGi, knowing the intricacies of iPOJO is NOT mandatory since most comple
 
 ## OSGi limits
 
-In OSGi,service management is entirely left to applications programmers. That is, programmers have to insert specific instructions in their code in order to follow the arrival and departure of services of interest and to react accordingly. This code is complex and highly error-prone (events can be missed, synchronisations can fail, bad class versions can be called, references can be forgotten, etc.).
+In OSGi,service management is entirely left to applications programmers. That is, programmers have to insert specific instructions in their code in order to follow the arrival and departure of services of interest and to react accordingly. This code is complex and highly error-prone (events can be missed, synchronisations can be forgotten, bad class versions can be called, stale references can be left, etc.).
 
 Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is a solution of choice in the open source world. 
 
