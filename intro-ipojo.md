@@ -54,16 +54,14 @@ When using modules, we will most likely have :
 + **a word processor module** with several packages and classes. The world processor  depends on the package org.example.english.spellchecker and uses the class org.example.EnglishSpellChecker. 
 + **a spellchecker module** that provides a org.example.english.spellchecker containing the class EnglishSpellChecker and some utility classes. The spellchecker specifies that it provides this package. 
 
-If for a reason or another (code refactoring, product renaming, conflict in libraries) you need to change the name of packages, you will have to change the dependencies since dependencies are direct reference to the code itself.
+If for a reason or another (code refactoring, product renaming, conflict in libraries) you need to change the name of packages, you will have to change the dependencies since dependencies are direct references to the code itself.
 
 When using components, we will have :
 
-+ **a word processor** component that will depend on a SpellChecking service. 
-+ **a spellchecker component** that will provide this service. 
++ **a word processor** component depending on a SpellChecking service. 
++ **a spellchecker component** providing this service. 
 
-The service "Spellchecking" will be described by an interface Spellchecking.java and some meta-information ("english" as a language for instance). How the packages are named is not relevant, the only important thing is what functionality you need and who provides it. If you change the name of the package or classes of the implementation, there will be no consequence on the component dependencies. 
-
-Using high-level concept instead of code makes easy to change the implementation. For instance, it is easy to change the spellchecker component by another.
+The service "Spellchecking" will be described by an interface Spellchecking.java and some meta-information ("english" as a language for instance). Package names here are not important. If you change the name of a package or of an ipmplementation classe, there will be no consequence on the component dependencies. 
 
 As bundles and iPOJO components are complementary, we will use both. Each bundle will contains one or more components as shown above.
 
