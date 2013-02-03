@@ -39,9 +39,9 @@ An application is made of a number of interacting iPOJO components. These compon
 {note}
 **Bundles and an iPOJO Components**
 
-The main purpose of the **bundle** is to deal with code packaging and code dependencies.
+**Bundles** are concerned with code packaging and code dependencies.
 
-iPOJO components are concerned by the *provided and required services* and *how the code is instantiated*.
+**Components** are concerned with  *provided and required services* and *code is instantiation*.
 
 {/note}
 
