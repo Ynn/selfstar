@@ -70,6 +70,9 @@ As bundles and iPOJO components are complementary, we will use both. Each bundle
 </div>
 
 
+## Dependency management
+
+Yoann : peux-tu ici expliquer les dépendances de services : les mots-clés, les différentes politiques, etc. enfin, tout ce que l'on va retrouver dans l'IDE.
 
 
 
