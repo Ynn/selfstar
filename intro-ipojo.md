@@ -33,31 +33,19 @@ There are different ways to create an iPOJO component. In particular, a componen
 In this site, we provide an IDE facilitating the creation and deployment of iPOJO components.
 
 
+## iPOJO applications
 
+An application is made of a number of iPOJO components. These components are linked at runtime, throuh service interactions, by the execution framework. An application can be run when all service dependencies are resolved.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-iPOJO introduces the notion of **service oriented component** that you will use all the time when writing an application. Application are divided (once again) into iPOJO components. This naturally raises the question : 
 
 {note}
 **What is the difference between a Bundle and an iPOJO Component ?**
 
-The main purpose of the **module (bundle)** is to deal with code dependencies and packaging. It is not concerned by *what the code is doing* (the functionality) but just by *what code it depends*. 
+The main purpose of the **bundle** is to deal with code packaging and code dependencies.
 
-As you guess the notion of service-oriented component is complementary. Components are concerned by *what service is provided*, *what service is required* and *how the code is instantiated*.
+iPOJO components are concerned by the *provided and required services* and *how the code is instantiated*.
 
-**What is a service ?**
+**What is a service?**
 
 The service is related to *what the code is doing*. It is basically the same notion than in the real world (your bank provides banking services). For instance a spell checker will provide a "spell checking" service, a logger will provide a "logging" service, etc ...
 
