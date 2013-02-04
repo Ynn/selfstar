@@ -151,7 +151,7 @@ public class DictionnaryImpl implements DictionnaryService { // ...
 
 Different policies may be applied for the creation of a service :
 
-+ **shared** (*default behaviour*): the service is created once for it is shared by all the users.
++ **shared** (*default behaviour*): the service is created once and is shared by all the users.
 + **service** : the service is shared by all the components of the same bundle. That means that two bundles won't have the same service. A new service will be created each time a new bundle ask for it.
 + **instance** : the service is never shared. A new service will be created each time the service is required.
 + **customized** : you can provide a class extending the CreationStrategy one so as to customized the way the instance are created. 
