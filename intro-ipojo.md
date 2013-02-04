@@ -81,7 +81,7 @@ An application is made of a number of interacting iPOJO components. These compon
 
 Bundles are concerned with *code packaging* and *code dependencies*.
 
-Components are concerned with *provided and required services* and *code is instantiation*.
+Components are concerned with *provided and required services* and *code instantiation*.
 
 {/note}
 
@@ -100,7 +100,7 @@ When using components, we will have :
 + **a word processor** component depending on a SpellChecking service. 
 + **a spellchecker component** providing this service. 
 
-The service "Spellchecking" will be described by an interface Spellchecking.java and some meta-information ("english" as a language for instance). Package names here are not important. If you change the name of a package or of an ipmplementation classe, there will be no consequence on the component dependencies. 
+The service "Spellchecking" will be described by an interface Spellchecking.java and some meta-information ("english" as a language for instance). Package names here are not important. If you change the name of a package or of an implementation class, there will be no consequence on the component dependencies. 
 
 As bundles and iPOJO components are complementary, we will use both. Each bundle will contains one or more components as shown above.
 
@@ -111,9 +111,39 @@ As bundles and iPOJO components are complementary, we will use both. Each bundle
 
 ## Dependency management
 
-Yoann : peux-tu ici expliquer les dépendances de services : les mots-clés, les différentes politiques, etc. enfin, tout ce que l'on va retrouver dans l'IDE.
+One core functionality of iPOJO is the dependency management. This section gives a brief overview of iPOJO functionalities.
+
+### Required services :
+The most difficult task managed by iPOJO is the service requirement.
+The service providing is described in details in the [iPOJO service requiring documentation](http://felix.apache.org/site/service-requirement-handler.html). In short a dependency can be :
+
++ **mandatory**/**optional**  : When the dependency is mandatory, iPOJO don't start the component until one matching service is found. If the service leaves, the component is stopped until a substitute can be found. Conversely, some service may be declared optional (e.g. a log service). In such case, when no service is found, the injected value is null (or a Nullable object) but the component lifecycle is not affected.
++ **simple/multiple** : When the dependency is simple, only one service is provided to the component. This dependency will remain the same until it leaves (dynamic policy) or a better substitute is found (dynamic-priority policy). When the dependency is multiple, iPOJO provides the component with the list of matching services.
+
+iPOJO supports different policies for injecting dependencies :
+
++ **dynamic** (*default behavior*): the service is injected until it leaves. When leaving, a substitute is provided when possible. 
++ **dynamic-priority** : same as dynamic but iPOJO inject the best service available each time a service is used. That means that the service in used can be substituted for a better one anytime. 
++ **static** : the same service is used during all the component lifetime. If the service leaves, the component is disabled and can not be restarted.
 
 
+### Provided services :
+In iPOJO providing a service is simply implementing an interface :
+
+{code lang=java}
+{literal}
+@Component
+@Provides(specifications={DictionnaryService.class})
+public class DictionnaryImpl implements DictionnaryService { // ...
+{/literal}
+{/code}
+
+Different policies may be applied when providing a service :
+
+
+
+
+More details on the service requirement can be found in the [iPOJO service providing documentation](http://felix.apache.org/site/providing-osgi-services.html).
 
 ## Conclusion
 
@@ -123,10 +153,11 @@ What you should remember is that iPOJO components and bundle are complementary. 
 
 In the [next section](?p=component-properties&s=introduction), you will learn how to add properties to components and how to configure the instances.
 
+
 </article>
 
 <aside markdown="1">
-### Bibloigraphy
+### Bibliography
 
 + iPOJO Web site.
 + Clement Escoffier's PhD thesis (French).
