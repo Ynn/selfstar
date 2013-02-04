@@ -1,7 +1,7 @@
 
 Execution platform: 
 
-+ [Basics about OSGi](/article/for-beginners/getting-started) 
++ [Basics about OSGi](/article/for-beginners/intro-osgi) 
 + [Basics about Felix](/article/for-beginners/intro-felix) 
 + [Basics about iPOJO](/article/for-beginners/intro-ipojo) 
 
