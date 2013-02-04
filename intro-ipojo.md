@@ -126,7 +126,18 @@ iPOJO supports different policies for injecting dependencies :
 + **dynamic-priority** : same as dynamic but iPOJO inject the best service available each time a service is used. That means that the service in used can be substituted for a better one anytime. 
 + **static** : the same service is used during all the component lifetime. If the service leaves, the component is disabled and can not be restarted.
 
+{note}
+**How do iPOJO know that a service is better ?**
 
+Service selection is based on service properties. Each services are ranked based on these properties. By default the ranking is random. But you can modify the ranking is performed by providing a standard java [Comparator](http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html) :
+
+{code lang=xml}
+<requires field="m_dictionnaryService" policy="dynamic-priority" comparator="dict.MyComparator"/>
+{/code}
+
+Each time a service is discovered, iPOJO will try to compare it to the other using this comparator. If the service is better that the one in use, it will be automatically substituted.
+
+{/note}
 ### Provided services :
 In iPOJO providing a service is simply implementing an interface :
 
@@ -138,10 +149,12 @@ public class DictionnaryImpl implements DictionnaryService { // ...
 {/literal}
 {/code}
 
-Different policies may be applied when providing a service :
+Different policies may be applied for the creation of a service :
 
-
-
++ **shared** (*default behaviour*): the service is created once for it is shared by all the users.
++ **service** : the service is shared by all the components of the same bundle. That means that two bundles won't have the same service. A new service will be created each time a new bundle ask for it.
++ **instance** : the service is never shared. A new service will be created each time the service is required.
++ **customized** : you can provide a class extending the CreationStrategy one so as to customized the way the instance are created. 
 
 More details on the service requirement can be found in the [iPOJO service providing documentation](http://felix.apache.org/site/providing-osgi-services.html).
 

@@ -1,3 +1,4 @@
+### [Getting Started](/article/for-beginners/getting-started)
 
 Execution platform: 
 
@@ -7,9 +8,10 @@ Execution platform:
 
 IPOJO IDE:
 
-+ [Hello world](/artcle/for-beginners/ide-hello-world) 
-+ Component properties
-+ Multiple bundles
++ [Hello world](/article/for-beginners/ide-hello-world) 
++ [Component properties](/article/for-beginners/component-properties)
++ [Service based Hello World](/article/for-beginners/intro-services)
++ [Application made of multiple bundles](/article/for-beginners/multiple-bundles)
 
 ICASA simualtor:
 
