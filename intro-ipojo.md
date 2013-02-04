@@ -2,7 +2,7 @@
 
 # Introduction to iPOJO
 
-The purpose of this page is to provide a quick introduction to the iPOJO component model. Specifically, it teaches you:
+The purpose of this page is to provide a quick introduction to the iPOJO component model. Specifically, it reminds you:
 
 + The limits of OSGi in term of programming.
 + What is an iPOJO component.
@@ -19,6 +19,8 @@ In OSGi,service management is entirely left to applications programmers. That is
 Several approaches have been proposed to improve OSGi in terms of dependency management. Among them [iPOJO](https://felix.apache.org/site/apache-felix-ipojo.html) is a solution of choice in the open source world. 
 
 ## What is iPOJO
+
+<img src="img/hello-world/ipojo.png" style ="float:right;width:20%; margin : 1em;"/>
 
 iPOJO is a component model: its purpose is to provide programming facilities in order to lower business code complexity. Specifically, an iPOJO component is a “plain old Java object” (A Java class!) enriched with meta-data. Meta-data is used to **generate** complex code implementing non functional properties. This code is actually injected at compilation time by the ipojo framework.
 

@@ -99,7 +99,7 @@ The second instance has a default "en" (english) value for the property lang and
 
 ## Conclusion
 
-Properties provides an handy way to configure the different component instances. In the [next section](?p=intro-services&s=introduction) we will introduce the services and see how we could have implement this example using services.
+Properties provides an handy way to configure the different component instances. In the [next section](/article/for-beginners/intro-services) we will introduce the services and see how we could have implement this example using services.
 
 
 </article>

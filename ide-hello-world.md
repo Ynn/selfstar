@@ -180,7 +180,7 @@ In this section, you have learned what a iPOJO component is and how to write you
 
 What you should remember is that iPOJO components and bundle are complementary. Bundles deal with *how to hide and share the code* and components deal with *how to instantiate and use the functionalities*.
 
-In the [next section](?p=component-properties&s=introduction), you will learn how to add properties to components and how to configure the instances.
+In the [next section](/article/for-beginners/component-properties), you will learn how to add properties to components and how to configure the instances.
 
 </article>
 
