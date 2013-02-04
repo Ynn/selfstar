@@ -15,7 +15,7 @@ The purpose of this page is to provide a quick introduction to OSGi. This knowle
 
 <img src="http://felix.apache.org/res/logo.png" style="float:right;width:20%; margin : 1em;"/>
 
-OSGi is an execution framework developed on top of Java. It builds on the Java’s dynamic features (on demand class loading, multiple class loaders, typing verification before loading) to provide a coarse-grained level of modularity. OSGi is a [specification](http://www.osgi.org/Specifications/HomePage) with several popular implementations like [Equinox](http://www.eclipse.org/equinox/), [Felix]({#link_felix#}) or [Knopflerfish](http://www.knopflerfish.org/). 
+OSGi is an execution framework developed on top of Java. It builds on the Java’s dynamic features ([classloaders](http://docs.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html) and [on demand class loading](https://en.wikipedia.org/wiki/Dynamic_loading)) to provide a coarse-grained level of modularity. OSGi is a [specification](http://www.osgi.org/Specifications/HomePage) with several popular implementations like [Equinox](http://www.eclipse.org/equinox/), [Felix]({#link_felix#}) or [Knopflerfish](http://www.knopflerfish.org/). 
 
 OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform. 
 
@@ -52,14 +52,20 @@ To use a service, a consumer has to look for it. Two modes are available to do t
 
 Code example:
 
-{code lang=bash}
-context.addServiceListener(this); //...
+{code lang=java}
+//Ask the registry to notify a listener when services matching the filter change.
+context.addServiceListener(this, filter); //...
+
+//Implement the listener logic :
 public void serviceChanged(ServiceEvent event) { //...
-switch (event.getType()) {
-case ServiceEvent.REGISTERED:
-ServiceReference serviceRef = event.getServiceReference(); //...
+	switch (event.getType()) {
+		//if a new service is found :
+		case ServiceEvent.REGISTERED:
+			//get a reference to the service so as to use it later.
+			ServiceReference serviceRef = event.getServiceReference(); //...
 {/code}
 
+There are multiple events associated with services. If you want to know more on the topic, you can follow [the Felix tutorial](https://felix.apache.org/site/apache-felix-osgi-tutorial.html). Nonetheless, managing all events and the dynamism easily becomes cumbersome and error-prone. This is the main reason of the introduction of the development of component model such as [Declarative Services](http://wiki.osgi.org/wiki/Declarative_Services) or [iPOJO](http://felix.apache.org/site/apache-felix-ipojo.html) that will be presented [later](/article/for-beginners/intro-ipojo).
 
 ## Conclusion
 
