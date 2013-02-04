@@ -2,9 +2,7 @@
 
 # Play with iCASA
 
-## Introduction
-
-{include file="content/section-introduction.md"}
+{include file="content/section-for-beginners.md"}
 
 ## Test 
 
