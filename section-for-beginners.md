@@ -8,9 +8,9 @@ Execution platform:
 
 IPOJO IDE:
 
-+ [Hello world](/article/for-beginners/ide-hello-world) 
-+ [Component properties](/article/for-beginners/component-properties)
-+ [Service based Hello World](/article/for-beginners/intro-services)
++ [An Hello world iPOJO component](/article/for-beginners/ide-hello-world) 
++ [Use iPOJO component properties](/article/for-beginners/component-properties)
++ [A service based Hello World](/article/for-beginners/intro-services)
 + [Application made of multiple bundles](/article/for-beginners/multiple-bundles)
 
 ICASA simualtor:
