@@ -39,13 +39,15 @@ public class DictionnaryClient {
 
 {note}
 **Alternative XML syntax**
-For those who don't want to use annotations, so as to separate class implementation from service declaration, iPOJO also supports an XML syntax (in a metadata.xml files) :
+For those who don't want to use annotations for meta-data, so as to separate class implementation from service declaration, iPOJO also supports an XML syntax (in a metadata.xml file) :
 
 {code lang=xml}
 <component classname="org.example.DictionnaryClient" name="DictionnaryClient">
 	<requires specification="org.example.DictionaryService" field="m_dictionnaryService"/>
 </component>
 {/code}
+
+The [iCASA-IDE](/article/for-beginners/ide-hello-world) uses the XML syntax.
 {/note}
 
 The service can then be used as is (the dynamism is managed by iPOJO) : 
@@ -65,7 +67,6 @@ Once implemented the component can be instanciated, whether programatically, whe
  <instance component="DictionnaryClient" name="myDictionnaryClient">
 {/code}
 
-The [iCASA-IDE](/article/for-beginners/ide-hello-world) uses the XML syntax.
 
 
 At compilation time, the ipojo framework also creates bundles containing iPOJO components (code and metadata). Bundles are used as the deployment unit and to resolve package dependencies, as it is usually done in OSGi.
