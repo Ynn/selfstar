@@ -29,7 +29,7 @@ In the context of this site, we have developed an IDE facilitating the developme
 
 + [iPOJO component instances](/article/for-beginners/component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties, which allows to specialize the behaviour of component instances.
 
-+ [Using services](/article/for-beginners/intro-services): This article shows how to implement a multilingual "Hello world" using services.
++ [Providing and using services](/article/for-beginners/intro-services): This article shows how to implement a multilingual "Hello world" using services.
 
 + [Dividing an application into multiple bundles](#): This article elaborates on the  "Hello World" and separates out the component providing services from those using services. It defines two bundles (client and consumer) and shows how to configure the dependencies between these bundles.
 

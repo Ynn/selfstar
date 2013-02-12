@@ -229,7 +229,9 @@ Create a new instance of your component and configure the property "lang" to "en
 
 The client will use this property to discover the client.
 
-## Implementing a Hello Client
+## The Hello Client
+
+### Configuration of the component
 
 Now, we will implement a client of our english provider that will call it on a regular basis.
 
@@ -243,16 +245,20 @@ This component will depend on the "Hello" service. To define the dependency, go 
 
 + if the dependency is **optional** : when mandatory the cardinality is (1,1 - single) or (1,n - multiple). That means that your component can be stopped if no service is available. When the dependency is optional, the cardinality is (0,1 - single) or (0,n - multiple) and the component lifecycle is not affected by the availability of services.
 
-+ the **name of the injected field**. Services will be injected to this field depending on the policy (see [iPOJO introduction](/article/for-beginners/intro-ipojo)). In our case, we want to be able to 
++ the **name of the injected field**. Services will be injected to this field depending on the policy (see [iPOJO introduction](/article/for-beginners/intro-ipojo)). In our case, we will use the default policy : keeping the services until they are unavailable. We will called it "helloServices". As the dependency is multiple and optional, the IDE will generate an array of size (0..n) that will be injected by iPOJO.
 
++ the **bind** and **unbind methods**. These methods are called when a new service is discovered (reciprocally when it leaves).They offer a convenient way to react to service change and to get the service properties from a specific service. The signature of the method is (Object service, Map properties) where they object is the service and the map contains the properties. In our case, we only use these methods to prompt some message. Later we will see that we can use them for improving context-awareness.
 
++ the **type** is the name of the service interface. In our case, "org.example.hello.service.Hello".
 
 ![add property]({#img#}/intro-services/requiredService1.png)
 
 
-
 Configure the dependency type to "org.example.hello.service.Hello" by selecting the interface in the selection wizard. 
 ![add property]({#img#}/intro-services/requiredService2.png)
+
+
+### Implementation of the Hello client
 
 Let's generate the client. Once again, you should use a different package name (org.example.hello.client)
 ![add property]({#img#}/intro-services/generationClient.png)
@@ -380,18 +386,16 @@ public class HelloClientImpl implements Runnable {
 {/code}
 
 
+### Create the Hello Client instance
 
-
-
-
-
-
-
-
+Create a new instance of the Hello client and call it "HelloClient".
 ![client instance]({#img#}/intro-services/clientInstance.png)
 
 
-## Test
+## Test with one provider and one client
+
+Now you can deploy and test you application. You should get something like this :
+
 {code lang=bash}
 The english hello service is starting
 New Provider language = en
@@ -402,6 +406,11 @@ Hello client
 ...
 {/code}
 
+The first message is printed by the english hello service. The next message is from the client : it has discover a new provider and can start running. Then, the client start calling the english Hello client every second.
+
+### Practice
+
+You can try to create multiple client and services instances to see how the different components behave.
 
 
 ##French provider
