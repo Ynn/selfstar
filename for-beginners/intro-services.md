@@ -415,11 +415,52 @@ You can try to create multiple client and services instances to see how the diff
 
 ##French provider
 
+Now we will create a new french provider. The process is the same than the one you followed for the creation of the English provider.
+
+Create your component (and add the lang property)
 ![client instance]({#img#}/intro-services/frenchComponent.png)
+
+Then generate the class (HelloFrenchProviderImpl) and complete the code :
+
+{code lang=java}
+package org.example.hello.service.impl;
+
+import org.example.hello.service.Hello;
+
+public class HelloFrenchProviderImpl implements Hello {
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println("Bonjour "+name);
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		System.out.println("The french hello service is stopping");
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		System.out.println("The french hello service is starting");
+	}
+
+
+}
+{/code}
+
+
+Create a new instance with the property "lang" set to "fr".
 
 ![client instance]({#img#}/intro-services/frenchInstance.png)
 
-##Test
+
+
+
+
+##Test with the french provider
+
+Now, if you redeploy the code, your client will use the two services :
+
 
 {code lang=bash}
 The english hello service is starting
@@ -435,9 +476,14 @@ Hello client
 
 ## Use the service filter
 
-See the [ldap filter syntax](http://www.osgi.org/javadoc/r2/org/osgi/framework/Filter.html).
+If for some reasons you want to use a service with specific properties, you can use an LDAP filter when expressing the dependency. See the [ldap filter syntax](http://www.osgi.org/javadoc/r2/org/osgi/framework/Filter.html) to have a quick overview on how to write filters.
 
+In our case, we will configure our client to use the French provider only.
+
+Go to the Hello Client component definition and edit the "Hello" service dependency. Add a (lang=fr) filter as shown below :
 ![client instance]({#img#}/intro-services/filter.png)
+
+If you redeploy your code, you will see that the english component is started but not used by the Hello Client.
 
 {code lang=java}
 The english hello service is starting
@@ -449,6 +495,13 @@ Bonjour client
 Bonjour client
 Bonjour client
 {/code}
+
+###Practice
+
+Try to create several different french provider and english provider to see it the filter is working. You can also add a new "location" property and use a filter to get a subset of providers only.
+
+## Conclusion
+In this tutorial you have learn how to create and use services. In the [next section](/article/for-beginners/multiple-bundles), you will learn how to split your application into several bundles so as to benefits from the dynamism offered by services.
 
 </article>
 
