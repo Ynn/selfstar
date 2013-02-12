@@ -2,11 +2,7 @@
 
 # Your first component with the IDE
 
-The purpose of this page is to provide a quick introduction to the IDE and start practicing. 
-
-+ blabla.
-+ blabla.
-+ blabla.
+The purpose of this page is to provide a quick introduction to the IDE and start practicing. In this first tutorial, you will learn how to create a first "Hello World" component using iPOJO-IDE.
 
  
 ## A basic Hello World

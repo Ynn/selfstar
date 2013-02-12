@@ -2,7 +2,7 @@
 
 {block name=baseref}{$baseref}{/block}
 
-{block name=title}Autonomic Computing in Practice{/block}
+{block name=title}Pervasive Computing in Practice{/block}
 
 {block name=stylesheets append}
 <link rel="stylesheet" href="css/home.css">
@@ -10,12 +10,11 @@
 
 {block name=article}
 
-
 <div id="ca-container" class="ca-container">
 	<div class="ca-wrapper">
-		<div class="ca-item ca-item-1">
+		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon"></div>
+				<div class="ca-icon" style="background-image:url(../img/home/home.png);"></div>
 				<h3>Build pervasive applications</h3>
 				<h4>
 					<span>Learn how to build pervasive applications step by step using the tutorials and the provided tools.</span>
@@ -35,9 +34,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="ca-item ca-item-2">
+		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon"></div>
+				<div class="ca-icon" style="background-image:url(/img/hello-world/Generation.png);"></div>
 				<h3>Develop using iPOJO-IDE</h3>
 				<h4>
 					<span>iPOJO-IDE includes a source code editor, build automation tools and automated deployment.</span>
@@ -60,9 +59,9 @@ In	order	to	allow	students	to	more	rapidly	focus	on	pervasive and autonomic	conc
 				</div>
 			</div>
 		</div>
-		<div class="ca-item ca-item-3">
+		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon"></div>
+				<div class="ca-icon" style="background-image:url(/img/home/OSGi.png);"></div>
 				<h3>Dynamically deploy on OSGi</h3>
 				<h4>
 					<span>This platform supports the dynamic execution of the pervasive applications developed by students.</span>
@@ -84,9 +83,9 @@ In	order	to	allow	students	to	more	rapidly	focus	on	pervasive and autonomic	conc
 				</div>
 			</div>
 		</div>
-		<div class="ca-item ca-item-4">
+		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon"></div>
+				<div class="ca-icon" style="background-image:url(/img/home/simulator.png);"></div>
 				<h3>Play with iCASA simulator</h3>
 				<h4>
 					<span>This simulator is made of a web-based GUI and a simulated devices.</span>
@@ -107,15 +106,11 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 				</div>
 			</div>
 		</div>
-
+	</div>
 </div>
 
 
 
-
-
-
-<ig src="img/test/home.png" style="width : 40%; border : 0px solid black;margin : 0px;"/>
 {/block}
 
 
