@@ -2,6 +2,8 @@
 
 # Providing and using services 
 
+![Project name]({#img#}/intro-services/project_name.png)
+
 The previous section we have seen how to implement a multilingual "Hello World" using properties. In this section we will re-implement it using services. The purpose of this section is to introduce :
 
 + how to provide services using iPOJO IDE.
@@ -111,7 +113,7 @@ public interface Hello {
 	/**
 	* The property lang defines the language used by the service. 
 	**/
-	public static final PROP_LANG = "lang";
+	public static final String PROP_LANG = "lang";
 
 	void sayHello(String name);
 }
