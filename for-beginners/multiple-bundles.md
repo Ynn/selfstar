@@ -2,6 +2,8 @@
 
 #Building an application from multiple bundles
 
+![exporting the package]({#img#}/multiple-bundles/exportPackage2.png)
+
 In the [previous tutorial](/article/for-beginners/intro-services), you have learned how to provide and use services. All the services were provided and used by the same bundle. This has several drawbacks as you can not provide new services without redeploying and restarting the bundle. In this tutorial, you will learn how to use the bundles to separate providers from client.
 
 
@@ -50,13 +52,13 @@ Pay attention to the package name (org.example.hello.service). You will have to 
 You need to export the package containing your code. This will allow the other bundles to import and use it.
 In that purpose, you will have to edit the MANIFEST of your bundle. The MANIFEST contains bundle metadata such as its name or its version. 
 
-Open the file "META-INF/MANIFEST.MF" using the "Manifest Editor" (default editor).Three panels are interesting for you :
+Open the file "META-INF/MANIFEST.MF" using the "Manifest Editor" (default editor).Three tab are interesting for you :
 
-+ **the overview panel** allows to configure the main information (name, vendor name, etc ...). 
-+ **the dependency panel** is provided to configure the bundle imported packages (we will use this later).
-+ **the runtime panel** gives access to the "import package" configuration. 
++ **the overview tab** allows to configure the main information (name, vendor name, etc ...). 
++ **the dependency tab** is provided to configure the bundle imported packages (we will use this later).
++ **the runtime tab** gives access to the "import package" configuration. 
 
-Go to the runtime panel and click add next to "Export Packages" as shown below :
+Go to the runtime tab and click add next to "Export Packages" as shown below :
 
 ![exporting the package]({#img#}/multiple-bundles/exportPackage1.png)
 
@@ -75,21 +77,61 @@ You can check that the deployment has been successful using the [web console]({#
 ## The english provider bundle
 This steps are appromatively the same than when you learned how to [use and provide services](/article/for-beginners/intro-service).
 
+First, create a new iPOJO project called "hello.english.provider".
 
 ### Import the service package
 
 You will need to import the package before using it. We will do that first. 
 
-Go and edit the "META-INF/MANIFEST.MF" files. 
+Go and edit the "META-INF/MANIFEST.MF" files. Open the "Runtime" tab and in the "Imported Packages" click add.
 
 ![import the package]({#img#}/multiple-bundles/importPackage1.png)
 
+Then import the "org.example.hello.service" package and save.
 
+![import the package]({#img#}/multiple-bundles/importPackage2.png)
 
+Now you will be able to use the package in your bundle.
 
-Create a new iPOJO project called "hello.english.provider" and the use the same component definition :
+### Component configuration
 
+The component configuration is exactly the same than from the previous tutorial. Just follow the same steps.
 
+![import the package]({#img#}/multiple-bundles/englishComponent.png)
+
+The implementation class is the same :
+
+{code lang=java}
+package org.example.hello.service.impl;
+
+import org.example.hello.service.Hello;
+
+public class HelloProviderImpl implements Hello {
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println("Hello "+name);
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		System.out.println("The english hello service is stopping");
+	}
+
+	/** Component Lifecycle Method */
+	public void start() {
+		System.out.println("The english hello service is starting");
+	}
+
+}
+
+{/code}
+
+If you copy the code from your previous project, make sure that you set-up the implementation class properly :
+
+![import the package]({#img#}/multiple-bundles/implemClass.png)
+
+Make sure that you have created at least an instance and deploy.
 
 ## Practice : the french provider
 
