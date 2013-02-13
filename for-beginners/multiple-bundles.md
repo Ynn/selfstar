@@ -24,6 +24,7 @@ This way we will be able to change each bundle without restarting the whole appl
 
 ## The specification bundle
 
+### Implement the bundle :
 The first bundle will only contains the service interface for the reason explains above. The interface is less likely to change but is used by both clients and providers. It is a good idea to separate it from them.
 
 Create a new project called "hello.service" and then add the interface :
@@ -43,9 +44,32 @@ public interface Hello {
 
 Pay attention to the package name (org.example.hello.service). You will have to import it inside the other bundles.
 
-You do not need to create any components. Deploy your project and that is all. 
+
+### Configuration : Export the package
+
+You need to export the package containing your code. This will allow the other bundles to import and use it.
+In that purpose, you will have to edit the MANIFEST of your bundle. The MANIFEST contains bundle metadata such as its name or its version. 
+
+Open the file "META-INF/MANIFEST.MF" using the "Manifest Editor" (default editor).Three panels are interesting for you :
+
++ **the overview panel** allows to configure the main information (name, vendor name, etc ...). 
++ **the dependency panel** is provided to configure the bundle imported packages (we will use this later).
++ **the runtime panel** gives access to the "import package" configuration. 
+
+Go to the runtime panel and click add next to "Export Packages" as shown below :
 
 ![exporting the package]({#img#}/multiple-bundles/exportPackage1.png)
+
+Then select the "org.example.hello.service" package. Eventually, your configuration will look like this :
+
+![exporting the package]({#img#}/multiple-bundles/exportPackage2.png)
+
+
+
+### Deployment
+
+You do not need to create any components. Deploy your project using the IDE. 
+
 
 ## The english provider bundle
 
