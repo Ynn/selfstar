@@ -64,14 +64,36 @@ Then select the "org.example.hello.service" package. Eventually, your configurat
 
 ![exporting the package]({#img#}/multiple-bundles/exportPackage2.png)
 
-
-
 ### Deployment
 
 You do not need to create any components. Deploy your project using the IDE. 
 
+You can check that the deployment has been successful using the [web console]({#link_web_console#}). If you search carefully, you will see that the "org.example.hello.service" package is exported by the bundle :
+
+![check exported package]({#img#}/multiple-bundles/checkExport.png)
 
 ## The english provider bundle
+This steps are appromatively the same than when you learned how to [use and provide services](/article/for-beginners/intro-service).
+
+
+### Import the service package
+
+You will need to import the package before using it. We will do that first. 
+
+Go and edit the "META-INF/MANIFEST.MF" files. 
+
+![import the package]({#img#}/multiple-bundles/importPackage1.png)
+
+
+
+
+Create a new iPOJO project called "hello.english.provider" and the use the same component definition :
+
+
+
+## Practice : the french provider
+
+Do the same for the french provider.
 
 ## The client bundle
 
