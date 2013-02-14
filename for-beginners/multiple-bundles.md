@@ -258,3 +258,14 @@ Bonjour client
 These firsts tutorial have shown you the basics to start pervasive application on OSGi. In the following tutorials, we will see how to play with devices and the iCASA simulator.
 
 </article>
+
+
+<aside markdown="1">
+### Download
+
++ The specification [project]({#bin#}/multiple-bundles/hello.service.zip) and [bundle]({#bin#}/multiple-bundles/hello.service.jar)
++ The english provider [project]({#bin#}/multiple-bundles/hello.provider.zip) and [bundle]({#bin#}/multiple-bundles/hello.provider.jar)
++ The french provider [project]({#bin#}/multiple-bundles/hello.french.provider.zip) and [bundle]({#bin#}/multiple-bundles/hello.french.provider.jar)
++ The client [project]({#bin#}/multiple-bundles/hello.client.zip) and [bundle]({#bin#}/multiple-bundles/hello.client.jar)
+
+</aside>
