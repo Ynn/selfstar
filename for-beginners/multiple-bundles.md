@@ -141,21 +141,21 @@ If you copy the code from your previous project, make sure that you set-up the i
 
 Make sure that you have created at least an instance and deploy.
 
-## Practice : the french provider
-
-Do the same for the french provider.
-
 ## The client bundle
 
 The process for building the client bundle is the same.
 
 Create a new project "hello.client".
 
-Import the package by using the MANIFEST.MF editor. Go to the "Dependency" tab. Then select the "org.example.hello.service" package. Eventually, your configuration will look like this :
+Import the package by using the MANIFEST.MF editor. Go to the "Dependency" tab. Then select and add the "org.example.hello.service" package in the exported Package :
 
 ![exporting the package]({#img#}/multiple-bundles/importPackage2.png)
 
 Create the HelloClient component and add a dependency to the Hello service. 
+
+![exporting the package]({#img#}/multiple-bundles/clientComponent.png)
+
+Make sure, you add start and stop method as "Component Lifecycle callbacks".
 
 The code is the same as before :
 
@@ -221,6 +221,40 @@ public class HelloClientImpl implements Runnable {
 }
 {/code}
 
-You can copy the class from the [previous tutorial](/article/for-beginners/intro-service) but make sure you select the implementation class in the "Component Type Implementation" panel. 
+You can copy the class from the [previous tutorial](/article/for-beginners/intro-service) but make sure to select the implementation class in the "Component Type Implementation" panel. 
+
+## Test 
+
+Deploy your project Client and check the result on the console. The result will be :
+
+{code lang=bash}
+New Provider language = en
+Hello Client Starting
+Hello client
+Hello client
+{/code}
+
+## Practice : the French provider
+
+Do the same for the French provider and reproduce the results from the previous tutorial.
+
+Try to deploy your components after the client has been started. Hopefully, you will get this result :
+
+{code lang=bash}
+New Provider language = en
+Hello Client Starting
+Hello client
+Hello client //...
+New Provider language = fr
+Hello client
+Bonjour client
+Hello client
+Bonjour client
+{/code}
+
+
+## Conclusion 
+
+These firsts tutorial have shown you the basics to start pervasive application on OSGi. In the following tutorials, we will see how to play with devices and the iCASA simulator.
 
 </article>
