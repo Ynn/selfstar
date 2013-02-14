@@ -23,6 +23,10 @@ A good practice is to always separate the interface from the client and from the
 
 This way we will be able to change each bundle without restarting the whole application (so as to add new providers for instance).
 
+{note}
+There is a balance to be found between over-dividing your applications and loosing dynamism. In this tutorial, the division is acceptable as the resulting application is made of only three bundles. For more complex application, we would probably regroup some classes.
+{/note}
+
 
 ## The specification bundle
 
@@ -89,6 +93,10 @@ Go and edit the "META-INF/MANIFEST.MF" files. Open the "Runtime" tab and in the 
 
 Then import the "org.example.hello.service" package and save.
 
+{note}
+If you don't find the package in the list, you probably did not deploy the specification bundle. Also check that the package is exported.
+{/note}
+
 ![import the package]({#img#}/multiple-bundles/importPackage2.png)
 
 Now you will be able to use the package in your bundle.
@@ -139,5 +147,80 @@ Do the same for the french provider.
 
 ## The client bundle
 
+The process for building the client bundle is the same.
+
+Create a new project "hello.client".
+
+Import the package by using the MANIFEST.MF editor. Go to the "Dependency" tab. Then select the "org.example.hello.service" package. Eventually, your configuration will look like this :
+
+![exporting the package]({#img#}/multiple-bundles/importPackage2.png)
+
+Create the HelloClient component and add a dependency to the Hello service. 
+
+The code is the same as before :
+
+{code lang=java}
+package org.example.hello.client;
+
+import org.example.hello.service.Hello;
+import java.util.Map;
+
+public class HelloClientImpl implements Runnable {
+
+	/** Field for helloServices dependency */
+	private Hello[] helloServices;
+
+	/** Bind Method for null dependency */
+	public void bindHello(Hello hello, Map properties) {
+		System.out.println("New Provider language = " + properties.get(Hello.PROP_LANG));
+	}
+
+	/** Unbind Method for null dependency */
+	public void unbindHello(Hello hello, Map properties) {
+		System.out.println("Provider leaving language = "
+				+ properties.get(Hello.PROP_LANG));
+	}
+
+	private void askProvidersToSayHello() {
+		for (int i = 0; i < helloServices.length; i++) {
+			helloServices[i].sayHello("client");
+		}
+	}
+
+	/**
+	 * When m_end is false and the component is started, the component ask
+	 * providers to say hello on a regular basis. When m_end is true, the thread
+	 * is stopped
+	 */
+	private boolean m_end = false;
+
+	/** Component Lifecycle Method */
+	public void start() {
+		Thread t = new Thread(this);
+		m_end = false;
+		t.start();
+	}
+
+	/** Component Lifecycle Method */
+	public void stop() {
+		m_end = true;
+	}
+
+	@Override
+	public void run() {
+		try {
+			while (!m_end) {
+				askProvidersToSayHello();
+				Thread.sleep(1000);
+			}
+		} catch (InterruptedException e) {
+			stop();
+		}
+	}
+
+}
+{/code}
+
+You can copy the class from the [previous tutorial](/article/for-beginners/intro-service) but make sure you select the implementation class in the "Component Type Implementation" panel. 
 
 </article>
