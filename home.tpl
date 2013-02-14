@@ -29,7 +29,7 @@
 						<p>We have	designed a	learning	environment	that	allows	students	to	develop, execute,	and	test pervasive	applications.	This	environment	represents	an	autonomic	pervasive computing	application	that	simulates	a	smart	home.	 A dedicated	IDE	(Integrated	development	environment) has	been designed	around	this,	which	allows	the	student	to	execute	autonomic	code in	a	runtime	simulation	that provides concrete,	visual	feedback of	the	behaviours	that	the	student	has	programmed.	We	believe	that	the	pervasive	domain	is	very	illustrative and	easy	to	grasp	for	students	in	computer	science.	Also,	it	characterizes requirements,	such	as	device	volatility,	evolving	QoS, mobility, environmental	change,	etc., that	often	motivate	self-management.</p>
 					</div>
 					<ul>
-						<li><a href="#">Read more</a></li>
+						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
 					</ul>
 				</div>
 			</div>
@@ -54,7 +54,7 @@
 In	order	to	allow	students	to	more	rapidly	focus	on	pervasive and autonomic	concepts,	we	have	developed	an	iPOJO	IDE	(Integrated	Development	Environment)	allowing	the	rapid	and	simplified	development	of	iPOJO	applications.	This	environment	provides	a	set	of	facilities	to	assist	the	developer	in the	creation	and	deployment	of	iPOJO	components.	In	particular,	a	number	of	classes	and	files	are	(partially)	generated.	Also,	deployment	can	be	fully	automated. </p>
 					</div>
 					<ul>
-						<li><a href="#">Read more</a></li>
+						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
 					</ul>
 				</div>
 			</div>
@@ -78,7 +78,7 @@ In	order	to	allow	students	to	more	rapidly	focus	on	pervasive and autonomic	conc
 						<p>OSGi supports the dynamic deployment of applications. In short, it means that you can easily install or update an application (or part of an application) at runtime without restarting the whole platform.</p>
 					</div>
 					<ul>
-						<li><a href="#">Read more</a></li>
+						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
 					</ul>
 				</div>
 			</div>
@@ -101,7 +101,7 @@ In	order	to	allow	students	to	more	rapidly	focus	on	pervasive and autonomic	conc
 environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	developed	in	the	context	of	the	Medical	project	(http://medical.imag.fr).	ICASA	is	based	on	OSGi	and	iPOJO	and	takes	advantage	of	their	versatility	and	dynamism.	iCASA	is	provided	as	a	set	of	modules	and	components	(e.g. bundles	and	iPOJO	components)	that	are	deployed	on	a	OSGi/iPOJO	framework.</p>
 					</div>
 					<ul>
-						<li><a href="#">Read more</a></li>
+						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
 					</ul>
 				</div>
 			</div>

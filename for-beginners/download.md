@@ -8,7 +8,7 @@
 This section explains how to set-up your environment for iCASA. You need to :
 
 1. [configure the Java environment](#java) iCASA requires a JDK 6 (JDK 7 is not supported).
-2. [download and install the IDE](#ide) (i.e. Eclipse + plugins). You can download a preconfigured eclipse or configure an existing one.
+2. [download and install the IDE](#ide) (i.e. Eclipse + plugins).
 3. [download the iCASA runtime](#runtime).
 
 </section>
@@ -32,29 +32,9 @@ After installing the JDK, you must set the JAVA_HOME environment variable to poi
 <section id="ide"  markdown="1"/>
 ##Install iCasa IDE 
 
-The IDE is provided as several Eclipse plugin. You can dowload a preconfigured Eclipse or install the plugins in an existing Eclipse.
+The IDE is provided as several Eclipse plugin. You can configure your own Eclipse environment. The IDE supports Juno or greater.
 
 {warning}iCASA requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater.{/warning}
-
-### Download a preconfigured Eclipse 
-
-We provide a preconfigured 32-bit Eclipse Juno. Download iCASA-IDE for your environment:
-
-+ Windows
-+ [MAC-OS]({#link_ide_mac#}) 
-+ [Linux]({#link_ide_linux#})
-
-To install extract the file in your working directory.
-
-The IDE is a standard Eclipse and is runned [like a normal Eclipse](http://wiki.eclipse.org/FAQ_How_do_I_run_Eclipse%3F).
-
-<h3 id="update-site"> Configure an existing Eclipse </h3> 
-
-You can configure your own Eclipse environment. The IDE supports Juno or greater.
-
-{note}
-If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
-{/note}
 
 To install the plugins in eclipse follow these steps :
 
@@ -67,12 +47,16 @@ To install the plugins in eclipse follow these steps :
 ![Alt text](img/downloads/download-ide3.png)
 5. Continue the standard installation procedure and finally restart your Eclipse to apply changes on the platform.
 
+{note}
+If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
+{/note}
+
 </section>
 
 <section id="runtime"  markdown="1"/>
 ##Download and configure the iCASA runtime
 
-1. Download and unzip in a your system the [iCASA runtime]({#link_runtime#}).
+1. Download and unzip in a your system the [iCASA runtime](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip).
 2. Run iCASA-IDE and select Window > Preferences ... from the main menu and go to iPojo preferences section.
 3. Click on Browse button and sets the iPojo installation directory using the directory created in step 1.
 4. Check "Add iCasa packages ...".
@@ -87,10 +71,7 @@ To install the plugins in eclipse follow these steps :
 ### Download links
 
 + **iCASA-IDE**: 
-	+ [update-site](#update-site)
-	+ Windows
-	+ [MAC-OS]({#link_ide_mac#}) 
-	+ [Linux]({#link_ide_linux#})	
-+ [**iCASA-runtime**]({#link_runtime#})
+	+ [update-site](#update-site)	
++ [**iCASA-runtime**](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip)
 
 </aside>
