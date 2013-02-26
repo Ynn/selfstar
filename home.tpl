@@ -10,32 +10,18 @@
 
 {block name=article}
 
-<div id="ca-container" class="ca-container">
-	<div class="ca-wrapper">
-		<div class="ca-item">
-			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(../img/home/home.png);"></div>
-				<h3>Build pervasive applications</h3>
-				<h4>
-					<span>Learn how to build pervasive applications step by step using the tutorials and the provided tools.</span>
-				</h4>
-					<a href="#" class="ca-more">more...</a>
-			</div>
-			<div class="ca-content-wrapper">
-				<div class="ca-content">
-					<h6>Learn to build pervasive applications</h6>
-					<a href="#" class="ca-close">close</a>
-					<div class="ca-content-text">
-						<p>We have designed a learning environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.</p>
+
+<div id="description" style="background : white; padding : 1em; margin : 2%;">
+
+<img src="../img/home/home.png" style="float:left; height : 100px; margin-right : 10px;"/>
+
+<p>We have designed a learning environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.</p>
  
 <p>The pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it is characterized by stringent requirements, like context-awareness or dynamicity, that motivate the introduction of self-management.</p>
-					</div>
-					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+</div>
+
+
+<div id="ca-container" class="ca-container">
 		<div class="ca-item">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(/img/hello-world/Generation.png);"></div>
