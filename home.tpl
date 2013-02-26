@@ -26,7 +26,9 @@
 					<h6>Learn to build pervasive applications</h6>
 					<a href="#" class="ca-close">close</a>
 					<div class="ca-content-text">
-						<p>We have	designed a	learning	environment	that	allows	students	to	develop, execute,	and	test pervasive	applications.	This	environment	represents	an	autonomic	pervasive computing	application	that	simulates	a	smart	home.	 A dedicated	IDE	(Integrated	development	environment) has	been designed	around	this,	which	allows	the	student	to	execute	autonomic	code in	a	runtime	simulation	that provides concrete,	visual	feedback of	the	behaviours	that	the	student	has	programmed.	We	believe	that	the	pervasive	domain	is	very	illustrative and	easy	to	grasp	for	students	in	computer	science.	Also,	it	characterizes requirements,	such	as	device	volatility,	evolving	QoS, mobility, environmental	change,	etc., that	often	motivate	self-management.</p>
+						<p>We have designed a learning environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.</p>
+ 
+<p>The pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it is characterized by stringent requirements, like context-awareness or dynamicity, that motivate the introduction of self-management.</p>
 					</div>
 					<ul>
 						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
