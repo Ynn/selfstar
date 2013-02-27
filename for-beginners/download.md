@@ -17,10 +17,10 @@ This section explains how to set-up your environment. Specifically, you need to 
 <section id = "java"  markdown="1">
 ## Configure your Java Environment
 
-Regardless of your operating system, you will need to install a [Java virtual machine (JVM)](http://en.wikipedia.org/wiki/Java_virtual_machine). Most available JVMs are supported but:
+Regardless of your operating system, you need to install a [Java virtual machine (JVM)](http://en.wikipedia.org/wiki/Java_virtual_machine). Most available JVMs are supported but:
 
 {warning}
-iCASA requires a Java 6 and does not support Java 7.
+Java 6 is required - Java 7 is not supported.
 {/warning}
 
 This is why, we advise you to download and install a [JDK 6 from Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html). [OpenJDK](http://openjdk.java.net/) is also supported.
