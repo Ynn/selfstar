@@ -8,14 +8,14 @@
 
 This section explains how to set-up your environment. Specifically, you need to :
 
-1. [configure your Java environment](#java) (JDK6 is required - JDK7 not supported!).
-2. [download and install the provided IDE](#ide) (i.e. Eclipse + plugins).
-3. [download the runtime](#runtime) (OSGI/iPOJO based).
+1. [configure your Java environment](#java) (JDK6).
+2. [download and install the provided IDE](#ide) (Eclipse).
+3. [download the runtime](#runtime) (OSGI/iPOJO).
 
 </section>
 
 <section id = "java"  markdown="1">
-## Configure the Java Environment
+## Configure your Java Environment
 
 Regardless of your operating system, you will need to install some [Java virtual machine (JVM)](http://en.wikipedia.org/wiki/Java_virtual_machine). 
 There are several competiting JVM available and iCASA is supported by the majority of them.
