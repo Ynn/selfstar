@@ -23,7 +23,7 @@ Regardless of your operating system, you need to install a [Java virtual machine
 Java 6 is required - Java 7 is not supported.
 {/warning}
 
-For instance, you may download and install a [JDK 6 from Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html). [OpenJDK](http://openjdk.java.net/) is also supported.
+For instance, you may download and install [Oracle JDK 6](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or [OpenJDK](http://openjdk.java.net/).
 
 After the JDK installation, you have to set the JAVA_HOME environment variable to point to the JDK installation directory. This depends on your operating system. 
 
