@@ -4,12 +4,13 @@
 
 
 <section  markdown="1">
-#Installing iCASA
-This section explains how to set-up your environment for iCASA. You need to :
+#Installing the working environment
 
-1. [configure the Java environment](#java) iCASA requires a JDK 6 (JDK 7 is not supported).
-2. [download and install the IDE](#ide) (i.e. Eclipse + plugins).
-3. [download the iCASA runtime](#runtime).
+This section explains how to set-up your environment. Specifically, you need to :
+
+1. [configure your Java environment](#java) (JDK6 is required - JDK7 not supported!).
+2. [download and install the provided IDE](#ide) (i.e. Eclipse + plugins).
+3. [download the runtime](#runtime) (OSGI/iPOJO based).
 
 </section>
 
