@@ -30,7 +30,10 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 </section>
 
 <section id="ide"  markdown="1"/>
-##Install iCasa IDE 
+##Install the IDE (Integrated Development Environment)
+
+Our IDE is based on Eclipse, augmented with a number of specific plugins. 
+
 
 The IDE is provided as several Eclipse plugin. You can configure your own Eclipse environment. The IDE supports Juno or greater.
 
