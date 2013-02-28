@@ -51,7 +51,7 @@ Our IDE is based on Eclipse, augmented with a number of specific plugins.
 
 The IDE is provided as several Eclipse plugin. You can configure your own Eclipse environment. The IDE supports Juno or greater.
 
-{warning}iCASA requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater.{/warning}
+{warning}iCASA requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater version.{/warning}
 
 To install the plugins in eclipse follow these steps :
 
