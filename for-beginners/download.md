@@ -6,7 +6,7 @@
 <section  markdown="1">
 #Installing your working environment
 
-The learning environment is made of three complementary tools (see figure):
+The learning environment is made of three integrated tools (see figure):
 
 + **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the Java applications.
 
