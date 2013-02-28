@@ -60,9 +60,9 @@ This is how to install the plugins:
 2. Click on Add Button and enter a name for the update site (i.e. iCasa Update Site), then enter the update site location {#link_update_site#}, finally click on OK button.
 ![Alt text](img/downloads/download-ide2.png)
 3. After a few seconds, the content of the update site is displayed under combo-box. Select the new update site.
-4. Selects all features shown in the list.
+4. Select all features shown in the list.
 ![Alt text](img/downloads/download-ide3.png)
-5. Continue the standard installation procedure and finally restart your Eclipse to apply changes on the platform.
+5. Continue the standard installation procedure and restart your Eclipse to apply changes.
 
 {note}
 If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
