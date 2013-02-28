@@ -43,6 +43,20 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 
 </section>
 
+</section>
+
+<section id="runtime"  markdown="1"/>
+## Download and configure the iCASA runtime
+
+1. Download and unzip in a your system the [iCASA runtime](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip).
+2. Run iCASA-IDE and select Window > Preferences ... from the main menu and go to iPojo preferences section.
+3. Click on Browse button and sets the iPojo installation directory using the directory created in step 1.
+4. Check "Add iCasa packages ...".
+![Alt text](img/downloads/download-icasa1.png)
+5. Finally, Click on OK button
+
+</section>
+
 <section id="ide"  markdown="1"/>
 ##Install the IDE (Integrated Development Environment)
 
@@ -65,19 +79,7 @@ This is how to install the plugins:
 If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
 {/note}
 
-</section>
 
-<section id="runtime"  markdown="1"/>
-##Download and configure the iCASA runtime
-
-1. Download and unzip in a your system the [iCASA runtime](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip).
-2. Run iCASA-IDE and select Window > Preferences ... from the main menu and go to iPojo preferences section.
-3. Click on Browse button and sets the iPojo installation directory using the directory created in step 1.
-4. Check "Add iCasa packages ...".
-![Alt text](img/downloads/download-icasa1.png)
-5. Finally, Click on OK button
-
-</section>
 
 </article>
 
