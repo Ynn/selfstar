@@ -4,16 +4,15 @@
 
 
 <section  markdown="1">
-#Installing the working environment
+#Installing your working environment
 
-Our learning environment is made of three complementary tools (see figure):
+The learning environment is made of three complementary tools (see figure):
 
-+ **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the pervasive applications developed by students.
++ **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the Java applications.
 
 + **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
-+ **A home simulator called iCASA**. This simulator is made of two synchronized parts: a GUI that can be run on any Web browser and a set of OSGi components running on the execution platform linked with the pervasive applications. 
-
++ **A smart home simulator called iCasa**. This simulator allows you to create a wide range of devices that can be used by your OSGi/iPOJO applications. It also permits the definition of scenario that can be played at various speeds. 
 
 <div style="margin:auto;width : 80%;"/>
 <img alt="the iCASA environment" src="{#img#}/getting-started/getting-started.png"/>
