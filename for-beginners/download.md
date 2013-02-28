@@ -8,9 +8,9 @@
 
 Our learning environment is made of three complementary tools (see figure):
 
-+ **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
-
 + **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the pervasive applications developed by students.
+
++ **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
 + **A home simulator called iCASA**. This simulator is made of two synchronized parts: a GUI that can be run on any Web browser and a set of OSGi components running on the execution platform linked with the pervasive applications. 
 
