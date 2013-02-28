@@ -23,8 +23,8 @@ The purpose of this section is to explain how to download the tools and set them
 Specifically, you need to :
 
 1. [configure your Java environment](#java) (JDK6).
-2. [download and install the provided IDE](#ide) (Eclipse).
-3. [download the runtime](#runtime) (OSGI/iPOJO).
+2. [download the runtime](#runtime) (OSGI/iPOJO + iCasa server).
+3. [download and install the provided IDE](#ide) (Eclipse).
 
 </section>
 
