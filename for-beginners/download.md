@@ -55,6 +55,8 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 ![Alt text](img/downloads/download-icasa1.png)
 5. Finally, Click on OK button
 
+To start the iCasa GUI : YOANN HELP !
+
 </section>
 
 <section id="ide"  markdown="1"/>
