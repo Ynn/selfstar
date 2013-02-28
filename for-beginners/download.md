@@ -53,7 +53,7 @@ The IDE is provided as several Eclipse plugin. You can configure your own Eclips
 
 {warning}iCASA requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater version.{/warning}
 
-To install the plugins in eclipse follow these steps :
+This is how to install the plugins:
 
 1. Run Eclipse and select Help > Install New Software... from the main menu.
 ![Alt text](img/downloads/download-ide1.png)
