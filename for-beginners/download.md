@@ -87,7 +87,7 @@ If you are behind proxies, you may need to configure your [Eclipse network confi
 <aside  markdown="1">
 ### Download links
 
-+ **iCASA-IDE**: 
++ **IDE**: 
 	+ [update-site](#update-site)	
 + [**iCASA-runtime**](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip)
 
