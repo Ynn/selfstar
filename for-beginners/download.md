@@ -8,7 +8,7 @@
 
 The learning environment is made of three integrated tools (see figure):
 
-+ **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the Java applications.
++ **An Execution platform based on OSGi and iPOJO**. This platform supports the dynamic execution of the Java applications. It also supports the execution of the iCasa simulator mentioned here after. 
 
 + **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
