@@ -59,7 +59,7 @@ This is how to install the plugins:
 ![Alt text](img/downloads/download-ide1.png)
 2. Click on Add Button and enter a name for the update site (i.e. iCasa Update Site), then enter the update site location {#link_update_site#}, finally click on OK button.
 ![Alt text](img/downloads/download-ide2.png)
-3. Wait for a few seconds until the content of the update site is displayed under combo-box. Select the new update site.
+3. After a few seconds, the content of the update site is displayed under combo-box. Select the new update site.
 4. Selects all features shown in the list.
 ![Alt text](img/downloads/download-ide3.png)
 5. Continue the standard installation procedure and finally restart your Eclipse to apply changes on the platform.
