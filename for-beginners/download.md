@@ -79,7 +79,7 @@ This is how to install the plugins:
 If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
 {/note}
 
-
+</section>
 
 </article>
 
