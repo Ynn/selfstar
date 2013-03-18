@@ -1,6 +1,6 @@
 <article markdown = "1"/>
 
-# Getting Started
+# Background
 
 Developing applications in the environment you have downloaded requires a minimum understanding of OSGi and iPOJO. The following articles contain some basic points that students should consider : 
 
