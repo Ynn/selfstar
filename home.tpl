@@ -10,10 +10,22 @@
 
 {block name=article}
 
-<div style="background : pink; border : blue 1px dashed;margin: 2%; padding: 0 1em 0 1em;">
-<h1 style="background : yellow"> Welcome </h1>
-<p>The association of pink with girls dates to the modern era, probably developing at different times in different countries. In 1856, it was reported that Napoleon III and Empress Eugénie of France prepared outfits with blue trimmings for the anticipated birth of a son, but their reasons were religious in that the son was to be dedicated to the Virgin Mary, whose traditional color was blue.[13] An 1868 American source, Louisa May Alcott's Little Women refers to French fashion's assignment of colors−"Amy put a blue ribbon on the boy and a pink on the girl, French fashion, so you can always tell [them apart]."−but it is unclear whether the French fashion was to use colors to distinguish between children or between boys and girls.[14] Before the 20th century, European countries varied, with some assigning colors based on the baby's complexion, and others assigning pink sometimes to boys and sometimes to girls.[15]
+<div id="introduction">
+<h3>Building pervasive application</h3>
 <p>
+This web site comes with the book “Autonomic Computing” authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.
+</p>
+<p> 
+Its purpose is to offer a Java-based learning environment in the domain of pervasive computing. Interested students then have the opportunity to develop a number of applications, in a robust, dedicated environment designed to explore various aspects of autonomic applications.
+ </p>
+
+<p>
+We believe that the pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it characterizes requirements, such as device volatility, mobility, environmental change, etc., that often motivate self-management.
+</p> 
+
+<p>
+We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike
+</p>
 </div>
 
 

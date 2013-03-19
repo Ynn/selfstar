@@ -1,5 +1,5 @@
 <section>
-<title>Getting Started</title>
+<title>Background</title>
 <description>This section presents the basics.</description>
 <link>/article/for-beginners/getting-started</link>
 <icon>{#img#}/getting-started/getting-started.png</icon>
