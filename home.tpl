@@ -11,7 +11,7 @@
 {block name=article}
 
 <div id="introduction">
-<h3>Building pervasive application</h3>
+<h1>Building pervasive application</h1>
 <p>
 This web site comes with the book “Autonomic Computing” authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.
 </p>
