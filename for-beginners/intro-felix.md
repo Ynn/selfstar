@@ -16,7 +16,7 @@ The purpose of this page is to provide a quick introduction to OSGi/Felix. Speci
 
 ## Starting the framework 
 
-Fist [install and set-up your environment](/article/general/download). 
+First [install and set-up your environment](/article/general/download). 
 
 Then copy the iCASA runtime into an accessible directory. In this tutorial, we assume that you will use {$workdir}.
 
