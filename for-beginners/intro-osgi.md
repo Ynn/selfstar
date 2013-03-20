@@ -77,6 +77,8 @@ However, managing dynamism at the application level is hard and result in comple
 
 </article>
 
+{section_links}
+
 <aside  markdown="1">
 
 ### Bibliography
@@ -85,6 +87,5 @@ More information about OSGi can be found in:
 
 + OSGi in action by R. Hall, K. Pauls, S. McCulloch, D. Savaga, Manning, 2012.
 + [the OSGi specification](http://www.osgi.org/Specifications/HomePage)
-
 
 </aside>

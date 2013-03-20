@@ -8,7 +8,6 @@
 
 {block name=article}
 
-<!--
 
 {assign var=sectionNames value=["for-beginners","first-applications"]}
 
@@ -50,7 +49,6 @@
 </div>
 
 
--->
 
 {/block}
 

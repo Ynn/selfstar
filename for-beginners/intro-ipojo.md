@@ -171,6 +171,8 @@ In the [next section](?p=component-properties&s=introduction), you will learn ho
 
 </article>
 
+{section_links}
+
 <aside markdown="1">
 ### Bibliography
 

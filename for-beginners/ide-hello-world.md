@@ -180,6 +180,8 @@ In the [next section](/article/for-beginners/component-properties), you will lea
 
 </article>
 
+{section_links}
+
 <aside markdown="1">
 ### Download
 

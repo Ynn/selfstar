@@ -259,6 +259,7 @@ These firsts tutorial have shown you the basics to start pervasive application o
 
 </article>
 
+{section_links}
 
 <aside markdown="1">
 ### Download

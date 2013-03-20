@@ -1,6 +1,6 @@
 <article markdown = "1"/>
 
-# Background
+# Background 
 
 The learning environment is made of three integrated tools (see figure):
 
@@ -33,3 +33,6 @@ The environment also includes an IDE facilitating the development and deployment
 + [Dividing an application into multiple bundles](/article/for-beginners/multiple-bundles): This article elaborates on the  "Hello World" and separates out the component providing services from those using services. It defines three bundles (specification, client and provider) and shows how to configure the dependencies between these bundles.
 
 </article>
+
+
+{section_links}

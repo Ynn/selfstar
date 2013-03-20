@@ -1,4 +1,4 @@
-<article markdown="1">
+<article markdown="1" class="single-column">
 
 # About
 

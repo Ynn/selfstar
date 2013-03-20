@@ -475,7 +475,7 @@ More to do :
 
 </article>
 
-
+{section_links}
 
 <aside markdown="1">
 ### Download

@@ -104,6 +104,8 @@ Properties provides an handy way to configure the different component instances.
 
 </article>
 
+{section_links}
+
 <aside markdown="1">
 ### Download
 
