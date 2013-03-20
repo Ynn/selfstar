@@ -11,4 +11,7 @@ We believe that the pervasive domain is very illustrative and easy to grasp for 
 We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike
 
 
+<iframe src="http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html"></iframe>
+
+
 </article>

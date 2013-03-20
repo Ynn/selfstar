@@ -9,9 +9,9 @@
 The purpose of this section is to explain how to download the tools and set them up. 
 Specifically, you need to :
 
-1. [configure your Java environment](#java) (JDK6).
-2. [download the runtime](#runtime) (OSGI/iPOJO + iCasa server).
-3. [download and install the provided IDE](#ide) (Eclipse).
+1. [configure your Java environment](/article/general/download#java) (JDK6).
+2. [download the runtime](/article/general/download#runtime) (OSGI/iPOJO + iCasa server).
+3. [download and install the provided IDE](/article/general/download#ide) (Eclipse).
 
 </section>
 
@@ -35,23 +35,35 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 <section id="runtime"  markdown="1"/>
 ## Download and configure the iCASA runtime
 
-1. Download and unzip in a your system the [iCASA runtime](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip).
-2. Run iCASA-IDE and select Window > Preferences ... from the main menu and go to iPojo preferences section.
-3. Click on Browse button and sets the iPojo installation directory using the directory created in step 1.
-4. Check "Add iCasa packages ...".
-![Alt text](img/downloads/download-icasa1.png)
-5. Finally, Click on OK button
 
-To start the iCasa GUI : YOANN HELP !
+### Download the runtime
+
+Download and unzip the [iCASA runtime teaching distribution]()). You can rename the directory if you want.
+
+iCASA runtime is a customized felix distribution. To start the framework, use the start scripts. See [the introduction to felix](/article/for-beginners/intro-felix) to learn more on felix.
+
+{note}
+You can have and use as many iCASA distribution as you want. You only need to rename the directory.
+However, *you should not run two instance of iCASA at the same time* on the same computer. There will be network conflicts otherwise.
+{/note}
+
+###Web Server Part Launch
+Go to the root of your iCASA runtime directory.
+
+Execute startGUI script on Unix systems or startGUI.bat script on Windows systems.
+
+By default, the web server port is set to 9000. The simulator home page is available at <http://localhost:9000/>
+
 
 </section>
 
 <section id="ide"  markdown="1"/>
-##Install the IDE (Integrated Development Environment)
+##Install the iCASA IDE (Integrated Development Environment)
 
-Our IDE is based on Eclipse, augmented with a number of specific plugins. 
+### Installation
+iCASA IDE is based on Eclipse, augmented with a number of specific plugins. 
 
-{warning}iCASA requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater version.{/warning}
+{warning}iCASA IDE requires [Eclipse Juno](http://www.eclipse.org/downloads/) (4.2.1) or greater version.{/warning}
 
 This is how to install the plugins:
 
@@ -68,6 +80,20 @@ This is how to install the plugins:
 If you are behind proxies, you may need to configure your [Eclipse network configuration](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Freference%2Fref-net-preferences.htm) before installing.
 {/note}
 
+###Configuration
+
+1. Run iCASA-IDE and select Window > Preferences ... from the main menu and go to iPojo preferences section.
+2. Click on Browse button and sets the iCASA runtime root directory (the directory where you unzipped iCASA)
+3. Check "Add iCasa packages ...".
+![Alt text](img/downloads/download-icasa1.png)
+4. Finally, Click on OK button
+
+{note}
+The configuration is associated to one workspace. 
+
+If you use different distribution of iCASA (or the same version but in different directories), you will have to reconfigure your workspace and restart Eclipse.s
+{/note}
+
 </section>
 
 </article>
@@ -76,7 +102,7 @@ If you are behind proxies, you may need to configure your [Eclipse network confi
 ### Download links
 
 + **IDE**: 
-	+ [update-site](#update-site)	
-+ [**iCASA-runtime**](http://repository-icasa.forge.cloudbees.com/release/fr/liglab/adele/icasa/icasa.teaching.distribution/0.0.1/icasa.teaching.distribution-0.0.1.zip)
+	+ [update-site](/article/general/download#ide)	
++ [**iCASA-runtime**](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/download.html)
 
 </aside>
