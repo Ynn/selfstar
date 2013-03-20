@@ -8,9 +8,9 @@
 
 {block name=article}
 
+<!--
+
 {assign var=sectionNames value=["for-beginners","first-applications"]}
-
-
 
 
 <div id="ca-container" class="ca-container">
@@ -50,9 +50,11 @@
 </div>
 
 
-
+-->
 
 {/block}
+
+
 
 
 {block name=script}

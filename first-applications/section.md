@@ -1,7 +1,8 @@
 <section>
-<title>Context Aware Applications</title>
-<description>Learn to write your first context aware applications</description>
+<title>Background</title>
+<description>This section presents the basics.</description>
 <link>/article/for-beginners/getting-started</link>
+<icon>{#img#}/getting-started/getting-started.png</icon>
 <toc>
 Execution platform: 
 
@@ -9,18 +10,12 @@ Execution platform:
 + [Basics about Felix](/article/for-beginners/intro-felix) 
 + [Basics about iPOJO](/article/for-beginners/intro-ipojo) 
 
-IPOJO IDE:
+iCASA IDE:
 
 + [An Hello world iPOJO component](/article/for-beginners/ide-hello-world) 
-+ [Use iPOJO component properties](/article/for-beginners/component-properties)
-+ [A service based Hello World](/article/for-beginners/intro-services)
-+ [Application made of multiple bundles](/article/for-beginners/multiple-bundles)
-
-ICASA simulator:
-
-+ [Learn to act on devices](#)
-+ [Sense device modifications](#)
-+ [Writing a simple Follow-Me with iCasa](/article/for-beginners/basic-follow-me)
++ [Component configuration properties](/article/for-beginners/component-properties)
++ [Providing and using services](/article/for-beginners/intro-services)
++ [Using multiple bundles](/article/for-beginners/multiple-bundles)
 
 </toc>
 </section>
