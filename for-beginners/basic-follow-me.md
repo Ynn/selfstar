@@ -1,74 +1,107 @@
+{assign var="workdir" value="{#dir_runtime_wks#}/iCASA"}
 
 <article markdown="1">
 
 # A basic light follow me
-
 In this introduction we will create a basic light follow me with ICASA. 
+
+This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [background section](/article/for-beginners/getting-started) for a refresher.
+
 
 ## What is a follow me ?
 
 A follow me is a a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
 Here the goal is to make the light follows the users.
 
+This project uses the iCASA simulated binary lights.
+
+
 ## Step by step follow me 
+
+### Installation and configuration
+
+First [install and set-up your environment](/article/general/download). 
+
+Then copy the iCASA runtime into an accessible directory. In this tutorial, we assume that you will use {$workdir}.
+
+You will need to configure the IDE to work with that particular distribution (see [how to configure iCASA IDE](/article/general/download#ide))
+
 
 ### Project creation and skeleton generation
 
-You need to create and generate the skeleton of the unique class of your application. To do so follow these steps :
+Open the iCASA-IDE.
 
-1. Create a new iPOJO project.
+This application will contains an unique class. To generate the skeleton of the class follow these steps :
+
+1. Create a new iPOJO project called BinaryLightFollowMe.
 ![iPOJO project creation](img/basic-follow-me/create_project.png)
-2. Create a new component "Follow".
+
+2. Open the metadata.xml file with the iPOJO Metadata Editor. The IDE is described in details in the [background section](/article/for-beginners/getting-started). See for instance [the hello world example](/for-beginners/basic-hello-world)
+![iPOJO project creation](img/basic-follow-me/metadataxml.png)
+
+
+3. Create a new component BinaryFollowMe. Open the metadata.xml file with the iPOJO Metadata Editor. To do so, click add then rename the component.
 ![iPOJO project creation](img/basic-follow-me/new_component.png)
-3. Add to service dependencies (required services) multiple and optional :
-    - one dependency to BinaryLight, with a field <code>binaryLights</code> and (un)bind method (un)bindBinaryLight
-    - one dependency to PresenceSensor with a field <code>presenceSensors</code> and (un)bind method (un)bindPresenceSensor
+
+4. Add to service dependencies (required services) multiple and optional (see [iPOJO introduction](/article/for-beginners/intro-ipojo) and [how to use services](/article/for-beginners/intro-services) to learn more on dependencies):
+    - one dependency to BinaryLight, with a field <code>binaryLights</code> and (un)bindBinaryLight methods
+![iPOJO project creation](img/basic-follow-me/bindBinaryLights.png)    
+    - one dependency to PresenceSensor with a field <code>presenceSensors</code> and (un)bindPresenceSensor methods
 ![iPOJO project creation](img/basic-follow-me/create_required.png)
-4. Add to new methods start and validate.
+
+5. Add to new methods start and validate.
 ![iPOJO project creation](img/basic-follow-me/create_lifecycle.png)
-5. Generate the class. Make sure you add a package. We will use the package follow.me. 
+
+6. Generate the class. Make sure you add a package. We will use the package follow.me. 
 ![iPOJO project creation](img/basic-follow-me/generate_class.png)
 
 Hopefully you will have a skeleton like this :
 
 {code}
-package follow.me;
+package com.example.binary.follow.me;
 
 import fr.liglab.adele.icasa.device.light.BinaryLight;
 import fr.liglab.adele.icasa.device.presence.PresenceSensor;
+import java.util.Map;
 
-public class FollowMeImpl {
+public class BinaryLightFollowMeImpl {
 
-    /** Bind Method for binaryLights dependency */
-    public void bindBinaryLight(BinaryLight binaryLights) {
-        // TODO: Add your implementation code here
-    }
+  /** Field for binaryLights dependency */
+  private BinaryLight[] binaryLights;
 
-    /** Unbind Method for binaryLights dependency */
-    public void unbindBinaryLight(BinaryLight binaryLights) {
-        // TODO: Add your implementation code here
-    }
+  /** Field for presenceSensors dependency */
+  private PresenceSensor[] presenceSensors;
 
-    /** Bind Method for presenceSensors dependency */
-    public void bindPresenceSensor(PresenceSensor presenceSensors) {
-        // TODO: Add your implementation code here
-    }
+  /** Bind Method for null dependency */
+  public void bindBinaryLight(BinaryLight binaryLight, Map properties) {
+     // TODO: Add your implementation code here
+  }
 
-    /** Unbind Method for presenceSensors dependency */
-    public void unbindPresenceSensor(PresenceSensor presenceSensors) {
-        // TODO: Add your implementation code here
-    }
+  /** Unbind Method for null dependency */
+  public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
+     // TODO: Add your implementation code here
+  }
 
-    /** Component Lifecycle Method */
-    public void stop() {
-        // TODO: Add your implementation code here
-    }
+  /** Bind Method for null dependency */
+  public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+     // TODO: Add your implementation code here
+  }
 
-    /** Component Lifecycle Method */
-    public void start() {
-        // TODO: Add your implementation code here
-    }
+  /** Unbind Method for null dependency */
+  public void unbindPresenceSensor(PresenceSensor presenceSensor,
+    Map properties) {
+     // TODO: Add your implementation code here
+  }
 
+  /** Component Lifecycle Method */
+  public void stop() {
+     // TODO: Add your implementation code here
+  }
+
+  /** Component Lifecycle Method */
+  public void start() {
+     // TODO: Add your implementation code here
+  }
 }
 {/code}
 
@@ -78,72 +111,66 @@ First we need to add the fields binaryLights and presenceSensors :
 
 {code lang="java"}
 {literal}
+/** List containing all the lights in the house */
+private List listBinaryLights;
 
-/**
- * A list containing all the light in the Home :
- */
-List<BinaryLight> binaryLights = new ArrayList<BinaryLight>();
-
-/**
- * A list containing all the presence sensors in the Home :
- */
-List<PresenceSensor> presenceSensors = new ArrayList<PresenceSensor>();
-
-
+/** Map containing all the presenceSensors in the house (SerialNumber/PresenceSensor) */
+private Map mapPresenceSensors;
 {/literal}
 {/code}
 
 
-Now we can complete the code of binding and unbinding methods by adding or removing devices from their respective lists.
+Now we can complete the code of binding and unbinding methods by adding or removing devices from their respective collection.
 
 {code lang="java"}
 {literal}        
-
-/** Bind Method for binaryLights dependency */
-public void bindBinaryLight(BinaryLight binaryLight) {
-	//Add the light to the list of lights :
-	binaryLights.add(binaryLight);	
-	System.out.println("Add the light "+ binaryLight);
+/** Bind Method for null dependency */
+public void bindBinaryLight(BinaryLight binaryLight, Map properties) {
+   System.out.println("bind binary light "+ binaryLight.getSerialNumber());
+   listBinaryLights.add(binaryLight);
 }
 
-/** Unbind Method for binaryLights dependency */
-public void unbindBinaryLight(BinaryLight binaryLight) {
-    //Remove the light from the list of lights :
-	binaryLights.remove(binaryLight);
-    System.out.println("Remove the light "+ binaryLight);
+/** Unbind Method for null dependency */
+public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
+   System.out.println("unbind binary light "+ binaryLight.getSerialNumber());
+   listBinaryLights.remove(binaryLight);
 }
 
-/** Bind Method for presenceSensors dependency */
-public void bindPresenceSensor(PresenceSensor presenceSensor) {
-    //Add the sensor to the list of sensors :
-	presenceSensors.add(presenceSensor);
-	System.out.println("Add the sensor "+ presenceSensor);
+/** Bind Method for null dependency */
+public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+   System.out.println("bind presence sensor "+ presenceSensor.getSerialNumber());
+   mapPresenceSensors.put(presenceSensor.getSerialNumber(), presenceSensor);
 }
 
-/** Unbind Method for presenceSensors dependency */
-public void unbindPresenceSensor(PresenceSensor presenceSensor) {
-    //Remove from the sensor to the list of sensors :
-	presenceSensors.remove(presenceSensor);
-	System.out.println("Remove the sensor "+ presenceSensor);
+/** Unbind Method for null dependency */
+public void unbindPresenceSensor(PresenceSensor presenceSensor,
+    Map properties) {
+   System.out.println("Unbind presence sensor "+ presenceSensor.getSerialNumber());
+   mapPresenceSensors.remove(presenceSensor.getSerialNumber());
 }
-  
 {/literal}
 {/code}
 
 ### Lifecycle methods
 
-To check an instance of our component is created, we add to message in the lifecyle methods : start and stop.
+The map and the list will be initialized/reseted in the lifecycle methods. See the [hello world tutorial](/article/for-beginners/basic-hello-world) to learn more on lifecycle methods.
+
+Moreover, to check an instance of our component is created, we add to message in the lifecyle methods : start and stop.
 
 {code lang="java"}
 {literal} 
 /** Component Lifecycle Method */
 public void stop() {
-	System.out.println("The follow me is stopping");
+   System.out.println("Component is stopping...");
+   listBinaryLights = null;
+   mapPresenceSensors = null;
 }
 
 /** Component Lifecycle Method */
 public void start() {
-	System.out.println("The follow me is starting");
+   System.out.println("Component is starting...");
+   listBinaryLights = new ArrayList();
+   mapPresenceSensors = new HashMap();
 }
 {/literal}
 {/code}
@@ -182,8 +209,9 @@ If you don't see the lifecycle messages, you must have done something wrong. Ret
 
 Now we can check the binding/unbinding methods :
 
-+ Start it again
-+ Go to <http://localhost:8080/simulator> 
++ Put the SetupEnvironmentsBinaryFollowMe.bhv file in the load directory of your iCASA runtime.
++ Start iCASA runtime and the simulator
++ Go to <http://localhost:9000> 
 + Click on "Scenarios and Scripts" then "install" in "iCASA Scenarios".
 + Check that the application has seen the light. It should start writing message in the console.
 
@@ -192,7 +220,7 @@ If the applications prints no message when adding the devices, check your code a
 {/warning}
 
 
-### Master notifications and detect the changes
+### Manage notifications and detect modifications
 
 So let us get down to the substance.
 
@@ -200,7 +228,9 @@ We will try to be notified when something is modified.
 
 #### The DeviceListener interface
 
-Let's start with the sensors. We will implement a DeviceListener.
+Let's start with the sensors. 
+
+In order to be notified when something is modified in the environment, we must implement a DeviceListener.
 
 {note}
 **DeviceListener :** The DeviceListener interface allows to get notification when a device change.
@@ -209,11 +239,11 @@ Let's start with the sensors. We will implement a DeviceListener.
 
 There is four ways to implement it. 
 
-First, you can make the main class (FollowMeImpl) implements the interface :
+First, you can make the main class (BinaryLightFollowMeImpl) implements the interface :
 
 {code lang="java"}
 {literal}     
-             public class FollowMeImpl implements DeviceListener{
+public class BinaryLightFollowMeImpl implements DeviceListener{ //..
 {/literal}
 {/code}
 
@@ -224,13 +254,13 @@ Second, you can define a new private inner class.
  
 {code lang="java"}
 {literal}          
-public class FollowMeImpl {
+public class BinaryLightFollowMeImpl {
 ...
 public class PresenceSensorListener implements DeviceListener{
 
     @Override
-    public void notifyDeviceEvent(String serialNumber) {
-
+	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+		/...
     }
 ...
 }
@@ -242,44 +272,68 @@ Third, you can use a anonymous class. This solution lets less control but ensure
 Finally, you can create a separate class but this class will need to have access to the device lists. It requires a little more code to work. This solution is suitable if your main class is big and you don't want to add more code.
 
         	
-In the following we will use an inner class. Let's start by printing something when a sensor changes its state :
+In the following we will use the first solution.
 
 {code lang="java"}
 {literal} 
-public static class PresenceSensorListener implements DeviceListener{
+public class BinaryLightFollowMeImpl implements DeviceListener
+{/literal}
+{/code}
 
-    @Override
-    public void notifyDeviceEvent(String deviceSerialNumber) {
-    	System.out.println("The device with the serial number "+ deviceSerialNumber+ " has changed");
+To start, we can print something when a presence sensor detects something (presence or not) :
+
+{code lang="java"}
+{literal}    
+public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+    //We are only interested by presence sensors :
+    if(device instanceof PresenceSensor) {
+        //get the presence sensor :
+        PresenceSensor activSensor = mapPresenceSensors.get(device.getSerialNumber());
+        //if the sensor is active 
+	        if(activSensor != null){
+	        	//and the presence sensor has detected something :
+		        if(propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)){
+		        	System.out.println("The device with the serial number"
+						+activSensor.getSerialNumber()+" has changed");
+					System.out.println("This sensor is in the room :"
+						+ activSensor..getPropertyValue("location"));	
+		        }
+	        }
     }
-
 }
 {/literal}
 {/code}
 
-Now we can create a new listener field and instantiate it. 
+The PRESENCE_SENSOR_SENSED_PRESENCE property value change every time the detection change from detected to undetected and reciprocally
 
+
+Each type device has a different set of properties. The value of these properties can be set or retrieved by using a key string (e.g, "location"). This work exactly like service properties. This mechanism allow each type of devices to define their own properties. 
+
+To avoid magic string, some of the properties are defined directly by the interface (e.g., PRESENCE_SENSOR_SENSED_PRESENCE is defined in the PresenceSensor interface). Some are not (e.g., location).
+
+In the following, we  define a constant LOCATIONPROPERTYNAME for the "location" property :
 {code lang="java"}
-{literal}     
-            private final PresenceSensorListener presenceSensorListener = new PresenceSensorListener();
- {/literal}
+{literal} 
+public static String LOCATIONPROPERTYNAME = "Location";
+{/literal}
 {/code}
 
-#### Managing presence sensors' notification
+#### Registering the listener
 
-We need to attach this new listener to the interesting devices (in our case all the presence sensors). 
-This is done in the bind method :
+{note}
+A DeviceListener has to be attached to a device in order to receive notification.
+{/note}
+
+We thus need to attach this new listener to the interesting devices (in our case all the presence sensors). 
+This is done in the bind method of presence sensors :
 
 {code lang="java"}
 {literal}     
-/** Bind Method for presenceSensors dependency */
-public void bindPresenceSensor(PresenceSensor presenceSensor) {
-	//Add the sensor to the sensors list
-	presenceSensors.add(presenceSensor);
-	System.out.println("Add the sensor "+ presenceSensor);
-	
-	//Add the listener :
-	presenceSensor.addListener(presenceSensorListener);
+/** Bind Method for null dependency */
+public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+   //register the listener :
+   presenceSensor.addListener(this);
+   mapPresenceSensors.put(presenceSensor.getSerialNumber(), presenceSensor);
 }
 {/literal}
 {/code}
@@ -288,19 +342,17 @@ We can also unregister the listener when the sensor is leaving :
 
 {code lang="java"}
 {literal}      
-/** Unbind Method for presenceSensors dependency */
-public void unbindPresenceSensor(PresenceSensor presenceSensor) {
-	//Remove the sensor from the list of sensors
-	presenceSensors.remove(presenceSensor);
-	System.out.println("Remove the sensor"+ presenceSensor);
-	
-	presenceSensor.removeListener(presenceSensorListener);
+/** Unbind Method for null dependency */
+public void unbindPresenceSensor(PresenceSensor presenceSensor,
+    Map properties) {
+   //unregister the listener :
+   presenceSensor.removeListener(this);
+   mapPresenceSensors.remove(presenceSensor.getSerialNumber());
 }
 {/literal}
 {/code}
 
-In this particular case, this is not really mandatory because the device is leaving and the listener will be unregisterd anyway.
-However it is a good practice to do it. 
+You could think that in this particular case, this is not really mandatory. Indeed, the device is leaving and thus the listener will be unregistered anyway. However it is a good practice to always unregister the listeners. 
 
 #### Testing that we get the notifications
 
@@ -310,105 +362,39 @@ Now we can test that the notifications work :
 + create a simulated user and then place it in a room using the select box.
 + move the user in a room where there is a detector.
 + If all is ok, you see a message like this one :          
-{code}
-The device with the serial number SekuSensor-AAA-20119215-S has changed
+{code lang=bash}
+The device with the serial number SekuSensor-AAA-20119215-S has changed.
+This sensor is in the room : kitchen
 {/code}
 
 {warning}
 If this don't work, check that your listener is correctly registered and created. Also check that there is a presence sensor in the room.
 {/warning}
     
-### Managing the lights
-
-Now that we can get notifications, we can modify the state of the lights.
-
-But before that we need to get the corresponding presence sensor. To do so we need to implement a method to get notifications :
-
-
-#### Finding the corresponding presence sensor
-{code lang="java"}
-{literal}    
-/**
- * Get the presence sensor with the given serial number
- * @param deviceSerialNumber : the given serial number
- * @return the corresponding presence sensor or null if not found.
- */
-public PresenceSensor getPresenceSensor(String deviceSerialNumber){
-	for (PresenceSensor sensor : presenceSensors) {
-		if (sensor.getSerialNumber().equals(deviceSerialNumber)){
-			return sensor;
-		}
-	}
-	return null;
-}
-{/literal}
-{/code}
-
-
-Then we can use this method in the PresenceSensorListener :
-
-{code lang="java"}
-{literal}  
-@Override
-public void notifyDeviceEvent(String deviceSerialNumber) {
-    System.out.println("The device with the serial number "+ deviceSerialNumber+ " has changed");
-
-    PresenceSensor sensor = getPresenceSensor(deviceSerialNumber);
-    if(sensor!=null){
-    	String location = sensor.getLocation();
-    	System.out.println("This sensor is in the room : " + sensor.getLocation());
-    }
-}
-{/literal}
-{/code}
-
-
-If you test again, you should have a result like this one:
- 
- {code}           
-            The device with the serial number SekuSensor-AAA-20119215-S has changed
-            This sensor is in the room : kitchen
- {/code}
-
 #### Finding the lights in the same room
 
-Here again we need to implement a search method :
+To be able to switch on or off the light, we need to find the light in the rooms where a presence has been detected.
+
+To do so, we implement a search method :
 
 {code lang="java"}
 {literal} 
 /**
- * Return the lights in the given location 
- * @param location :  the given location
- * @return the lights of this location
- */
-public List<BinaryLight> getBinaryLightFromLocation(String location){
-	List<BinaryLight> ligths = new ArrayList<BinaryLight>();
-	for (BinaryLight binaryLight : binaryLights) {
-		if(binaryLight.getLocation().equals(location)){
-			ligths.add(binaryLight);
-		}
+Return all the binary lights from a given location
+@param location
+@return List of BinaryLights
+*/
+private List<BinaryLight> getBinaryLightFromLocation(String location) {
+	List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
+	for(BinaryLight binaryLight : listBinaryLights) {
+	   if(binaryLight.getPropertyValue(LOCATIONPROPERTYNAME).equals(location)) {
+	       binaryLightsLocation.add(binaryLight);
+	   }
 	}
-	return ligths;
+	return binaryLightsLocation;
 }
 {/literal}
 {/code}
-
-We can now print a message showing the number of lights in the room :
-
-{code lang="java"}
-{literal} 
-System.out.println("The device with the serial number "+ deviceSerialNumber+ " has changed");
-PresenceSensor sensor = getPresenceSensor(deviceSerialNumber);
-if(sensor!=null){
-	String location = sensor.getLocation();
-    System.out.println("This sensor is in the room : " + sensor.getLocation());
-	List<BinaryLight> ligths = getBinaryLightFromLocation(location);	
-	System.out.println("There are "+ ligths.size()+ " lights in "+ location);
-}
-{/literal}
-{/code}
-
-You can test if it works.
 
 #### Modifying the state of lights
 
@@ -417,39 +403,26 @@ Finally we will test the state of the sensor (presence or not) and change the li
 
 {code lang="java"}
 {literal} 
-public class PresenceSensorListener implements DeviceListener{
-
-		@Override
-		public void notifyDeviceEvent(String deviceSerialNumber) {
-            System.out.println("The device with the serial number "+ deviceSerialNumber+ " has changed");
-			PresenceSensor sensor = getPresenceSensor(deviceSerialNumber);
-			if(sensor!=null){
-				String location = sensor.getLocation();
-                System.out.println("This sensor is in the room : " + sensor.getLocation());
-				List<BinaryLight> ligths = getBinaryLightFromLocation(location);	
-                System.out.println("There are "+ ligths.size()+ " lights in "+ location);
-				
-				//Check of the sensor :
-				System.out.println("Presence ? " + sensor.getSensedPresence());
-				if(sensor.getSensedPresence()){
-					//If the user is in the room :
-					for (BinaryLight binaryLight : ligths) {
-						//switch on the lights
-						binaryLight.setPowerStatus(true);
-						System.out.println("switch on "+ binaryLight.getSerialNumber());
-					}
-				}else{
-					//else if the user left the room:
-					for (BinaryLight binaryLight : ligths) {
-						//switch off the lights :
-						binaryLight.setPowerStatus(false);
-						System.out.println("switch off "+ binaryLight.getSerialNumber());
-					}
-				}
-			}
-		}
-		
-	}
+public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+    if(device instanceof PresenceSensor) {
+        PresenceSensor activSensor = mapPresenceSensors.get(device.getSerialNumber());
+        if(activSensor != null){
+        	if(propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)){
+	            String detectorLocation = (String) activSensor
+	            					.getPropertyValue(LOCATION_PROPERTY_NAME);
+	            
+	            //check the location exist :
+	            if(!detectorLocation.equals(LOCATION_UNKNOW)) {
+	                List sameLocationLights = getBinaryLightFromLocation(detectorLocation);
+	                for(BinaryLight binaryLight : sameLocationLights) {
+	                    //change the value of the light :
+	                    binaryLight.setPowerStatus(!(Boolean) oldValue);
+	                }
+	            }
+	        }
+        }
+    }
+}
 {/literal}
 {/code}
 
@@ -470,8 +443,7 @@ To add new sensors in the iCASA interface:
     
 More to do :
 
-+ This code does not manage the concurrency. Try to implement it. You can check the [correction](#TODO) [TODO] if needed.
-
++ This code does not manage the concurrency. Try to implement it. 
 
 </article>
 
@@ -480,7 +452,7 @@ More to do :
 <aside markdown="1">
 ### Download
 
-+ Download the [workspace](bin/eclipse-32-linux.tar.gz)
++ Download the [project](bin/BinaryFollowMe_V1.0.zip)
 
 </aside>
 

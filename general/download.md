@@ -100,9 +100,6 @@ If you use different distribution of iCASA (or the same version but in different
 
 <aside  markdown="1">
 ### Download links
-
-+ **IDE**: 
-	+ [update-site](/article/general/download#ide)	
-+ [**iCASA-runtime**](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/download.html)
-
++ [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
++ [iCASA-runtime website](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/download.html)
 </aside>
