@@ -2,7 +2,7 @@
 
 <article markdown="1">
 
-# A basic light follow me
+# Quick Start : Writing a follow me
 In this introduction we will create a basic light follow me with ICASA. 
 
 This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [background section](/article/for-beginners/getting-started) for a refresher.
