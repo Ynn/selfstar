@@ -1,6 +1,6 @@
 <article markdown = "1"/>
 
-# Background 
+# Getting Started 
 
 The learning environment is made of three integrated tools (see figure):
 
