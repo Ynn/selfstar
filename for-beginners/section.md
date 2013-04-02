@@ -17,6 +17,9 @@ iCASA IDE:
 + [Providing and using services](/article/for-beginners/intro-services)
 + [Using multiple bundles](/article/for-beginners/multiple-bundles)
 
-[iCASA simulator documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
+iCASA simulator :
+
++ [documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
+
 </toc>
 </section>

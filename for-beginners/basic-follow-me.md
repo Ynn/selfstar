@@ -454,6 +454,7 @@ More to do :
 
 </aside>
 
+{*
 <aside  markdown="1">
 ### Download iCASA
 + [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
@@ -461,6 +462,5 @@ More to do :
 </aside>
 
 {section_links}
-
-
+*}
 
