@@ -99,7 +99,7 @@ If you use different distribution of iCASA (or the same version but in different
 </article>
 
 <aside  markdown="1">
-### Download links
+### Download iCASA
 + [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
 + [iCASA-runtime website](http://adeleresearchgroup.github.com/iCasa-Simulator/1.0.0/download.html)
 </aside>

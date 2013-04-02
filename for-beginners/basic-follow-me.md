@@ -447,12 +447,20 @@ More to do :
 
 </article>
 
-{section_links}
-
 <aside markdown="1">
-### Download
+### Download the follow me project
 
 + Download the [project](bin/BinaryFollowMe_V1.0.zip)
 
 </aside>
+
+<aside  markdown="1">
+### Download iCASA
++ [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
++ [iCASA-runtime website](http://adeleresearchgroup.github.com/iCasa-Simulator/1.0.0/download.html)
+</aside>
+
+{section_links}
+
+
 

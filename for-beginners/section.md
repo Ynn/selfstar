@@ -1,5 +1,5 @@
 <section>
-<title>Background</title>
+<title>Getting Started</title>
 <description>This section presents the basics.</description>
 <link>/article/for-beginners/getting-started</link>
 <icon>{#img#}/getting-started/getting-started.png</icon>
@@ -17,5 +17,6 @@ iCASA IDE:
 + [Providing and using services](/article/for-beginners/intro-services)
 + [Using multiple bundles](/article/for-beginners/multiple-bundles)
 
+[iCASA simulator documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
 </toc>
 </section>
