@@ -107,70 +107,65 @@ public class BinaryLightFollowMeImpl {
 
 ### Managing the lists of devices 
 
-First we need to add the fields binaryLights and presenceSensors :
-
-{code lang="java"}
-{literal}
-/** List containing all the lights in the house */
-private List listBinaryLights;
-
-/** Map containing all the presenceSensors in the house (SerialNumber/PresenceSensor) */
-private Map mapPresenceSensors;
-{/literal}
-{/code}
-
-
-Now we can complete the code of binding and unbinding methods by adding or removing devices from their respective collection.
+To ease the debug we will add a message when binding or unbinding devices. 
 
 {code lang="java"}
 {literal}        
-/** Bind Method for null dependency */
-public void bindBinaryLight(BinaryLight binaryLight, Map properties) {
-   System.out.println("bind binary light "+ binaryLight.getSerialNumber());
-   listBinaryLights.add(binaryLight);
+
+/**
+ * Bind Method for binaryLights dependency.
+ * This method is not mandatory and implemented for debug purpose only.
+ */
+public void bindBinaryLight(BinaryLight binaryLight, Map<Object, Object> properties) {
+  System.out.println("bind binary light " + binaryLight.getSerialNumber());
 }
 
-/** Unbind Method for null dependency */
-public void unbindBinaryLight(BinaryLight binaryLight, Map properties) {
-   System.out.println("unbind binary light "+ binaryLight.getSerialNumber());
-   listBinaryLights.remove(binaryLight);
+/**
+ * Unbind Method for binaryLights dependency. 
+ * This method is not mandatory and implemented for debug purpose only.
+ */
+public void unbindBinaryLight(BinaryLight binaryLight, Map<Object, Object> properties) {
+  System.out.println("unbind binary light " + binaryLight.getSerialNumber());
 }
 
-/** Bind Method for null dependency */
-public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+/** 
+ * Bind Method for PresenceSensors dependency.
+ * This method will be used to manage device listener.
+ */
+public void bindPresenceSensor(PresenceSensor presenceSensor, Map<Object, Object> properties) {
    System.out.println("bind presence sensor "+ presenceSensor.getSerialNumber());
-   mapPresenceSensors.put(presenceSensor.getSerialNumber(), presenceSensor);
 }
 
-/** Unbind Method for null dependency */
-public void unbindPresenceSensor(PresenceSensor presenceSensor,
-    Map properties) {
+/** 
+ * Unbind Method for PresenceSensors dependency.
+ * This method will be used to manage device listener.
+ */
+public void unbindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
    System.out.println("Unbind presence sensor "+ presenceSensor.getSerialNumber());
-   mapPresenceSensors.remove(presenceSensor.getSerialNumber());
 }
 {/literal}
 {/code}
 
+It should be stressed here that *the dependencies arrays (binaryLights[] and presenceSensors[]) are dynamically injected by iPOJO*.
+You don't have to modify these arrays.
+
+
 ### Lifecycle methods
 
-The map and the list will be initialized/reseted in the lifecycle methods. See the [hello world tutorial](/article/for-beginners/basic-hello-world) to learn more on lifecycle methods.
+We will use lifecycle methods to see when our component instance is started/stopped. See the [hello world tutorial](/article/for-beginners/basic-hello-world) to learn more on lifecycle methods.
 
-Moreover, to check an instance of our component is created, we add to message in the lifecyle methods : start and stop.
+In that purpose, we add to message in the lifecyle methods : start and stop.
 
 {code lang="java"}
 {literal} 
 /** Component Lifecycle Method */
 public void stop() {
    System.out.println("Component is stopping...");
-   listBinaryLights = null;
-   mapPresenceSensors = null;
 }
 
 /** Component Lifecycle Method */
 public void start() {
    System.out.println("Component is starting...");
-   listBinaryLights = new ArrayList();
-   mapPresenceSensors = new HashMap();
 }
 {/literal}
 {/code}
@@ -239,6 +234,8 @@ In order to be notified when something is modified in the environment, we must i
 
 There is four ways to implement it. 
 
+{* comments : i know this note will be removed but students should know about that*}
+
 First, you can make the main class (BinaryLightFollowMeImpl) implements the interface :
 
 {code lang="java"}
@@ -284,37 +281,59 @@ To start, we can print something when a presence sensor detects something (prese
 
 {code lang="java"}
 {literal}    
-public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
-    //We are only interested by presence sensors :
-    if(device instanceof PresenceSensor) {
-        //get the presence sensor :
-        PresenceSensor activSensor = mapPresenceSensors.get(device.getSerialNumber());
-        //if the sensor is active 
-	        if(activSensor != null){
-	        	//and the presence sensor has detected something :
-		        if(propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)){
-		        	System.out.println("The device with the serial number"
-						+activSensor.getSerialNumber()+" has changed");
-					System.out.println("This sensor is in the room :"
-						+ activSensor..getPropertyValue("location"));	
-		        }
-	        }
-    }
+  
+/**
+ * This method is part of the DeviceListener interface and is called when a
+ * subscribed device property is modified.
+ * 
+ * @param device
+ *            is the device whose property has been modified.
+ * @param propertyName
+ *            is the name of the modified property.
+ * @param oldValue
+ *            is the old value of the property
+ */
+public void devicePropertyModified(GenericDevice device,
+    String propertyName, Object oldValue) {
+
+  //we assume that we listen only to presence sensor events (otherwise there is a bug)  
+  assert device instanceof PresenceSensor : "device must be a presence sensors only";
+
+  //based on that assumption we can cast the generic device without checking via instanceof
+  PresenceSensor changingSensor = (PresenceSensor) device;
+
+  // check the change is related to presence sensing
+  if (propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {
+    // get the location of the changing sensor:
+    String detectorLocation = (String) changingSensor.getPropertyValue(LOCATION_PROPERTY_NAME);
+    System.out.println("The device with the serial number"
+                       + changingSensor.getSerialNumber()+" has changed");
+    System.out.println("This sensor is in the room :" + detectorLocation);  
+  }
+
 }
 {/literal}
 {/code}
 
 The PRESENCE_SENSOR_SENSED_PRESENCE property value change every time the detection change from detected to undetected and reciprocally
 
-
 Each type device has a different set of properties. The value of these properties can be set or retrieved by using a key string (e.g, "location"). This work exactly like service properties. This mechanism allow each type of devices to define their own properties. 
 
 To avoid magic string, some of the properties are defined directly by the interface (e.g., PRESENCE_SENSOR_SENSED_PRESENCE is defined in the PresenceSensor interface). Some are not (e.g., location).
 
-In the following, we  define a constant LOCATIONPROPERTYNAME for the "location" property :
+In the following, we  define a constant LOCATION_PROPERTY_NAME for the "location" property (and a value for unknown location) :
+
 {code lang="java"}
 {literal} 
-public static String LOCATIONPROPERTYNAME = "Location";
+/**
+ * The name of the LOCATION property
+ */
+public static final String LOCATION_PROPERTY_NAME = "Location";
+
+/**
+ * The name of the location for unknown value
+ */
+public static final String LOCATION_UNKNOWN = "unknown";
 {/literal}
 {/code}
 
@@ -329,11 +348,13 @@ This is done in the bind method of presence sensors :
 
 {code lang="java"}
 {literal}     
-/** Bind Method for null dependency */
-public void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
-   //register the listener :
-   presenceSensor.addListener(this);
-   mapPresenceSensors.put(presenceSensor.getSerialNumber(), presenceSensor);
+/**
+ * Bind Method for PresenceSensors dependency.
+ * This method is used to manage device listener.
+ */
+public synchronized void bindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+  // Add the listener to the presence sensor
+  presenceSensor.addListener(this); //..
 }
 {/literal}
 {/code}
@@ -342,12 +363,13 @@ We can also unregister the listener when the sensor is leaving :
 
 {code lang="java"}
 {literal}      
-/** Unbind Method for null dependency */
-public void unbindPresenceSensor(PresenceSensor presenceSensor,
-    Map properties) {
-   //unregister the listener :
-   presenceSensor.removeListener(this);
-   mapPresenceSensors.remove(presenceSensor.getSerialNumber());
+/**
+ * Unbind Method for PresenceSensors dependency.
+ * This method is used to manage device listener.
+ */
+public synchronized void unbindPresenceSensor(PresenceSensor presenceSensor, Map properties) {
+  // Remove the listener from the presence sensor
+  presenceSensor.removeListener(this); //..
 }
 {/literal}
 {/code}
@@ -380,18 +402,22 @@ To do so, we implement a search method :
 {code lang="java"}
 {literal} 
 /**
-Return all the binary lights from a given location
-@param location
-@return List of BinaryLights
-*/
-private List<BinaryLight> getBinaryLightFromLocation(String location) {
-	List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
-	for(BinaryLight binaryLight : listBinaryLights) {
-	   if(binaryLight.getPropertyValue(LOCATIONPROPERTYNAME).equals(location)) {
-	       binaryLightsLocation.add(binaryLight);
-	   }
-	}
-	return binaryLightsLocation;
+ * Return all BinaryLight from the given location
+ * 
+ * @param location
+ *            : the given location
+ * @return the list of matching BinaryLights
+ */
+private synchronized List<BinaryLight> getBinaryLightFromLocation(
+    String location) {
+  List<BinaryLight> binaryLightsLocation = new ArrayList<BinaryLight>();
+  for (BinaryLight binLight : binaryLights) {
+    if (binLight.getPropertyValue(LOCATION_PROPERTY_NAME).equals(
+        location)) {
+      binaryLightsLocation.add(binLight);
+    }
+  }
+  return binaryLightsLocation;
 }
 {/literal}
 {/code}
@@ -403,25 +429,33 @@ Finally we will test the state of the sensor (presence or not) and change the li
 
 {code lang="java"}
 {literal} 
+/**
+ * This method is part of the DeviceListener interface and is called when a
+ * subscribed device property is modified.
+ * 
+ * @param device
+ *            is the device whose property has been modified.
+ * @param propertyName
+ *            is the name of the modified property.
+ * @param oldValue
+ *            is the old value of the property
+ */
 public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
-    if(device instanceof PresenceSensor) {
-        PresenceSensor activSensor = mapPresenceSensors.get(device.getSerialNumber());
-        if(activSensor != null){
-        	if(propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)){
-	            String detectorLocation = (String) activSensor
-	            					.getPropertyValue(LOCATION_PROPERTY_NAME);
-	            
-	            //check the location exist :
-	            if(!detectorLocation.equals(LOCATION_UNKNOW)) {
-	                List sameLocationLights = getBinaryLightFromLocation(detectorLocation);
-	                for(BinaryLight binaryLight : sameLocationLights) {
-	                    //change the value of the light :
-	                    binaryLight.setPowerStatus(!(Boolean) oldValue);
-	                }
-	            }
-	        }
-        }
+  PresenceSensor changingSensor = (PresenceSensor) device;
+  // check the change is related to presence sensing
+  if (propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {
+    // get the location where the sensor is:
+    String detectorLocation = (String) changingSensor.getPropertyValue(LOCATION_PROPERTY_NAME);
+    // if the location is known :
+    if (!detectorLocation.equals(LOCATION_UNKNOWN)) {
+      // get the related binary lights
+      List<BinaryLight> sameLocationLigths = getBinaryLightFromLocation(detectorLocation);
+      for (BinaryLight binaryLight : sameLocationLigths) {
+        // and switch them on/off depending on the sensed presence
+        binaryLight.setPowerStatus(!(Boolean) oldValue);
+      }
     }
+  }
 }
 {/literal}
 {/code}
@@ -429,6 +463,7 @@ public void devicePropertyModified(GenericDevice device, String propertyName, Ob
 Now you can test your application by moving the user.
 Hopefully, the lights will change as desired.
  
+
 ## Play with it
 
 Now you can play with your application and add new devices and see what happens when the you move your user.
@@ -441,9 +476,29 @@ To add new sensors in the iCASA interface:
 + Activate it in the list of devices.
 + Move it to the desired room.
     
-More to do :
 
-+ This code does not manage the concurrency. Try to implement it. 
+## A word on concurrency 
+
+You may have notice that the concurrency is **apparently** not managed in this short tutorial. It is indeed managed by iPOJO.
+
+As OSGi environment is multi-threaded, multiple threads may access the class at the same time.
+One common problem occur when a thread try to remove device from a collection while another thread is using the collection or device elsewhere in the class.
+
+This is the case here : the binaryLights array may be modified when searching for the light in  getBinaryLightFromLocation methods called by devicePropertyModified. The array is dynamically modified by iPOJO when a service is changing (thread 1) and it is possible that a light is when handling a devicePropertyModified (thread 2).
+
+Normally, we should use a lock when accessing or modifying the array to prevent concurrent access. However the collection managed by iPOJO are synchronized and the locking is managed by iPOJO. 
+
+{note}
+iPOJO ensure that the list won't be changed until the end of the method getBinaryLightFromLocation. It is therefore not necessary to synchronize in this tutorial.
+{/note}
+
+BUT :
+
+{warning}
+**The synchronization is managed only for iPOJO fields :**
+you will have to manage concurrency if you store the services or devices in different collection.
+{/warning}
+
 
 </article>
 
