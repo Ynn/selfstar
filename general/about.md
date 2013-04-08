@@ -18,8 +18,6 @@ ICasa has been designed and implemented by Thomas Leveque, Gabriel Pedraza and I
 
 </article>
 
-{section_links}
-
 <aside markdown="1">
 ### Bibliography
 
