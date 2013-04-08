@@ -14,6 +14,6 @@ This site has been designed and developed by Yoan Maurel.
 
 Exercises have been designed and implemented by Yoann Maurel, Stéphanie Chollet and Jérémy Savonet.
 
-ICasa has been designed and implemented by Catherine Hamon, Thomas Leveque, Gabriel Pedraza. 
+ICasa has been designed and implemented by Thomas Leveque, Gabriel Pedraza and Issac Garcia under the supervision of Catherine Hamon. 
 
 </article>
