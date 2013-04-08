@@ -17,3 +17,13 @@ Exercises have been designed and implemented by Yoann Maurel, Stéphanie Chollet
 ICasa has been designed and implemented by Thomas Leveque, Gabriel Pedraza and Issac Garcia under the supervision of Catherine Hamon. 
 
 </article>
+
+{section_links}
+
+<aside markdown="1">
+### Bibliography
+
++ iPOJO Web site.
++ Clement Escoffier's PhD thesis (French).
+
+</aside>
