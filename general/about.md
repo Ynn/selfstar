@@ -12,6 +12,8 @@ We hope this web environment will grow with the book, learning from the feedback
 
 This site has been designed and developed by Yoan Maurel.
 
-Exercises have been 
+Exercises have been designed and implemented by Yoann Maurel, Stéphanie Chollet and Jérémy Savonet.
+
+ICasa has been designed and implemented by Catherine Hamon, Thomas Leveque, Gabriel Pedraza. 
 
 </article>
