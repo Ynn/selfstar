@@ -24,4 +24,8 @@ Exercises have been designed and implemented by Dr. Yoann Maurel, Dr. Stéphanie
 
 ICasa has been designed and implemented by Dr. Thomas Lévêque, Dr. Gabriel Pedraza and Dr. Issac Garcia under the supervision of Dr. Catherine Hamon. 
 
+# Contact
+
+Please contact us, for more information  : contact (at) self-star.net
+
 </article>
