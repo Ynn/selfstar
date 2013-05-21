@@ -10,6 +10,22 @@
 
 {block name=article}
 
+<div id = "introduction" style = "background : white; margin : 2em; padding : 10px 40px 10px 40px;font-family : 'Short Stack'">
+<p>
+This Web site comes with our book entitled “Autonomic Computing: Principles, design and implementation”. 
+</p>
+<p/>
+<p>
+It defines a set of exercises motivating in a progressive way the introduction of self-management in pervasive applications. It also provides a development environment based on the iPOJO component model and the iCasa simulator allowing an immediate and concrete feedback. 
+</p>
+<p>
+We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike.
+</p>
+
+<p style = "font-family: Pacifico; font-size : 16px;text-align : right;">Philippe Lalanda, Julie McCann, Ada Diaconescu</p>
+</div>
+
+
 <div id="ca-container" class="ca-container">
 	<div class="ca-wrapper">
 		<div class="ca-item">
