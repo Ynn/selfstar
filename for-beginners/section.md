@@ -1,5 +1,5 @@
 <section>
-<title>Getting Started</title>
+<title>Related Articles</title>
 <description>This section presents the basics.</description>
 <link>/article/for-beginners/getting-started</link>
 <icon>{#img#}/getting-started/getting-started.png</icon>
@@ -17,9 +17,9 @@ iPOJO and iCASA IDE:
 + [Providing and using services](/article/for-beginners/intro-services)
 + [Using multiple bundles](/article/for-beginners/multiple-bundles)
 
-iCASA simulator :
+iCASA simulator:
 
-+ [documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
++ [Documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
 
 </toc>
 </section>
