@@ -99,7 +99,14 @@ If you use different distribution of iCASA (or the same version but in different
 </article>
 
 <aside  markdown="1">
-### Download iCASA
+### Download iCASA 
+Download last releases:
+
 + [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
-+ [iCASA-runtime website](http://adeleresearchgroup.github.com/iCasa-Simulator/1.0.0/download.html)
++ [iCASA-runtime](http://maven.dynamis-technologies.com/artifactory/adele-repos/fr/liglab/adele/icasa/icasa.teaching.distribution/1.0.0/icasa.teaching.distribution-1.0.0.zip)
+
+Documentation:
+
++ [iCASA doc](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
+
 </aside>
