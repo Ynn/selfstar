@@ -125,9 +125,9 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 		<div class="ca-item">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(/img/hello-world/Generation.png);"></div>
-				<h3>Develop using iPOJO-IDE</h3>
+				<h3>Develop using iCASA-IDE</h3>
 				<h4>
-					<span>iPOJO-IDE includes a source code editor, build automation tools and automated deployment.</span>
+					<span>iCASA-IDE includes a source code editor, build automation tools and automated deployment.</span>
 				</h4>
 					<a href="#" class="ca-more">more...</a>
 			</div>
