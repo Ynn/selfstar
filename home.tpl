@@ -117,7 +117,7 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 
 		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/book.jpg);"></div>
+				<div class="ca-icon" style="background-image:url(/img/book_icon.jpg);"></div>
 				<h3>Autonomic Computing book</h3>
 				<h4>
 					<span> authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.</span>
