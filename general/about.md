@@ -26,6 +26,6 @@ ICasa has been designed and implemented by Dr. Thomas Lévêque, Dr. Gabriel Ped
 
 # Contact
 
-Please contact us, for more information  : contact (at) self-star.net
+For more information, contact us at: contact (at) self-star.net
 
 </article>
