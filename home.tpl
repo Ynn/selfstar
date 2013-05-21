@@ -28,6 +28,50 @@ We hope this web environment will grow with the book, learning from the feedback
 
 <div id="ca-container" class="ca-container">
 	<div class="ca-wrapper">
+		
+
+		<div class="ca-item">
+			<div class="ca-item-main">
+				<div class="ca-icon" style="background-image:url(/img/book_icon.jpg);"></div>
+				<h3>Autonomic Computing book</h3>
+				<h4>
+					<span> authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.</span>
+				</h4>
+					<a href="#" class="ca-more">more...</a>
+			</div>
+			<div class="ca-content-wrapper">
+				<div class="ca-content">
+					<h6>Autonomic Computing Book</h6>
+					<a href="#" class="ca-close">close</a>
+					<div class="ca-content-text">
+						<p>
+						This web site comes with the book “Autonomic Computing” authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.
+						</p>
+
+						<p>
+						Its purpose is to offer a Java-based learning environment in the domain of pervasive computing. Interested students then have the opportunity to develop a number of applications, in a robust, dedicated environment designed to explore various aspects of autonomic applications.
+						</p>
+
+						<p>
+						We believe that the pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it characterizes requirements, such as device volatility, mobility, environmental change, etc., that often motivate self-management.
+						</p>
+
+						<p>
+						We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike
+						</p>
+					</div>
+					<ul>
+						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
 		<div class="ca-item">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(../img/home/home.png);"></div>
@@ -131,42 +175,6 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 
 
 
-		<div class="ca-item">
-			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/book_icon.jpg);"></div>
-				<h3>Autonomic Computing book</h3>
-				<h4>
-					<span> authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.</span>
-				</h4>
-					<a href="#" class="ca-more">more...</a>
-			</div>
-			<div class="ca-content-wrapper">
-				<div class="ca-content">
-					<h6>Autonomic Computing Book</h6>
-					<a href="#" class="ca-close">close</a>
-					<div class="ca-content-text">
-						<p>
-						This web site comes with the book “Autonomic Computing” authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.
-						</p>
-
-						<p>
-						Its purpose is to offer a Java-based learning environment in the domain of pervasive computing. Interested students then have the opportunity to develop a number of applications, in a robust, dedicated environment designed to explore various aspects of autonomic applications.
-						</p>
-
-						<p>
-						We believe that the pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it characterizes requirements, such as device volatility, mobility, environmental change, etc., that often motivate self-management.
-						</p>
-
-						<p>
-						We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike
-						</p>
-					</div>
-					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 	</div>
 
 </div>
