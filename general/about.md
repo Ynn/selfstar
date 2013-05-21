@@ -18,10 +18,10 @@ We hope this web environment will grow with the book, learning from the feedback
 
 # Credits
 
-This site has been designed and developed by Yoann Maurel.
+This site has been designed and developed by Dr. Yoann Maurel.
 
-Exercises have been designed and implemented by Yoann Maurel, Stéphanie Chollet and Jérémy Savonet.
+Exercises have been designed and implemented by Dr. Yoann Maurel, Dr. Stéphanie Chollet and Jérémy Savonet.
 
-ICasa has been designed and implemented by Thomas Leveque, Gabriel Pedraza and Issac Garcia under the supervision of Catherine Hamon. 
+ICasa has been designed and implemented by Dr. Thomas Lévêque, Dr. Gabriel Pedraza and Dr. Issac Garcia under the supervision of Dr. Catherine Hamon. 
 
 </article>
