@@ -2,21 +2,21 @@
 
 <article markdown="1">
 
-# Quick Start : Writing a follow me
+# Quick Start : Writing a Basic Light Follow Me
 In this introduction we will create a basic light follow me with ICASA. 
 
-This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [background section](/article/for-beginners/getting-started) for a refresher.
+This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [getting started section](/article/for-beginners/getting-started) for a refresher.
 
 
-## What is a follow me ?
+## What is a Follow Me ?
 
-A follow me is a a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
+A Follow Me is a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
 Here the goal is to make the light follows the users.
 
 This project uses the iCASA simulated binary lights.
 
 
-## Step by step follow me 
+## Step by step Basic Light Follow Me 
 
 ### Installation and configuration
 
