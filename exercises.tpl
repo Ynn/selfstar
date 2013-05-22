@@ -51,8 +51,8 @@ Exercises are divided into several themes: light management, heating management,
 
 		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/home/simulator.png);"></div>
-				<h3>Follow Me</h3>
+				<div class="ca-icon" style="background-image:url(/img/exercices/heater.png);"></div>
+				<h3>Heater management</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
