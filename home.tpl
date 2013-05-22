@@ -35,7 +35,7 @@ We hope this web environment will grow with the book, learning from the feedback
 				<div class="ca-icon" style="background-image:url(/img/book_icon.jpg);"></div>
 				<h3>Autonomic Computing book</h3>
 				<h4>
-					<span> authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.</span>
+					<span> Authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.</span>
 				</h4>
 					<a href="#" class="ca-more">more...</a>
 			</div>
@@ -45,23 +45,14 @@ We hope this web environment will grow with the book, learning from the feedback
 					<a href="#" class="ca-close">close</a>
 					<div class="ca-content-text">
 						<p>
-						This web site comes with the book “Autonomic Computing” authored by Philippe Lalanda, Julie McCann and Ada Diaconescu.
-						</p>
-
-						<p>
-						Its purpose is to offer a Java-based learning environment in the domain of pervasive computing. Interested students then have the opportunity to develop a number of applications, in a robust, dedicated environment designed to explore various aspects of autonomic applications.
-						</p>
-
-						<p>
-						We believe that the pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it characterizes requirements, such as device volatility, mobility, environmental change, etc., that often motivate self-management.
-						</p>
-
-						<p>
-						We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike
+Autonomic computing seeks to render computing systems as self-managed. In other words, its objective is to enable computer systems to manage themselves so as to minimise the need for human input. 
+</p>
+<p>
+Implementing self-managed systems however remains a true challenge today. Thus, beyond giving necessary explanations about the objectives and interests of autonomic computing, this book goes through the different software engineering techniques that are currently available for organizing and developing self-managed software systems.
 						</p>
 					</div>
 					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
+						<li><a href="/article/general/about">Read more</a></li>
 					</ul>
 				</div>
 			</div>
@@ -75,7 +66,7 @@ We hope this web environment will grow with the book, learning from the feedback
 		<div class="ca-item">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(../img/home/home.png);"></div>
-				<h3>Build pervasive applications</h3>
+				<h3>Build pervasive applications with iPOJO</h3>
 				<h4>
 					<span>Learn how to build pervasive applications step by step using the tutorials and the provided tools.</span>
 				</h4>
@@ -86,9 +77,15 @@ We hope this web environment will grow with the book, learning from the feedback
 					<h6>Learn to build pervasive applications</h6>
 					<a href="#" class="ca-close">close</a>
 					<div class="ca-content-text">
-						<p>We have designed a learning environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.</p>
- 
-<p>The pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it is characterized by stringent requirements, like context-awareness or dynamicity, that motivate the introduction of self-management.</p>
+						<p>We have designed a learning environment that allows students to progressively We have designed an environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. 
+						</p>
+						<p>
+
+OSGi is an execution framework developed on top of Java. It builds on the Java’s dynamic features (classloaders and on demand class loading) to provide a coarse-grained level of modularity.
+</p>
+<p>
+The IDE allows the rapid and simplified development of iPOJO applications. It provides a set of facilities to assist the developer in the creation and deployment of iPOJO components. 
+</p>
 					</div>
 					<ul>
 						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
@@ -101,7 +98,7 @@ We hope this web environment will grow with the book, learning from the feedback
 		<div class="ca-item">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(/img/home/simulator.png);"></div>
-				<h3>Play with iCASA simulator</h3>
+				<h3>Test with iCASA simulator</h3>
 				<h4>
 					<span>This simulator is made of a web-based GUI and a simulated devices.</span>
 				</h4>
@@ -112,8 +109,18 @@ We hope this web environment will grow with the book, learning from the feedback
 					<h6>Play with iCASA</h6>
 					<a href="#" class="ca-close">close</a>
 					<div class="ca-content-text">
-					<p>We	provide a	simulated	environment	enabling	complete	control	of	the	
-environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	developed	in	the	context	of	the	Medical	project	(http://medical.imag.fr).	ICASA	is	based	on	OSGi	and	iPOJO	and	takes	advantage	of	their	versatility	and	dynamism.	iCASA	is	provided	as	a	set	of	modules	and	components	(e.g. bundles	and	iPOJO	components)	that	are	deployed	on	a	OSGi/iPOJO	framework.</p>
+
+<p>
+ICasa is a smart home simulator developed in the context of the Medical project (http://medical.imag.fr).
+</p>
+<p>
+ICasa allows the loading of any map, the definition of smart spaces (zones) and the dynamic management of devices lifecyle. ICasa also provides facilities to run scenario, playing with time and devices. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.
+</p>
+
+<p>
+Technically speaking, iCasa is based on OSGi and iPOJO and takes advantage of their versatility and dynamism. iCASA is provided as a set of modules and components (e.g. bundles and iPOJO components) that are deployed on a OSGi/iPOJO framework
+</p>
+
 					</div>
 					<ul>
 						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
@@ -121,6 +128,9 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 				</div>
 			</div>
 		</div>
+
+
+<!--
 
 		<div class="ca-item">
 			<div class="ca-item-main">
@@ -173,6 +183,7 @@ environment	and	time.	This	is	the	very	purpose	of	iCASA,	a	smart	home	simulator	
 			</div>
 		</div>
 
+-->
 
 
 	</div>

@@ -12,9 +12,9 @@ This web site comes with the book <a href="https://www.springer.com/computer/swe
 
 <a href="http://adadiaconescu.there-you-are.com/">Dr. Ada Diaconescu </a> is a lecturer (Maître de conférences) in the Department of Computing and Networks at Télécom ParisTech, France.
 
-The purpose of this site is to offer a Java-based learning environment in the domains of pervasive and autonomic computing. We believe that the pervasive domain is very illustrative and easy to grasp for students in computer science. Also, it characterizes requirements, such as device volatility, mobility, environmental change, etc., that often motivate self-management.
+This book is aimed at students and practitioners working on software projects where system self-management would redress maintenance complexity and cost issues.
 
-We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike.
+Authors have created this web site, which will be regularly updated, to allow students to execute autonomic code in a runtime simulation. The environment provides concrete, visual feedback of the behaviours illustrating what the student has programmed.
 
 # Credits
 
