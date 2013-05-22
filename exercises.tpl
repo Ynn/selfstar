@@ -26,7 +26,7 @@ Exercises are divided into several themes: light management, heating management,
 
 		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/exercices/light.jpg);"></div>
+				<div class="ca-icon" style="background-image:url(/img/exercices/light.png);"></div>
 				<h3>Follow Me</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
