@@ -12,9 +12,11 @@
 
 <div id = "introduction" style = "background : white; margin : 2em; padding : 10px 40px 10px 40px;font-family : 'Short Stack'">
 <p>
-Exercices blahblah
+This page presents several exercises sets motivating the introduction of self-management in pervasive applications.
 </p>
-
+<p>
+Exercises are divided into several themes: light management, heating management, alarm management, etc. For each theme, the progression is the same: we start with basic (non robust!) pervasive applications and we gradually introduce harder requirements demanding autonomic capabilities.</p>
+</p>
 </div>
 
 

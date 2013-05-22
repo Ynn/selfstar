@@ -77,7 +77,7 @@ Implementing self-managed systems however remains a true challenge today. Thus, 
 					<h6>Learn to build pervasive applications</h6>
 					<a href="#" class="ca-close">close</a>
 					<div class="ca-content-text">
-						<p>We have designed a learning environment that allows students to progressively We have designed an environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. 
+						<p>We have designed an environment that allows students to progressively develop, execute, and test pervasive and autonomic applications. This environment comprises an IDE, an execution environment based on OSGi/iPOJO and a smart home simulator. 
 						</p>
 						<p>
 

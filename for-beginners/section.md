@@ -17,9 +17,11 @@ iPOJO and iCASA IDE:
 + [Providing and using services](/article/for-beginners/intro-services)
 + [Using multiple bundles](/article/for-beginners/multiple-bundles)
 
-iCASA simulator:
+External Documentation :
 
-+ [Documentation](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
++ [iCASA simulator](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
++ [iPOJO](http://felix.apache.org/site/apache-felix-ipojo.html)
++ [OSGi Felix](http://felix.apache.org/)
 
 </toc>
 </section>

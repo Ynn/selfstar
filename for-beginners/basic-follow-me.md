@@ -512,13 +512,5 @@ you will have to manage concurrency if you store the services or devices in diff
 
 </aside>
 
-{*
-<aside  markdown="1">
-### Download iCASA
-+ [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
-+ [iCASA-runtime website](http://adeleresearchgroup.github.com/iCasa-Simulator/1.0.0/download.html)
-</aside>
-
 {section_links}
-*}
 
