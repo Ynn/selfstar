@@ -13,6 +13,9 @@ This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. Yo
 A Follow Me is a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
 Here the goal is to make the light follows the users.
 
+<img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
+
+
 This project uses the iCASA simulated binary lights.
 
 

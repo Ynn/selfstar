@@ -24,7 +24,7 @@ Exercices blahblah
 
 		<div class="ca-item">
 			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/home/simulator.png);"></div>
+				<div class="ca-icon" style="background-image:url(/img/exercices/light.jpg);"></div>
 				<h3>Follow Me</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
@@ -97,7 +97,7 @@ Exercices blahblah
 			</div>
 		</div>
 
-		
+
 
 
 	</div>
