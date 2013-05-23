@@ -1,9 +1,13 @@
 <section>
-<title>Introduction</title>
-<description>This section contains general information</description>
-<link>/article/for-beginners/getting-started</link>
+<title>Related Exercices</title>
+<description>This section contains exercises</description>
+<link>/exercises</link>
 <icon>{#img#}/getting-started/getting-started.png</icon>
 <toc>
+
++ [Follow Me](/article/exercises/follow-me)
++ [Heater Management](/article/exercises/heater)
++ [Alarm Management](/article/exercises/alarm)
 
 </toc>
 </section>
