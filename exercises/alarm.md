@@ -2,8 +2,7 @@
 
 # Alarm Exercices
 
-<img src="img/exercises/alarm.jpg" width = "60%"/>
-
+<img src="img/exercises/alarm_big.png" width = "60%"/>
 
 </article>
 

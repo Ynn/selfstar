@@ -2,7 +2,7 @@
 
 # Heater Exercices
 
-<img src="img/exercises/heater.jpeg" width = "60%"/>
+<img src="img/exercises/heater_big.png" width = "60%"/>
 
 
 </article>
