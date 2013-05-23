@@ -202,7 +202,18 @@ Technically speaking, iCasa is based on OSGi and iPOJO and takes advantage of th
 <script type="text/javascript" src="js/vendor/slider/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/vendor/slider/jquery.contentcarousel.js"></script>
 <script type="text/javascript">
-	$('#ca-container').contentcarousel();
+	$('#ca-container').contentcarousel({
+    // speed for the sliding animation
+    sliderSpeed     : 500,
+    // easing for the sliding animation
+    sliderEasing    : 'easeOutExpo',
+    // speed for the item animation (open / close)
+    itemSpeed       : 500,
+    // easing for the item animation (open / close)
+    itemEasing      : 'easeOutExpo',
+    // number of items to scroll at a time
+    scroll          : 1
+});
 </script>
 
 {/block}
