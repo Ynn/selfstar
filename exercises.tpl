@@ -31,7 +31,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
 			</div>
 		</div>
 
@@ -42,7 +42,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>			
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
 
@@ -53,7 +53,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
 			</div>
 		</div>
 
