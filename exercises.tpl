@@ -10,7 +10,7 @@
 
 {block name=article}
 
-<div id = "introduction" style = "background : white; margin : 2em; padding : 10px 40px 10px 40px;font-family : 'Short Stack'">
+<div id = "introduction">
 <p>
 This page presents several exercises sets motivating the introduction of self-management in pervasive applications.
 </p>
@@ -31,21 +31,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="#" class="ca-more">more...</a>
-			</div>
-			<div class="ca-content-wrapper">
-				<div class="ca-content">
-					<h6>Follow Me</h6>
-					<a href="#" class="ca-close">close</a>
-					<div class="ca-content-text">
-						<p>
-						blahblah
-						</p>
-					</div>
-					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
-					</ul>
-				</div>
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>
 			</div>
 		</div>
 
@@ -56,21 +42,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="#" class="ca-more">more...</a>
-			</div>
-			<div class="ca-content-wrapper">
-				<div class="ca-content">
-					<h6>Follow Me</h6>
-					<a href="#" class="ca-close">close</a>
-					<div class="ca-content-text">
-						<p>
-						blahblah
-						</p>
-					</div>
-					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
-					</ul>
-				</div>
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>			
 			</div>
 		</div>
 
@@ -81,21 +53,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="#" class="ca-more">more...</a>
-			</div>
-			<div class="ca-content-wrapper">
-				<div class="ca-content">
-					<h6>Follow Me</h6>
-					<a href="#" class="ca-close">close</a>
-					<div class="ca-content-text">
-						<p>
-						blahblah
-						</p>
-					</div>
-					<ul>
-						<li><a href="/article/for-beginners/getting-started">Read more</a></li>
-					</ul>
-				</div>
+					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">more...</a>
 			</div>
 		</div>
 
@@ -118,8 +76,18 @@ Exercises are divided into several themes: light management, heating management,
 <script type="text/javascript" src="js/vendor/slider/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/vendor/slider/jquery.contentcarousel.js"></script>
 <script type="text/javascript">
-	$('#ca-container').contentcarousel();
-</script>
-
+	$('#ca-container').contentcarousel({
+    // speed for the sliding animation
+    sliderSpeed     : 500,
+    // easing for the sliding animation
+    sliderEasing    : 'easeOutExpo',
+    // speed for the item animation (open / close)
+    itemSpeed       : 500,
+    // easing for the item animation (open / close)
+    itemEasing      : 'easeOutExpo',
+    // number of items to scroll at a time
+    scroll          : 0
+});
+	</script>
 {/block}
 
