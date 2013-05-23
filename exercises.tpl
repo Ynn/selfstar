@@ -24,14 +24,14 @@ Exercises are divided into several themes: light management, heating management,
 	<div class="ca-wrapper">
 		
 
-		<div class="ca-item" onClick="location.href = 'http://local.self-star.net:8888/article/for-beginners/basic-follow-me';">
+		<div class="ca-item" onClick="location.href = '/article/for-beginners/basic-follow-me';">
 			<div class="ca-item-main">
 				<div class="ca-icon" style="background-image:url(/img/exercices/light.png);"></div>
 				<h3>Follow Me</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
+					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
 			</div>
 		</div>
 
@@ -42,7 +42,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>			
+					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
 
@@ -53,7 +53,7 @@ Exercises are divided into several themes: light management, heating management,
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="http://local.self-star.net:8888/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
+					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
 			</div>
 		</div>
 
