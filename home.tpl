@@ -10,7 +10,7 @@
 
 {block name=article}
 
-<div id = "introduction" style = "background : white; margin : 2em; padding : 10px 40px 10px 40px;font-family : 'Short Stack'">
+<div id = "introduction">
 <p>
 This Web site comes with our book entitled “Autonomic Computing: Principles, design and implementation”. 
 </p>
@@ -22,7 +22,7 @@ It defines a set of exercises motivating in a progressive way the introduction o
 We hope this web environment will grow with the book, learning from the feedback that we receive from practitioners and students alike.
 </p>
 
-<p style = "font-family: Pacifico; font-size : 16px;text-align : right;">Philippe Lalanda, Julie McCann, Ada Diaconescu</p>
+<p style = "font-family: Courgette; font-size : 16px;text-align : right;">Philippe Lalanda, Julie McCann, Ada Diaconescu</p>
 </div>
 
 
@@ -212,7 +212,7 @@ Technically speaking, iCasa is based on OSGi and iPOJO and takes advantage of th
     // easing for the item animation (open / close)
     itemEasing      : 'easeOutExpo',
     // number of items to scroll at a time
-    scroll          : 1
+    scroll          : 0
 });
 </script>
 
