@@ -1,6 +1,6 @@
 <article markdown="1">
 
-# Heater Exercices
+# Heater Exercises
 
 <img src="img/exercises/heater_big.png" width = "60%"/>
 

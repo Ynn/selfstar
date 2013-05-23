@@ -1,5 +1,5 @@
 <section>
-<title>Related Exercices</title>
+<title>Related Exercises</title>
 <description>This section contains exercises</description>
 <link>/exercises</link>
 <icon>{#img#}/getting-started/getting-started.png</icon>
