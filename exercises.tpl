@@ -24,36 +24,36 @@ Exercises are divided into several themes: light management, heating management,
 	<div class="ca-wrapper">
 		
 
-		<div class="ca-item" onClick="location.href = '/article/for-beginners/basic-follow-me';">
+		<div class="ca-item" onClick="location.href = '/article/exercises/follow-me';">
 			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/exercices/light.png);"></div>
+				<div class="ca-icon" style="background-image:url(/img/exercises/light.png);"></div>
 				<h3>Follow Me</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
+					<a href="/article/exercises/follow-me" class="inactive-more">Exercises...</a>
 			</div>
 		</div>
 
 		<div class="ca-item">
-			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/exercices/heater.png);"></div>
+			<div class="ca-item-main" onClick="location.href = '/article/exercises/heater';">
+				<div class="ca-icon" style="background-image:url(/img/exercises/heater.png);"></div>
 				<h3>Heater management</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>			
+					<a href="/article/exercises/heater" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
 
 				<div class="ca-item">
-			<div class="ca-item-main">
-				<div class="ca-icon" style="background-image:url(/img/exercices/alarm.png);"></div>
+			<div class="ca-item-main" onClick="location.href = '/article/exercises/alarm';">
+				<div class="ca-icon" style="background-image:url(/img/exercises/alarm.png);"></div>
 				<h3>Alarm <br/>management</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="/article/for-beginners/basic-follow-me" class="inactive-more">Exercises...</a>
+					<a href="/article/exercises/alarm" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
 
