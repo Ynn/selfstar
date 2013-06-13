@@ -45,7 +45,7 @@ When creating a new device, you must give it an unique ID. An ID cannot be used 
 
 Stop the running script. Use the reset environnement command in the "Script Pannel" and run your newly created script.
 
-<u>Question 4 - No more that n lights</u>: As you can notice, the present implementation of the follow me is switching all the lights on when a user enter a room. This is obviously not energy friendly.
+<u>Question 4 - No more than n lights</u>: As you can notice, the present implementation of the follow me is switching all the lights on when a user enter a room. This is obviously not energy friendly.
 
 Change the current implementation so that the number of light per room can be configured.
 
