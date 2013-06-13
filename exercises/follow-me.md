@@ -121,7 +121,8 @@ Your manager will understand (more) "high level goals" such as "High Illuminance
 
 For begining the interpretation of these goals into according configuration will be hard-coded and hardwired. Of course, this manager is not smart (the manager acts more like an administration wrapper) and the raise of abstraction is limited, but it will show you the basics steps to separate the concerns of your application configuration with the management of more abstract administration goals.
 
-Create a new project "follow.me.manager" and add a main component FollowMeMananger. 
+Create a new project "follow.me.manager" and add a main component FollowMeManager. The implementation class should be nammed FollowMeManager.java and put into the **org.example.follow.me.manager.impl** package.
+
 
 Import the package org.example.follow.me.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
