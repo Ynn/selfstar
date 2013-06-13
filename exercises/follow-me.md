@@ -75,7 +75,7 @@ Check your application is working as expected.
 
 In this exercise, you will create an administration service to allow the configuration of your application. You will also create your first small manager that will automatically configure this service.
 
-<u>Question 1 - Providing an administration service</u>: In the getting started section, we explain [how to provide a service](/article/for-beginners/intro-services). You will now provide a service for configuring your application.
+<u>Question 1 - Providing a configuration service</u>: In the getting started section, we explain [how to provide a service](/article/for-beginners/intro-services). You will now provide a service for configuring your application.
 
 The FollowMeConfiguration service interface is really simple :
 
