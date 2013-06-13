@@ -125,7 +125,49 @@ Create a new project "follow.me.manager" and add a main component FollowMeManang
 
 Import the package org.example.follow.me.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
-Add the dependency to the
+Add the dependency to the FollowMeConfiguration configuration and write a manager so that the number of lights is adjusting depending on a targetted goal. 
+
+You can use the following hard-coded values :
+
+{code lang="java"}
+package org.example.follow.me.manager;
+
+/**
+ * This enum describes the different illuminance goals associated with the
+ * manager.
+ */
+public enum IlluminanceGoal {
+
+	/** The goal associated with soft illuminance. */
+	SOFT(1),
+	/** The goal associated with medium illuminance. */
+	MEDIUM(2),
+	/** The goal associated with full illuminance. */
+	FULL(3);
+
+	/** The number of lights to turn on. */
+	private int numberOfLightsToTurnOn;
+
+	/**
+	 * Gets the number of lights.
+	 * 
+	 * @return the number of lights
+	 */
+	public int getNumberOfLightsToTurnOn() {
+		return numberOfLightsToTurnOn;
+	}
+
+	/**
+	 * Instantiates a new illuminance goals.
+	 * 
+	 * @param numberOfLightsToTurnOn
+	 *            the number of lights to turn on
+	 */
+	private IlluminanceGoal(int numberOfLightsToTurnOn) {
+		this.numberOfLightsToTurnOn = numberOfLightsToTurnOn;
+	}
+}
+{/code}
 
 
 
