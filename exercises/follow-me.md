@@ -159,7 +159,7 @@ public enum IlluminanceGoal {
 	}
 
 	/**
-	 * Instantiates a new illuminance goals.
+	 * Instantiates a new illuminance goal.
 	 * 
 	 * @param numberOfLightsToTurnOn
 	 *            the number of lights to turn on.
@@ -171,9 +171,41 @@ public enum IlluminanceGoal {
 {/code}
 
 
+<u>Question 3 - providing an adminstration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express is goals. Once again, you will provide a service in that purpose.
 
-## Exercise 3: Adjusting illuminance
+The service interface will be :
 
+{code lang="java"}
+
+package org.example.follow.me.manager;
+
+/**
+ * The Interface FollowMeAdministration allows the administrator to configure
+ * its preference regarding the management of the Follow Me application.
+ */
+public interface FollowMeAdministration {
+
+	/**
+	 * Sets the illuminance preference. The manager will try to adjust the
+	 * illuminance in accordance with this goal.
+	 * 
+	 * @param goal
+	 *            the new illuminance preference
+	 */
+	public void setIlluminancePreference(IlluminanceGoal illuminanceGoal);
+
+}
+{/code}
+
+Your FollowMeManager class should implement this class and provide it as a service.
+
+
+<u> Question 4 - providing a command </u> Now that you can configure your manager, we propose you to build a command line so as to allow adminstrators to configure your manager.
+
+
+## Exercise 3: A better illuminance management.
+
+## Exercise 4: Reacting to time events
 
 
 ## Exercise 5: Dealing with Flopping state
