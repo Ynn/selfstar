@@ -149,9 +149,9 @@ public enum IlluminanceGoal {
 	private int numberOfLightsToTurnOn;
 
 	/**
-	 * Gets the number of lights.
+	 * Gets the number of lights to turn On.
 	 * 
-	 * @return the number of lights
+	 * @return the number of lights to turn On.
 	 */
 	public int getNumberOfLightsToTurnOn() {
 		return numberOfLightsToTurnOn;
@@ -161,7 +161,7 @@ public enum IlluminanceGoal {
 	 * Instantiates a new illuminance goals.
 	 * 
 	 * @param numberOfLightsToTurnOn
-	 *            the number of lights to turn on
+	 *            the number of lights to turn on.
 	 */
 	private IlluminanceGoal(int numberOfLightsToTurnOn) {
 		this.numberOfLightsToTurnOn = numberOfLightsToTurnOn;
