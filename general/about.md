@@ -2,7 +2,7 @@
 
 # Autonomic Computing
 
-<a href="https://www.springer.com/computer/swe/book/978-1-4471-5006-0"><img src = "img/book.jpg" style = "float : left; width : 150px; margin : 0 1em 0 1em;"/></a>
+<img src = "img/book.jpg" style = "float : left; width : 150px; margin : 0 1em 0 1em;"/>
 
 This web site comes with the book <a href="https://www.springer.com/computer/swe/book/978-1-4471-5006-0">"Autonomic Computing: Principles, Design and Implementation”</a> authored by Philippe Lalanda, Julie McCann and Ada Diaconescu. 
 
