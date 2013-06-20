@@ -15,7 +15,7 @@ In this exercise, you will learn how to write a basic light follow me. Then you 
 
 <u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. You can skip the play with it section. Optionnaly you can also read the getting started section as recommended in the tutorial.
 
-<u>Question 2 - react when a light is moved</u>The current application does not manage the change of light location. Listen to the change of location and change the lights state accordingly.
+<u>Question 2 - react when a light is moved:</u> The current application does not manage the change of light location. Listen to the change of location and change the lights state accordingly.
 
 <u>Question 3 - Scripts</u>: You will now test that the application is working correctly. To do so, you will need to use a script.
 
@@ -332,9 +332,9 @@ This maximumNumberOfLights has precedence over the given maximum power consumpti
 
 At first, to simplify the implementation you can consider that each light as a 100Watt default consumption and that the lights are binary lights only. In such case the number of light is given by a simple Euclidean division.
 
-<u>Question 2 - Test</u>: Create a script (the environment should be composed by binary lights only) to test your application and checks it is working according to the specification.
+<u>Question 2 - Test:</u> Create a script (the environment should be composed by binary lights only) to test your application and checks it is working according to the specification.
 
-<u>Question 3 - Manager</u>: Extend the FollowMeAdministration and your manager to add an energy saving mode :
+<u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving mode :
 
 {code lang="java"}
 public interface FollowMeAdministration {
@@ -343,23 +343,210 @@ public interface FollowMeAdministration {
     public illuminanceGoal getIlluminancePreference();
 
 	/**
-	 * Turn on/off the energy saving mode
-	 * @param energySavingEnabled : true if the energy saving mode is enabled.
+	 * Configure the energy saving mode
+	 * @param energySavingEnabled : the targeted energy mode.
 	 */
-	public void setEnergySaving(boolean energySavingEnabled);
+	public void setEnergySaving(EnergyGoal energyGoal);
 
 	/**
 	 * Check if the energy saving mode is enabled.
 	 * 
-	 * @return true if the energy saving mode is enabled; return false otherwise.
+	 * @return the current energy mode.
 	 */
-	public boolean isInEnergySavingMode();
+	public EnergyGoal isInEnergySavingMode();
 
 }
 {/code}
 
-<u>Question 4 - Command</u>: Extend your command to be able to trigger the energy saving mode
+The different level of energy could be :
+{code lang="java"}
+package org.example.follow.me.manager;
 
+/**
+ * This enum describes the different energy goals associated with the
+ * manager.
+ */
+public enum EnergyGoal {
+	LOW(100d), MEDIUM(200d), HIGH(1000d);
+
+	/**
+	 * The corresponding maximum energy in watt
+	 */
+	private double maximumEnergyInRoom;
+
+	/**
+	 * get the maximum energy consumption in each room
+	 * 
+	 * @return the energy in watt
+	 */
+	public double getMaximumEnergyInRoom() {
+		return maximumEnergyInRoom;
+	}
+
+	private EnergyGoal(double powerInWatt) {
+		maximumEnergyInRoom = powerInWatt;
+	}
+} 
+{/code}
+
+
+<u>Question 4 - Command:</u> Extend your command to be able to trigger the energy saving mode and test your work.
+
+{code lang="bash"}
+g! setEnergyPreference MEDIUM
+g! getEnergyPreference
+EnergyMode = MEDIUM
+{/code}
+
+
+<u>Question 5 - Using DimmerLights:</u> Change your implementation to take dimmer lights into account.
+One way to achieve it, is to try to turn on as many BinaryLight as possible and then turn the DimmerLights to reach the targeted power by adjusting their powers.
+
+<u>Question 6 (optional) - Using heterogeneous lights:</u> In the previous questions, we assumed that the lights all have the same nominal consumption. Try to write a more generic algorithm to manage heterogeneous lights.
+
+First consider only the problem with BinaryLights. To do that, you might have to test all the combinations of BinaryLights. This can be achieved by solving the [Subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem).
+
+The consumption of a light is given by the getMaxPowerLevel() method of the BinaryLight interface.
+
+Here is a very naive implementation of this algorithm (feel free to implement your own) :
+
+{code lang="java"}
+package org.example.algorithm;
+
+import java.util.Arrays;
+import java.util.BitSet;
+
+/**
+ * This class implements an algorithm that use a very naive approach of solving
+ * the closest sum subset problem on an array of doubles.
+ */
+public final class ClosestSumAlgorithm {
+
+	/**
+	 * Find the subset of the items whose sum is closest to, without exceeding
+	 * maximalSum.
+	 * 
+	 * Performance are low with doubles. Could largely be improved by using
+	 * integers instead. The algorithm is sufficiently effective for 15 lights
+	 * or less.
+	 * 
+	 * @param maximalSum
+	 *            the maximal sum of the subset;
+	 * @param items
+	 *            an array containing the weight of each items. The order of
+	 *            element will be preserved to produce the best
+	 *            combination.
+	 * @return the subset of items whose sum is closest to maximalSum
+	 *         without exceeding it. The combination is given in the same order
+	 *         as the input array. array[i] contains the value of item[i] if it
+	 *         is involved in the computing of the closest-sum, or 0 if not.
+	 */
+	public static double[] greadySubSetClosestSum(final double maximalSum, final double[] items) {
+
+		// the current best results :
+		double bestSum = 0;
+		double[] bestCombination = new double[0];
+
+		/*
+		 * Generate all the possible combinations. There are 2^N possibilities
+		 * that can therefore be represented by a bitset.
+		 * The use of bitset is done to reduce the number of line of codes.
+		 * The solution is thus far from being optimized.
+		 */
+		for (int i = 0; i < Math.pow(2, items.length); i++) {
+			// Get the current combination
+			// Note that the sum could be calculated without using the bitset
+			// (less clear but more memory efficient)
+			double[] currentCombination = multiplyByBitset(convertToBitSet(i), items);
+			double currentSum = sum(currentCombination);
+
+			// if we have the best result possible
+			if (currentSum == maximalSum) {
+				// return it
+				return currentCombination;
+			}
+
+			// if the current result is better than the previous best result
+			if ((currentSum <= maximalSum) && (currentSum > bestSum)) {
+				// store it
+				bestSum = currentSum;
+				bestCombination = currentCombination;
+			}
+		}
+
+		return bestCombination;
+	}
+
+	/**
+	 * Sum of the given variables or array.
+	 * 
+	 * @param variables
+	 *            the variables to be summed.
+	 * @return the sum of the variables.
+	 */
+	private static double sum(double... variables) {
+		double sum = 0;
+		for (double var : variables) {
+			sum += var;
+		}
+		return sum;
+	}
+
+	/**
+	 * Convert a number into BitSet.
+	 * This could be obtained directly in JAVA7 (iCASA is not compatible)
+	 * 
+	 * @param number
+	 *            the number to convert
+	 * @return the resulting bit set
+	 */
+	private static BitSet convertToBitSet(long number) {
+		BitSet bits = new BitSet();
+		int index = 0;
+		while (number != 0L) {
+			if ((number % 2L) != 0) {
+				bits.set(index);
+			}
+			++index;
+			number = number >>> 1;
+		}
+		return bits;
+	}
+
+	/**
+	 * Multiply an array by a bitset
+	 * 
+	 * @param bitset
+	 *            the BitSet
+	 * @param array
+	 *            the array
+	 * @return the resulting array
+	 */
+	private static double[] multiplyByBitset(BitSet bitset, double[] array) {
+		assert (bitset.length() == array.length) : "array and bitset must have the same size";
+
+		double[] result = new double[array.length];
+		for (int i = 0; i < array.length; i++) {
+			result[i] = bitset.get(i) ? array[i] : 0;
+		}
+		return result;
+	}
+}
+{/code}
+
+Example of use :
+{code lang="java"}
+public static void main(String[] args) {
+	double[] items = new double[] { 1.5d, 7.4d, 3.4d, 8.3d, 15.233d, 99d, 22d, 76d, 38d, 22d, 7d, 0.10d, 54.9d, 45.9d, 90d, 48.6d, 6.1d, 4.2d, 89.3d };
+	Arrays.sort(items);
+	// force the algorithm to explore all the possibilities
+	double maxSum = 99.97484;
+	double[] result = ClosestSumAlgorithm.greadySubSetClosestSum(maxSum, items);
+	System.out.println(Arrays.toString(result));
+	System.out.println(sum(result));
+
+}
+{/code}
 
 
 ## Exercise 4: A better illuminance management.
