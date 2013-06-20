@@ -538,9 +538,10 @@ Example of use :
 {code lang="java"}
 public static void main(String[] args) {
 	double[] items = new double[] { 1.5d, 7.4d, 3.4d, 8.3d, 15.233d, 99d, 22d, 76d, 38d, 22d, 7d, 0.10d, 54.9d, 45.9d, 90d, 48.6d, 6.1d, 4.2d, 89.3d };
-	Arrays.sort(items);
-	// force the algorithm to explore all the possibilities
+
+	// Targeted sum :
 	double maxSum = 99.97484;
+	// Compute the best combination :
 	double[] result = ClosestSumAlgorithm.greadySubSetClosestSum(maxSum, items);
 	System.out.println(Arrays.toString(result));
 	System.out.println(sum(result));
@@ -549,10 +550,64 @@ public static void main(String[] args) {
 {/code}
 
 
-## Exercise 4: A better illuminance management.
+## Exercise 5: A better illuminance management.
 
-Question 1 
+In this exercise, you will manage the level of illuminance more precisely.
 
+<u>Question 1 - Reaching a targeted illuminance</u> Use the photometers to get the illuminance of each room.
+Change your code to switch reach a targeted illuminance :
+
+{code lang="java"}
+/**
+* The targeted illuminance in each room
+**/
+private double targetedIlluminance = 4000.0d;
+{/code}
+
+**To simplify, you can assume that there is only one DimmerLight per room (and no Binary Lights).**
+
+The physical model used by iCASA is basic. You can use the following constant to perform your computation :
+
+{code lang="java"}
+/**
+ * Watt to lumens conversion factor
+ * It has been considered that: 1 Watt=680.0 lumens at 555nm.
+ */
+public final static double ONE_WATT_TO_ONE_LUMEN = 680.0d;
+{/code}
+
+The light provided by a DimmerLight depends on the configuration of the dimmer (ranging from 0.0d to 1.0d).
+Let's call :
+
++ &lambda; the dimmer configuration
++ &beta; the watts to lumens factor (value 680.0)
++ R the area of the room
++ P the maximum power of the given light
++ I the illuminance
+
+The illuminance I given by one dimmer light is given by :
+
+![illuminance equation](img/exercises/follow.me/illEquation.png)
+
+It is thus easy to find the &lambda; factor to apply to a given light.
+
+<u>Question 2 - more than one dimmer light:</u> You will now try to manage more than one Dimmer Light.
+
+The general equation of our physical model is :
+
+![illuminance equation](img/exercises/follow.me/generalIllEquation.png)
+
+where :
+
++ N is the number of available lights.
++ &lambda;(i) and P(i) are the power factor and maximum power of light i. 
+
+To simplify the problem, you can assume that every light has the same maximum power level (P(i)) : P and that the factor &lambda;(i) is the same for every light (&lambda;).
+
+
+<u>Question 3 (optional) - generic algorithm</u> Try to find a solution for the generic case : heterogeneous lights (binary lights and dimmer lights with different wattage). 
+
+To simplify the problem, you can adopt a test&amp;try approach by turning on the lights and configuring the the dimmer lights  progressively. If you choose this approach, you may cache the result of your configuration for the next time (until the targeted light is changed).
 
 
 ## Exercise 5: Reacting to time events
