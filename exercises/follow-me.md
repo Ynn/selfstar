@@ -7,53 +7,54 @@ Here the goal is to make the light follows the users.
 
 <img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
 
-The exercises are dependant and must be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need.
+The exercises are dependent and must be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need.
 
 
 ## Exercise 1: Writing the basic follow me
-In this exercise, you will learn how to write a basic light follow me. Then you will enhance the tutorial version by managing dimmer lights.
+In this exercise, you will learn how to write a basic light follow me. 
 
-<u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. You can skip the play with it section. Optionnaly you can also read the getting started section as recommended in the tutorial.
+<u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. You can skip the "play with it section". Optionally you can also read the [getting started](/article/for-beginners/getting-started) section as recommended in the tutorial.
 
-<u>Question 2 - react when a light is moved:</u> The current application does not manage the change of light location. Listen to the change of location and change the lights state accordingly.
+<u>Question 2 - react when a light is moved:</u> The current application does not manage the change of light location. Listen to the change of location and change each light state accordingly.
 
 <u>Question 3 - Scripts</u>: You will now test that the application is working correctly. To do so, you will need to use a script.
 
 {note}
 ### About scripts
 
-The iCASA environnement can be created and modified using scripts. A script is an xml files with a specific extension (.bhv) that contains sequentially executed instructions. The list of available commands can be found in the [iCASA scripts documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.0.0/script.html).
+The iCASA environment can be created and modified using scripts. A script is an XML file with a specific extension (.bhv) that contains sequentially executed instructions. The list of available commands can be found in the [iCASA scripts documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.0.0/script.html).
 
-To play a script, you need to deploy it in the iCASA **load** directory. Scripts can then be run using the "Script Player" pannel, you then can select and start your script in the "Script" section. At any time, only one script can be played.
+To play a script, you need to deploy it in the iCASA **load** directory. Scripts can then be run using the "Script Player" panel, you then can select and start your script in the "Script" section. At any time, only one script can be played.
 
 {/note}
 
 
-For beginning and to ease the process of creating scripts, we will provide you a squeleton of a script for testing your light application. You will need to enhanced it, among question, to be able to test your applicaitons.
+For beginning and to ease the process of creating scripts, we will provide you a skeleton of a script for testing your light application. You will need to enhanced it to be able to test your applications.
 
 Download and deploy the following script : [single_bl_light_environment.bhv]() in the load directory of iCASA. 
-
 The script should be now available in the "Script player" in the iCASA GUI. 
 
 Run the script and check that the application is working as expected.
 
-## Exercices 2 : Using multiple lights and dimmer lights
+## Exercises 2 : Using multiple lights and dimmer lights
 
-<u>Question 1 - More lights</u>: Note that there is only one light per room. Copy the script and rename the copy to **multiple_lights_environement.bhv**. 
+Now you will enhance the tutorial version by managing dimmer lights.
+
+<u>Question 1 - More lights</u>: Note that there is only one light per room. Copy the script and rename the copy to **multiple_lights_environment.bhv**. 
 
 Modify the script to have at least two lights per room. 
 
 {warning}
-When creating a new device, you must give it an unique ID. An ID cannot be used twice. The ID is a string and there is no restriction on how to format the device name. We strongly recommand to give it an easily recognizable name.
+When creating a new device, you must give it an unique ID. An ID cannot be used twice. The ID is a string and there is no restriction on how to format the device name. We strongly recommend to give it an easily recognizable name.
 {/warning}
 
-Stop the running script. Use the reset environnement command in the "Script Pannel" and run your newly created script.
+Stop the running script. Use the reset environment command in the "Script Panel" and run your newly created script.
 
-<u>Question 2 - No more than n lights</u>: As you can notice, the present implementation of the follow me is switching all the lights on when a user enter a room. This is obviously not energy friendly.
+<u>Question 2 - No more than n lights</u>: As you can notice, the present implementation of the follow me is turning all the lights on when a user enter a room. This is obviously not energy friendly.
 
 Change the current implementation so that the number of light per room can be configured.
 
-We strongly recommand to store that maximum number in a member variable (you will have to reuse it later when building administration interfaces) :
+We strongly recommend to store that maximum number in a member variable (you will have to reuse it later when building administration interfaces) :
 
 {code lang=java} 
 /** 
@@ -64,9 +65,9 @@ private int maxLightsToTurnOnPerRoom = 1;
 
 
 <u>Question 3 - Using the dimmer lights</u>: You will now manage a new type of device called dimmer light.
-The specification of dimmer lights is given in iCASA documentation. Every Dimmer Lights use the fr.liglab.adele.icasa.device.light.DimmerLight interface.
+The specification of dimmer lights is given in iCASA documentation. Each dimmer light use the fr.liglab.adele.icasa.device.light.DimmerLight interface.
 
-Modify the application to switch on (0%) and off(100%) the Dimmer Lights (as well as the binary lights) when the user is moving. 
+Modify the application to switch on (0%) and off(100%) the dimmer lights (as well as the binary lights) when the user is moving. 
 
 Modify your script so add some dimmer lights in the different rooms. Example :
 {code lang=xml}
@@ -113,7 +114,7 @@ public interface FollowMeConfiguration {
 
 Implement the FollowMeConfiguration interface into your main application class.
 
-Provide this interface as a service (follow the instuction given in the getting started section).
+Provide this interface as a service (follow the instruction given in the getting started section).
 
 Deploy your application and check that your service is provided in the Felix console : [http://localhost:8080/system/console/bundles](http://localhost:8080/system/console/bundles).
 
@@ -123,15 +124,13 @@ Export the package org.example.follow.me.configuration as explained in the [usin
 
 Your manager will understand (more) "high level goals" such as "High Illuminance", "Medium Illuminance", "Low Illuminance" and configure the number of lights accordingly. 
 
-For begining the interpretation of these goals into according configuration will be hard-coded and hardwired. Of course, this manager is not smart (the manager acts more like an administration wrapper) and the raise of abstraction is limited, but it will show you the basics steps to separate the concerns of your application configuration with the management of more abstract administration goals.
-
-Create a new project "follow.me.manager" and add a main component FollowMeManager. The implementation class should be nammed FollowMeManager.java and put into the **org.example.follow.me.manager.impl** package.
-
+Create a new project "follow.me.manager" and add a main component FollowMeManager. The implementation class should be named FollowMeManager.java and put into the **org.example.follow.me.manager.impl** package.
 
 Import the package org.example.follow.me.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
-Add the dependency to the FollowMeConfiguration configuration and write a manager so that the number of lights is adjusting depending on a targetted goal. 
+Add the dependency to the FollowMeConfiguration configuration and write a manager so that the number of lights is adjusted depending on a targeted goal. 
 
+For beginning the interpretation of these goals into according configuration will be hard-coded and hardwired.
 You can use the following hard-coded values :
 
 {code lang="java"}
@@ -175,7 +174,7 @@ public enum IlluminanceGoal {
 {/code}
 
 
-<u>Question 3 - providing an adminstration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express is goals. Once again, you will provide a service in that purpose.
+<u>Question 3 - providing an administration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express his goals. Once again, you will provide a service in that purpose.
 
 The service interface will be :
 
@@ -211,9 +210,9 @@ public interface FollowMeAdministration {
 Your FollowMeManager class should implement this class and provide it as a service.
 
 
-<u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose you to build a command line so as to allow adminstrators to configure your manager.
+<u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose you to build a command line so as to allow administrators to configure your manager.
 
-Commands are not currently supported by the IDE. You will need to use [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html). You don't Here is an example of command using [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html) and a [specific handler]() for providing commands :
+Commands are not currently supported by the IDE. You will need to use [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html). You don't Here is an example of command using [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html) and a [provided specific handler](http://felix.apache.org/site/how-to-write-your-own-handler.html) for providing commands :
 
 {code lang="java"}
 package org.example.follow.me.manager.command;
@@ -271,7 +270,7 @@ public class FollowMeManagerCommandImpl {
 
 As you can notice, the component and the dependency are directly declared in the code. There is no need to do it in the IDE.
 
-Complete this code to perform the conversion of the goal. The command can be used directly in the Felix shell :
+Implement the two methods to achieve the conversion of the goal from String to IlluminanceGoal. The command can be then used directly in the Felix shell :
 {code lang="bash"}
 g! setIlluminancePreference MEDIUM
 {/code}
@@ -328,13 +327,13 @@ In that purpose, you should create a new member variable :
 private double maximumEnergyConsumptionAllowedInARoom = 100.0d;
 {/code}
 
-This maximumNumberOfLights has precedence over the given maximum power consumption. 
+Please note that the maximumNumberOfLights (we have introduced earlier) takes precedence over the given maximum power consumption. 
 
-At first, to simplify the implementation you can consider that each light as a 100Watt default consumption and that the lights are binary lights only. In such case the number of light is given by a simple Euclidean division.
+To simplify the implementation you can assume that each light as a 100Watt default consumption and that the lights are binary lights only. In such case the number of light is given by a simple Euclidean division.
 
 <u>Question 2 - Test:</u> Create a script (the environment should be composed by binary lights only) to test your application and checks it is working according to the specification.
 
-<u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving mode :
+<u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving goal :
 
 {code lang="java"}
 public interface FollowMeAdministration {
@@ -343,22 +342,22 @@ public interface FollowMeAdministration {
     public illuminanceGoal getIlluminancePreference();
 
 	/**
-	 * Configure the energy saving mode
-	 * @param energySavingEnabled : the targeted energy mode.
+	 * Configure the energy saving goal.
+	 * @param energySavingEnabled : the targeted energy goal.
 	 */
-	public void setEnergySaving(EnergyGoal energyGoal);
+	public void setEnergySavingGoal(EnergyGoal energyGoal);
 
 	/**
-	 * Check if the energy saving mode is enabled.
+	 * Gets the current energy goal.
 	 * 
-	 * @return the current energy mode.
+	 * @return the current energy goal.
 	 */
-	public EnergyGoal isInEnergySavingMode();
+	public EnergyGoal getEnergyGoal();
 
 }
 {/code}
 
-The different level of energy could be :
+The different levels of energy could be :
 {code lang="java"}
 package org.example.follow.me.manager;
 
@@ -390,7 +389,7 @@ public enum EnergyGoal {
 {/code}
 
 
-<u>Question 4 - Command:</u> Extend your command to be able to trigger the energy saving mode and test your work.
+<u>Question 4 - Command:</u> Extend your command to be able to configure the energy saving goal and test your work.
 
 {code lang="bash"}
 g! setEnergyPreference MEDIUM
@@ -400,9 +399,9 @@ EnergyMode = MEDIUM
 
 
 <u>Question 5 - Using DimmerLights:</u> Change your implementation to take dimmer lights into account.
-One way to achieve it, is to try to turn on as many BinaryLight as possible and then turn the DimmerLights to reach the targeted power by adjusting their powers.
+One way to achieve this is to try to turn on as many binary lights as possible and then turn the DimmerLights to reach the targeted power by adjusting their powers.
 
-<u>Question 6 (optional) - Using heterogeneous lights:</u> In the previous questions, we assumed that the lights all have the same nominal consumption. Try to write a more generic algorithm to manage heterogeneous lights.
+<u>Question 6 (optional) - Using heterogeneous lights:</u> In the previous questions, we assumed that all the lights had the same nominal consumption. Try to write a more generic algorithm to manage heterogeneous lights.
 
 First consider only the problem with BinaryLights. To do that, you might have to test all the combinations of BinaryLights. This can be achieved by solving the [Subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem).
 
@@ -549,13 +548,14 @@ public static void main(String[] args) {
 }
 {/code}
 
+Then you may try to solve the problem for environment including some dimmer lights.
 
 ## Exercise 5: A better illuminance management.
 
 In this exercise, you will manage the level of illuminance more precisely.
 
 <u>Question 1 - Reaching a targeted illuminance</u> Use the photometers to get the illuminance of each room.
-Change your code to switch reach a targeted illuminance :
+Change your code to keep a targeted illuminance when moving users from one room to another:
 
 {code lang="java"}
 /**
@@ -564,7 +564,7 @@ Change your code to switch reach a targeted illuminance :
 private double targetedIlluminance = 4000.0d;
 {/code}
 
-**To simplify, you can assume that there is only one DimmerLight per room (and no Binary Lights).**
+**To simplify, you can assume that there is only one dimmer light per room (and no binary lights).**
 
 The physical model used by iCASA is basic. You can use the following constant to perform your computation :
 
