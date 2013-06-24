@@ -705,13 +705,43 @@ g! setIlluminancePreference FULL
 
 
 
+## Exercise 6 : Using user preferences
+
+Now, we will try to adapt the illuminance based on User's preferences. 
+
+In this exercises, we will assume that it is possible to identify precisely who is in a given room. In that purpose we provide a LocationService that provide the ability to get a list of persons in a given room.
+
+The user preferences service (Preferences) is able to store a set/get of user preferences (via setUserPropertyValue/getUserProperties)
+
+<u> Question 1 - Reading user preferences </u> Use both services to read the preference of a given user regarding the illuminance.
+
+![The FollowMeConfiguration service](/img/exercises/follow.me/preferences.png)
+
+
+You can use the following properties names and values:
+{code lang="java"}
+/**
+* User preferences for illuminance
+**/
+public static final String USER_PROP_ILLUMINANCE = "illuminance";
+public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "SOFT";
+public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "MEDIUM";
+public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "FULL";
+
+{/code}
 
 
 
-## Exercise 6: Reacting to time events
 
 
-## Exercise 7: Dealing with Flopping state
+## Exercise 7: Reacting to time events
+
+In this exercise you will learn to react to timed events.
+
+<u>Question 1 - 
+
+
+## Exercise 8: Dealing with Flopping state
 
 </article>
 
