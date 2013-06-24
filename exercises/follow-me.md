@@ -130,6 +130,8 @@ Import the package org.example.follow.me.configuration as explained in the [usin
 
 Add the dependency to the FollowMeConfiguration configuration and write a manager so that the number of lights is adjusted depending on a targeted goal. 
 
+![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+
 For beginning the interpretation of these goals into according configuration will be hard-coded and hardwired.
 You can use the following hard-coded values :
 
@@ -176,6 +178,9 @@ public enum IlluminanceGoal {
 
 <u>Question 3 - providing an administration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express his goals. Once again, you will provide a service in that purpose.
 
+![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeAdministration.png)
+
+
 The service interface will be :
 
 {code lang="java"}
@@ -212,7 +217,15 @@ Your FollowMeManager class should implement this class and provide it as a servi
 
 <u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose you to build a command line so as to allow administrators to configure your manager.
 
+
+One again, you need to create a new component "Follow Me Command" and import and export the package "org.example.follow.me.manager".
+
+![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeCommand.png)
+
+
 Commands are not currently supported by the IDE. You will need to use [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html). You don't Here is an example of command using [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html) and a [provided specific handler](http://felix.apache.org/site/how-to-write-your-own-handler.html) for providing commands :
+
+
 
 {code lang="java"}
 package org.example.follow.me.manager.command;
