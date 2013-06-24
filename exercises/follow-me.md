@@ -99,7 +99,7 @@ public interface FollowMeConfiguration {
 	 * 
 	 * @return the maximum number of lights to turn on
 	 */
-	public void getMaximumNumberOfLightsToTurnOn();
+	public int getMaximumNumberOfLightsToTurnOn();
 
 	/**
 	 * Sets the maximum number of lights to turn on each time an user is
@@ -303,6 +303,8 @@ In this exercise, you will try to add to manage the energy consumption of your s
 
 <u>Question 1 - Extending the configuration service</u>: Extend the configuration service of your Follow Me application so that it is possible to configure a maximum power per room :
 
+![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+
 {code lang=java}
 package org.example.follow.me.configuration;
  
@@ -311,7 +313,7 @@ package org.example.follow.me.configuration;
  * application.
  */
 public interface FollowMeConfiguration {
-    public void getMaximumNumberOfLightsToTurnOn();
+    public int getMaximumNumberOfLightsToTurnOn();
     public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn);
  
     /**
@@ -319,15 +321,15 @@ public interface FollowMeConfiguration {
      * 
      * @return the maximum allowed energy consumption in Watts
      */
-    public void getMaximumAllowedEnergyInRoom();
+    public double getMaximumAllowedEnergyInRoom();
  
     /**
      * Sets the maximum allowed energy consumption in Watts in each room
      * 
-     * @param maximumNumberOfLightsToTurnOn
-     *            the new maximum number of lights to turn on
+     * @param maximumEnergy
+     *            the maximum allowed energy consumption in Watts in each room
      */
-    public void setMaximumAllowedEnergyInRoom(int maximumNumberOfLightsToTurnOn);
+    public void setMaximumAllowedEnergyInRoom(double maximumEnergy);
 }
 {/code}
 
@@ -347,6 +349,8 @@ To simplify the implementation you can assume that each light as a 100Watt defau
 <u>Question 2 - Test:</u> Create a script (the environment should be composed by binary lights only) to test your application and checks it is working according to the specification.
 
 <u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving goal :
+
+![The FollowMeAdministration service](/img/exercises/follow.me/followMeAdministration.png)
 
 {code lang="java"}
 public interface FollowMeAdministration {
@@ -403,6 +407,9 @@ public enum EnergyGoal {
 
 
 <u>Question 4 - Command:</u> Extend your command to be able to configure the energy saving goal and test your work.
+
+![The FollowMeAdministration service](/img/exercises/follow.me/followMeCommand.png)
+
 
 {code lang="bash"}
 g! setEnergyPreference MEDIUM
@@ -621,6 +628,102 @@ To simplify the problem, you can assume that every light has the same maximum po
 <u>Question 3 (optional) - generic algorithm</u> Try to find a solution for the generic case : heterogeneous lights (binary lights and dimmer lights with different wattage). 
 
 To simplify the problem, you can adopt a test&amp;try approach by turning on the lights and configuring the the dimmer lights  progressively. If you choose this approach, you may cache the result of your configuration for the next time (until the targeted light is changed).
+
+
+<u>Question 4 - Enhancing the configuration service.</u> Now you will improve your configuration service to allow the configuration of the illuminance value.
+
+
+![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+
+Implements the following methods :
+
+{code lang="java"}
+package org.example.follow.me.configuration;
+ 
+/**
+ * The FollowMeConfiguration service allows to configure the Follow Me
+ * application.
+ */
+public interface FollowMeConfiguration {
+    public int getMaximumNumberOfLightsToTurnOn();
+    public void setMaximumNumberOfLightsToTurnOn(int maximumNumberOfLightsToTurnOn);
+    public double getMaximumAllowedEnergyInRoom();
+    public void setMaximumAllowedEnergyInRoom(double maximumEnergy);
+
+    /**
+     * Gets the targeted illuminance for each room
+     * 
+     * @return the targeted illuminance in lumens
+     */
+    public double getTargetedIlluminance();
+ 
+    /**
+     * Sets the targeted illuminance for each room
+     * 
+     * @param illuminance
+     * 		 the targeted illuminance in lumens for each room
+     */
+    public void setTargetedIlluminance(double illuminance);
+}
+{/code}
+
+<u>Question 5 - Administration interface.</u> Modify the manager IlluminanceGoal to add illuminance configuration :
+
+![The FollowMeAdministration service](/img/exercises/follow.me/followMeAdministration.png)
+
+{code lang="java"}
+package org.example.follow.me.manager;
+ 
+/**
+ * This enum describes the different illuminance goals associated with the
+ * manager.
+ */
+public enum IlluminanceGoal {
+
+    /** The goal associated with soft illuminance. */
+    SOFT(1, 500d),
+    /** The goal associated with medium illuminance. */
+    MEDIUM(2, 2750d),
+    /** The goal associated with full illuminance. */
+    FULL(3, 4000d);
+ 
+    /** The number of lights to turn on. */
+    private int numberOfLightsToTurnOn;
+ 
+    /**
+     * Gets the number of lights to turn On.
+     * 
+     * @return the number of lights to turn On.
+     */
+    public int getNumberOfLightsToTurnOn() {
+        return numberOfLightsToTurnOn;
+    }
+ 
+    /**
+     * Instantiates a new illuminance goal.
+     * 
+     * @param numberOfLightsToTurnOn
+     *            the number of lights to turn on.
+     */
+    private IlluminanceGoal(int numberOfLightsToTurnOn) {
+        this.numberOfLightsToTurnOn = numberOfLightsToTurnOn;
+    }
+}
+
+{/code}
+and modify your manager to takes this goal into account.
+
+<u>Question 6 - Test</u> Using the command you have implemented before, test that your application is working as expected.
+
+{code lang="bash"}
+g! setIlluminancePreference SOFT
+g! setIlluminancePreference MEDIUM
+g! setIlluminancePreference FULL
+{/code}
+
+
+
+
 
 
 ## Exercise 5: Reacting to time events
