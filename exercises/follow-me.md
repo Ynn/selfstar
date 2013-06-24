@@ -130,7 +130,7 @@ Import the package org.example.follow.me.configuration as explained in the [usin
 
 Add the dependency to the FollowMeConfiguration configuration and write a manager so that the number of lights is adjusted depending on a targeted goal. 
 
-![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+![The FollowMeConfiguration service](/img/exercises/follow.me/FollowMeConfigurationService.png)
 
 For beginning the interpretation of these goals into according configuration will be hard-coded and hardwired.
 You can use the following hard-coded values :
@@ -303,7 +303,7 @@ In this exercise, you will try to add to manage the energy consumption of your s
 
 <u>Question 1 - Extending the configuration service</u>: Extend the configuration service of your Follow Me application so that it is possible to configure a maximum power per room :
 
-![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+![The FollowMeConfiguration service](/img/exercises/follow.me/FollowMeConfigurationService.png)
 
 {code lang=java}
 package org.example.follow.me.configuration;
@@ -350,7 +350,7 @@ To simplify the implementation you can assume that each light as a 100Watt defau
 
 <u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving goal :
 
-![The FollowMeAdministration service](/img/exercises/follow.me/followMeAdministration.png)
+![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeAdministration.png)
 
 {code lang="java"}
 public interface FollowMeAdministration {
@@ -408,7 +408,8 @@ public enum EnergyGoal {
 
 <u>Question 4 - Command:</u> Extend your command to be able to configure the energy saving goal and test your work.
 
-![The FollowMeAdministration service](/img/exercises/follow.me/followMeCommand.png)
+![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeCommand.png)
+
 
 
 {code lang="bash"}
@@ -633,7 +634,7 @@ To simplify the problem, you can adopt a test&amp;try approach by turning on the
 <u>Question 4 - Enhancing the configuration service.</u> Now you will improve your configuration service to allow the configuration of the illuminance value.
 
 
-![The FollowMeConfiguration service](/img/exercises/follow.me/followMeConfigurationService.png)
+![The FollowMeConfiguration service](/img/exercises/follow.me/FollowMeConfigurationService.png)
 
 Implements the following methods :
 
@@ -669,7 +670,7 @@ public interface FollowMeConfiguration {
 
 <u>Question 5 - Administration interface.</u> Modify the manager IlluminanceGoal to add illuminance configuration :
 
-![The FollowMeAdministration service](/img/exercises/follow.me/followMeAdministration.png)
+![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeAdministration.png)
 
 {code lang="java"}
 package org.example.follow.me.manager;
