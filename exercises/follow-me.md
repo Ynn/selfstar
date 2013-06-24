@@ -727,10 +727,10 @@ g! setIlluminancePreference FULL
 
 
 
-## Exercise 5: Reacting to time events
+## Exercise 6: Reacting to time events
 
 
-## Exercise 6: Dealing with Flopping state
+## Exercise 7: Dealing with Flopping state
 
 </article>
 
