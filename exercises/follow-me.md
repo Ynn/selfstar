@@ -13,7 +13,11 @@ The exercises are dependent and must be followed in the given order. You can ref
 ## Exercise 1: Writing the basic follow me
 In this exercise, you will learn how to write a basic light follow me. 
 
-<u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. You can skip the "play with it section". Optionally you can also read the [getting started](/article/for-beginners/getting-started) section as recommended in the tutorial.
+<u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. 
+
+Use "LightFollowMe" as the name of your component and "LightFollowMeImpl" as your implementation class. The package will be "org.example.follow.me"
+
+You can skip the "play with it section". Optionally you can also read the [getting started](/article/for-beginners/getting-started) section as recommended in the tutorial.
 
 <u>Question 2 - react when a light is moved:</u> The current application does not manage the change of light location. Listen to the change of location and change each light state accordingly.
 
@@ -124,7 +128,7 @@ Export the package org.example.follow.me.configuration as explained in the [usin
 
 Your manager will understand (more) "high level goals" such as "High Illuminance", "Medium Illuminance", "Low Illuminance" and configure the number of lights accordingly. 
 
-Create a new project "follow.me.manager" and add a main component FollowMeManager. The implementation class should be named FollowMeManager.java and put into the **org.example.follow.me.manager.impl** package.
+Create a new project "follow.me.manager" and add a main component FollowMeManager. The implementation class should be named FollowMeManagerImpl.java and put into the **org.example.follow.me.manager.impl** package.
 
 Import the package org.example.follow.me.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
@@ -703,6 +707,7 @@ g! setIlluminancePreference MEDIUM
 g! setIlluminancePreference FULL
 {/code}
 
+In particular, make sure that the lights are correctly reconfigured for each room when the targeted illuminance is reconfigured.
 
 
 ## Exercise 6 : Using user preferences
@@ -711,14 +716,17 @@ Now, we will try to adapt the illuminance based on User's preferences.
 
 In this exercises, we will assume that it is possible to identify precisely who is in a given room. In that purpose we provide a LocationService that provide the ability to get a list of persons in a given room.
 
-The user preferences service (Preferences) is able to store a set/get of user preferences (via setUserPropertyValue/getUserProperties)
+The user preferences service (Preferences) is able to store a set of user preferences (via setUserPropertyValue/getUserProperties)
 
-<u> Question 1 - Reading user preferences </u> Use both services to read the preference of a given user regarding the illuminance.
+<u> Question 1 - Change the manager implementation to use the Preferences service</u> Instead of having a targeted global illuminance configured globally, we will use the preference service to configure a value per users.
 
-![The FollowMeConfiguration service](/img/exercises/follow.me/preferences.png)
+Initially, we will assume that there is only one person in the flat. 
 
+Use the location service to determine who is in the flat. Then use the the Preferences services to get the user preferences regarding illuminance.
 
-You can use the following properties names and values:
+![The Manager using location and preferences](/img/exercises/follow.me/preferences.png)
+
+Each person can express a preference. Use the following constant for the illuminance preference.
 {code lang="java"}
 /**
 * User preferences for illuminance
@@ -727,8 +735,56 @@ public static final String USER_PROP_ILLUMINANCE = "illuminance";
 public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "SOFT";
 public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "MEDIUM";
 public static final String USER_PROP_ILLUMINANCE_VALUE_SOFT = "FULL";
+{/code}
+
+
+Example of using the Preferences service :
+{code lang="java"}
+import fr.liglab.adele.icasa.service.preferences;
+//..
+public class FollowMeManagerImpl {
+
+	// You have to create a new dependency :
+	private Preferences preferencesService; //...
+
+	//same applied for the person location service :
+	private PersonLocationService personLocationService; //...
+
+
+	public void ...{
+		String AliceIlm = (String) preferencesServices.getUserPropertyValue("Alice", USER_PROP_ILLUMINANCE);
+		//..	
+	}
 
 {/code}
+
+You will have to convert the given String "SOFT"/"MEDIUM"/"FULL" into an illuminanceGoal. You have done this before in order to implement your command.
+
+When the person has not express any preference, use the previously defined (global) preference.
+
+<u>Question 2 - Writing a command for the preference service </u> Extend your command implementation so as to allow to store user preferences :
+
+
+{code lang="bash"}
+g! setIlluminancePreference Alice SOFT 
+g! setIlluminancePreference John MEDIUM
+g! setIlluminancePreference Bob FULL
+{/code}
+
+
+![The preferences command](/img/exercises/follow.me/preferencesCommand.png)
+
+
+Using this command, test that your implementation is working as expected.
+
+
+
+<u>Question 3 - More than one person:</u> When more than one person is in the flat, use an average value for the targeted illuminance. You can define another policy if you want.
+
+
+
+
+
 
 
 
