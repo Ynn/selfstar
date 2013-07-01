@@ -975,12 +975,60 @@ Change your implementation to manage listeners. The easiest way to do the that i
 
 To simplify the concurrency management, you can add synchronize before each method (performance greedy but safe). If you are more confident, you can use a lock to prevent concurrent access of the list.
 
-<u> Question 4 - A moment-aware manager </u>
+<u> Question 4 - A moment-aware manager:</u> Change your manager implementation to implement the listener.
 
 ![The moment of the day listener](/img/exercises/follow.me/momentOfTheDayListener.png)
 
+The idea is to adapt the illuminance based on the moment of the day.
+
+Here are some factor suggestion, you could use to compute the SOFT, MEDIUM, FULL configuration :
+{code lang="java"}
+// There is no need of full illuminance in the morning
+private double factor MORNING_ILLUMINANCE_FACTOR = 0.5;
+// In the afternoon the illuminance can be largely limited
+private double factor ATERNOON_ILLUMINANCE_FACTOR = 0.2;
+// In the evening, the illuminance should be the best
+private double factor EVENING_ILLUMINANCE_FACTOR = 1;
+// In the night, there is no need to use the full illuminance
+private double factor NIGHT_ILLUMINANCE_FACTOR = 1;
+{/code}
+
+
+{*
+
+## Exercise 8: Dynamic dependency
+
+In this short exercise, you will learn how to create a dynamic filter.
+
+<u>Question 1 - Follow Alice by night </u> Alice has a child (Bob) that cannot be disturbed when she is going to her bedroom.
+
+This goal of this exercise is to show you how a dependency filter can be built to solve such problems.
+
+In your follow me application, create a new dependency on lights (we will only manage binaryLights) :
+{code lang="java"}
+	private void lightsInAliceRoomButNotInBobRoom;
+{/code}
+
+Create a filter associated to that field :
+
+{code lang = "ldap"}
+{literal}
+(location=${person.alice.location})&(!(location=${person.bob.location}))
+{/literal}
+{/code}
+
+*}
 
 ## Exercise 8: Dealing with Flopping state
+
+In this exercise, the goal is too avoid the state of lights to be change on very short periods.
+
+For this exercise, you will not be guided. The goal is to propose an architecture and a solution for avoiding flopping states (never-ending change due to repeating events).
+
+Hints : 
+
++ You may use a time-frame and some counters associated to each device as a first approach.
++ It would be a good idea (but more complex) to let the manager manage such case. You may for instance change the configuration interface of your follow me component to allow the configuration of a non-changeable device list. This list would be configured by your manager.
 
 </article>
 
