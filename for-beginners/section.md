@@ -19,7 +19,7 @@ iPOJO and iCASA IDE:
 
 External Documentation :
 
-+ [iCASA simulator](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
++ [iCASA simulator](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/index.html) 
 + [iPOJO](http://felix.apache.org/site/apache-felix-ipojo.html)
 + [OSGi Felix](http://felix.apache.org/)
 

@@ -38,7 +38,7 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 
 ### Download the runtime
 
-Download and unzip the [iCASA runtime teaching distribution](http://adeleresearchgroup.github.com/iCasa-Simulator/1.0.0/download.html)). You can rename the directory if you want.
+Download and unzip the [iCASA runtime teaching distribution](http://maven.dynamis-technologies.com/artifactory/adele-repos/fr/liglab/adele/icasa/icasa.teaching.distribution/1.1.0/icasa.teaching.distribution-1.1.0.zip). You can rename the directory if you want.
 
 iCASA runtime is a customized felix distribution. To start the framework, use the start scripts. See [the introduction to felix](/article/for-beginners/intro-felix) to learn more on felix.
 
@@ -103,10 +103,10 @@ If you use different distribution of iCASA (or the same version but in different
 Download last releases:
 
 + [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/distributions/update-site/)
-+ [iCASA-runtime](http://maven.dynamis-technologies.com/artifactory/adele-repos/fr/liglab/adele/icasa/icasa.teaching.distribution/1.0.0/icasa.teaching.distribution-1.0.0.zip)
++ [iCASA-runtime](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/)
 
 Documentation:
 
-+ [iCASA doc](http://adeleresearchgroup.github.com/iCasa-Simulator/snapshot/index.html) 
++ [iCASA doc](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/index.html) 
 
 </aside>
