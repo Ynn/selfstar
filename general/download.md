@@ -69,7 +69,7 @@ This is how to install the plugins:
 
 1. Run Eclipse and select Help > Install New Software... from the main menu.
 ![Alt text](img/downloads/download-ide1.png)
-2. Click on Add Button and enter a name for the update site (i.e. iCasa Update Site), then enter the update site location {#link_update_site#}, finally click on OK button.
+2. Click on Add Button and enter a name for the update site (i.e. iCasa Update Site), then enter the update site location http://adeleresearchgroup.github.com/iCasa-IDE/distributions/update-site/, finally click on OK button.
 ![Alt text](img/downloads/download-ide2.png)
 3. After a few seconds, the content of the update site is displayed. Select the new update site.
 4. Select all features shown in the list.
@@ -102,7 +102,7 @@ If you use different distribution of iCASA (or the same version but in different
 ### Download iCASA 
 Download last releases:
 
-+ [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/)
++ [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/distributions/update-site/)
 + [iCASA-runtime](http://maven.dynamis-technologies.com/artifactory/adele-repos/fr/liglab/adele/icasa/icasa.teaching.distribution/1.0.0/icasa.teaching.distribution-1.0.0.zip)
 
 Documentation:

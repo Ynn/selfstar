@@ -854,8 +854,6 @@ public enum MomentOfTheDay {
 }
 {/code}
 
-![The moment of the day service implementation](/img/exercises/follow.me/momentOfTheDay.png)
-
 
 Implement the MomentOfTheDayService. The implementation class should be named "MomentOfTheDayImpl" and will be based on the PeriodicRunnable of the fr.liglab.adele.icasa.service.scheduler package.
 
@@ -863,6 +861,7 @@ The PeriodicRunnable follow [the whiteboard pattern](http://www.osgi.org/wiki/up
 
 Basically you have to provide PeriodicRunnable as a service and implement it into your MomentOfTheDayImpl class. Then iCASA will automatically discover your service and its configuration. Based on the latter (getPeriod), it will call the run() method on a regular basis.
 
+![The moment of the day service implementation](/img/exercises/follow.me/momentOfTheDay.png)
 
 {code lang="java"}
 
@@ -914,6 +913,71 @@ Complete the code above to work as expected.
 g! getMomentOfTheDay
 AFTERNOON
 {/code}
+
+<u>Question 3 - Implementing Listeners</u> You will now change your implementation to support listeners.
+
+Here is the new interface of the service :
+{code lang="java"}
+package org.example.time;
+
+public interface MomentOfTheDayService {
+
+	MomentOfTheDay getMomentOfTheDay();
+
+	/**
+	 * Register a listener that will be notified each time the moment of the day
+	 * changed.
+	 * 
+	 * @param listener
+	 *            the listener
+	 */
+	void register(MomentOfTheDayListener listener);
+
+	/**
+	 * Unregister a moment of the day listener.
+	 * 
+	 * @param listener
+	 *            the listener
+	 */
+	void unregister(MomentOfTheDayListener listener);
+}
+{/code}
+Here is the interface of the Listeners :
+
+{code lang="java"}
+package org.example.time;
+
+/**
+ * The listener interface for receiving momentOfTheDay events.
+ * The class that is interested in processing a momentOfTheDay
+ * event implements this interface, and the object created
+ * with that class is registered with a component using the
+ * MomentOfTheDayService <code>register<code> method. When
+ * the momentOfTheDay event occurs, that object's appropriate
+ * method (<code>momentOfTheDayHasChanged</code>) is invoked.
+ * 
+ * When the listener is leaving, it must unregister.
+ * 
+ */
+public interface MomentOfTheDayListener {
+
+	/**
+	 * Notify the listener that moment of the day has changed.
+	 * 
+	 * @param newMomentOfTheDay
+	 *            the new moment of the day
+	 */
+	void momentOfTheDayHasChanged(MomentOfTheDay newMomentOfTheDay);
+}
+{/code}
+
+Change your implementation to manage listeners. The easiest way to do the that is to maintain a list of listeners and call the momentOfTheDayHasChanged method of each listener every time the moment of the day change.
+
+To simplify the concurrency management, you can add synchronize before each method (performance greedy but safe). If you are more confident, you can use a lock to prevent concurrent access of the list.
+
+<u> Question 4 - A moment-aware manager </u>
+
+![The moment of the day listener](/img/exercises/follow.me/momentOfTheDayListener.png)
 
 
 ## Exercise 8: Dealing with Flopping state
