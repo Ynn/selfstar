@@ -779,14 +779,7 @@ Using this command, test that your implementation is working as expected.
 
 
 
-<u>Question 3 - More than one person:</u> When more than one person is in the flat, use an average value for the targeted illuminance. You can define another policy if you want.
-
-
-
-
-
-
-
+<u>Question 3 - More than one person:</u> When more than one person is in the flat, use an average value for the targeted illuminance. You can define another policy if you want (priority based, user-type based, ...)
 
 
 
@@ -794,7 +787,133 @@ Using this command, test that your implementation is working as expected.
 
 In this exercise you will learn to react to timed events.
 
-<u>Question 1 - 
+<u>Question 1 - Moment Of The Day Component:</u> We propose to reconfigure the illuminance based on moment of the day. In that purpose you will need to create a new component "MomentOfTheDay" in a new package "org.example.time".
+
+Make sure you export the service as it will be reused by your manager.
+
+
+The component will provide a service MomentOfTheDayService :
+
+{code lang="java"}
+package org.example.time;
+
+/**
+ * The MomentOfTheDay service is used to retrieve the moment of the day.
+ * It also supports listeners that are notified when the moment of the day
+ * change.
+ */
+public interface MomentOfTheDayService {
+
+	/**
+	 * Gets the moment of the day.
+	 * 
+	 * @return the moment of the day
+	 */
+	MomentOfTheDay getMomentOfTheDay();
+
+
+	//...
+}
+{/code}
+
+A MomentOfTheDay is defined by the following enum :
+{code lang="java"}
+package org.example.time;
+
+public enum MomentOfTheDay {
+	MORNING(6), AFTERNOON(12), EVENING(18), NIGHT(22);
+
+	/**
+	 * Gets the moment of the day corresponding to the hour.
+	 * 
+	 * @param hour
+	 *            the given hour
+	 * @return the corresponding moment of the day
+	 */
+	MomentOfTheDay getCorrespondingMoment(int hour) {
+		assert ((0 <= startHour) && (startHour <= 24));
+		// TODO : if (hour < //..
+		return null;
+	}
+
+	/**
+	 * The hour when the moment start.
+	 */
+	private final int startHour;
+
+	/**
+	 * Build a new moment of the day :
+	 * 
+	 * @param startHour
+	 *            when the moment start.
+	 */
+	MomentOfTheDay(int startHour) {
+		assert ((0 <= startHour) && (startHour <= 24));
+		this.startHour = startHour;
+	}
+}
+{/code}
+
+![The moment of the day service implementation](/img/exercises/follow.me/momentOfTheDay.png)
+
+
+Implement the MomentOfTheDayService. The implementation class should be named "MomentOfTheDayImpl" and will be based on the PeriodicRunnable of the fr.liglab.adele.icasa.service.scheduler package.
+
+The PeriodicRunnable follow [the whiteboard pattern](http://www.osgi.org/wiki/uploads/Links/whiteboard.pdf) (you don't need to understand how it works to implement it). 
+
+Basically you have to provide PeriodicRunnable as a service and implement it into your MomentOfTheDayImpl class. Then iCASA will automatically discover your service and its configuration. Based on the latter (getPeriod), it will call the run() method on a regular basis.
+
+
+{code lang="java"}
+
+public class MomentOfTheDayImpl implements MomentOfTheDayService, PeriodicRunnable{
+	
+	/**
+	* The current moment of the day :
+	**/
+	MomentOfTheDay currentMomentOfTheDay;
+
+	// Implementation of the MomentOfTheDayService ....
+
+	MomentOfTheDay getMomentOfTheDay(){
+
+	}
+
+	// Implementation ot the PeriodicRunnable ...
+
+    public long getPeriod(){
+    	// The service will be periodically called every hour.
+    	return 3600 * 1000;
+    }
+
+    public String getGroup(){
+    	return "default"; // you don't need to understand this part.
+    }
+
+
+	@Override
+	public void run() {
+		// The method run is called on a regular basis
+
+		// TODO : do something to check the current time of the day and see if
+		// it has changed
+
+		currentMomentOfTheDay = null; // FIXME : change the value
+	}
+
+}
+
+{/code}
+
+Complete the code above to work as expected.
+
+<u>Question 2 - Writing a command: </u> You can implement a command to test that your code is working :
+![The moment of the day service implementation](/img/exercises/follow.me/momentOfTheDayCommand.png)
+
+{code lang="bash"}
+g! getMomentOfTheDay
+AFTERNOON
+{/code}
 
 
 ## Exercise 8: Dealing with Flopping state
