@@ -3,15 +3,15 @@
 <article markdown="1">
 
 # Quick Start : Writing a Basic Light Follow Me
-In this introduction we will create a basic light follow me with ICASA. 
+In this introduction we will create a basic light follow me with iCASA. 
 
-This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [getting started section](/article/for-beginners/getting-started) for a refresher.
+This tutorial assumes that you have basic knowledge on OSGi, Felix and iPOJO. You can read the [getting started section](/article/for-beginners/getting-started) for an introduction to these topics.
 
 
 ## What is a Follow Me ?
 
 A Follow Me is a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
-Here the goal is to make the light follows the users.
+Here the goal is to make the light follow the users.
 
 <img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
 
@@ -19,7 +19,7 @@ Here the goal is to make the light follows the users.
 This project uses the iCASA simulated binary lights.
 
 
-## Step by step Basic Light Follow Me 
+## Step-by-step Basic Light Follow Me 
 
 ### Installation and configuration
 
@@ -34,7 +34,7 @@ You will need to configure the IDE to work with that particular distribution (se
 
 Open the iCASA-IDE.
 
-This application will contains an unique class. To generate the skeleton of the class follow these steps :
+This application will contain an unique class. To generate the skeleton of the class follow these steps :
 
 1. Create a new iPOJO project called BinaryLightFollowMe.
 ![iPOJO project creation](img/basic-follow-me/create_project.png)
@@ -157,7 +157,7 @@ You don't have to modify these arrays.
 
 We will use lifecycle methods to see when our component instance is started/stopped. See the [hello world tutorial](/article/for-beginners/basic-hello-world) to learn more on lifecycle methods.
 
-In that purpose, we add to message in the lifecyle methods : start and stop.
+In order to check the good functionning of the component, we will print two traces in the lifecyle methods : start and stop.
 
 {code lang="java"}
 {literal} 
@@ -199,7 +199,7 @@ g!lb
 g! 
 {/code}
 
-+ Start your component (using start) and stop it. You should see the message we put in the lifecycles methods.
++ Start your component (using start) and stop it. You should see the message we put in the lifecycle methods.
 
 {warning}
 If you don't see the lifecycle messages, you must have done something wrong. Retry the preceding steps.
@@ -220,8 +220,6 @@ If the applications prints no message when adding the devices, check your code a
 
 ### Manage notifications and detect modifications
 
-So let us get down to the substance.
-
 We will try to be notified when something is modified.
 
 #### The DeviceListener interface
@@ -231,15 +229,15 @@ Let's start with the sensors.
 In order to be notified when something is modified in the environment, we must implement a DeviceListener.
 
 {note}
-**DeviceListener :** The DeviceListener interface allows to get notification when a device change.
+**DeviceListener :** The DeviceListener interface allows to get a notification when a device changes.
 {/note}
 
 
-There is four ways to implement it. 
+There are four ways to implement it. 
 
 {* comments : i know this note will be removed but students should know about that*}
 
-First, you can make the main class (BinaryLightFollowMeImpl) implements the interface :
+First, you can make the main class (BinaryLightFollowMeImpl) implement the interface:
 
 {code lang="java"}
 {literal}     
@@ -267,7 +265,7 @@ public class PresenceSensorListener implements DeviceListener{
 {/literal}
 {/code}
 
-Third, you can use a anonymous class. This solution lets less control but ensure that there will be only one listener instance.
+Third, you can use a anonymous class. This solution allows less control but ensures that there will be only one listener instance.
 
 Finally, you can create a separate class but this class will need to have access to the device lists. It requires a little more code to work. This solution is suitable if your main class is big and you don't want to add more code.
 
@@ -318,11 +316,11 @@ public void devicePropertyModified(GenericDevice device,
 {/literal}
 {/code}
 
-The PRESENCE_SENSOR_SENSED_PRESENCE property value change every time the detection change from detected to undetected and reciprocally
+The PRESENCE_SENSOR_SENSED_PRESENCE property value changes every time the detection changes from **detected** to **undetected** and reciprocally
 
-Each type device has a different set of properties. The value of these properties can be set or retrieved by using a key string (e.g, "location"). This work exactly like service properties. This mechanism allow each type of devices to define their own properties. 
+Each device type has a different set of properties. The value of these properties can be set or retrieved by using a key string (e.g, "location"). This works exactly like service properties. This mechanism allows each type of device to define their own properties. 
 
-To avoid magic string, some of the properties are defined directly by the interface (e.g., PRESENCE_SENSOR_SENSED_PRESENCE is defined in the PresenceSensor interface). Some are not (e.g., location).
+To avoid [magic string](https://en.wikipedia.org/wiki/Magic_string), some of the properties are defined directly by the interface (e.g., PRESENCE_SENSOR_SENSED_PRESENCE is defined in the PresenceSensor interface). Some are not (e.g., location).
 
 In the following, we  define a constant LOCATION_PROPERTY_NAME for the "location" property (and a value for unknown location) :
 
@@ -343,7 +341,7 @@ public static final String LOCATION_UNKNOWN = "unknown";
 #### Registering the listener
 
 {note}
-A DeviceListener has to be attached to a device in order to receive notification.
+A DeviceListener has to be attached to a device in order to receive notifications.
 {/note}
 
 We thus need to attach this new listener to the interesting devices (in our case all the presence sensors). 
@@ -393,7 +391,7 @@ This sensor is in the room : kitchen
 {/code}
 
 {warning}
-If this don't work, check that your listener is correctly registered and created. Also check that there is a presence sensor in the room.
+If this does not work, check that your listener is correctly registered and created. Also check that there is a presence sensor in the room.
 {/warning}
     
 #### Finding the lights in the same room
@@ -469,7 +467,7 @@ Hopefully, the lights will change as desired.
 
 ## Play with it
 
-Now you can play with your application and add new devices and see what happens when the you move your user.
+Now you can play with your application and add new devices and see what happens when you move your user.
  
 To add new sensors in the iCASA interface:
 
@@ -482,20 +480,20 @@ To add new sensors in the iCASA interface:
 
 ## A word on concurrency 
 
-You may have notice that the concurrency is **apparently** not managed in this short tutorial. It is indeed managed by iPOJO.
+You may have noticed that the concurrency is **apparently** not managed in this short tutorial. It is indeed managed by iPOJO.
 
-As OSGi environment is multi-threaded, multiple threads may access the class at the same time.
-One common problem occur when a thread try to remove device from a collection while another thread is using the collection or device elsewhere in the class.
+Since OSGi environment is multi-threaded, multiple threads may access the class at the same time.
+One common problem occurs when a thread tries to remove a device from a collection while another thread is using the collection or device elsewhere in the class.
 
 This is the case here : the binaryLights array may be modified when searching for the light in  getBinaryLightFromLocation methods called by devicePropertyModified. The array is dynamically modified by iPOJO when a service is changing (thread 1) and it is possible that a light is when handling a devicePropertyModified (thread 2).
 
-Normally, we should use a lock when accessing or modifying the array to prevent concurrent access. However the collection managed by iPOJO are synchronized and the locking is managed by iPOJO. 
+Normally, we should use a lock when accessing or modifying the array to prevent concurrent access. However the collections managed by iPOJO are synchronized and the locking is managed by iPOJO. 
 
 {note}
-iPOJO ensure that the list won't be changed until the end of the method getBinaryLightFromLocation. It is therefore not necessary to synchronize in this tutorial.
+iPOJO ensures that the list won't be changed until the end of the method getBinaryLightFromLocation. It is therefore not necessary to synchronize in this tutorial.
 {/note}
 
-BUT :
+BUT:
 
 {warning}
 **The synchronization is managed only for iPOJO fields :**

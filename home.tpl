@@ -114,7 +114,7 @@ The IDE allows the rapid and simplified development of iPOJO applications. It pr
 ICasa is a smart home simulator developed in the context of the Medical project (http://medical.imag.fr).
 </p>
 <p>
-ICasa allows the loading of any map, the definition of smart spaces (zones) and the dynamic management of devices lifecyle. ICasa also provides facilities to run scenario, playing with time and devices. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.
+ICasa allows the loading of any map, the definition of smart spaces (zones) and the dynamic management of devices lifecyle. ICasa also provides facilities to run scenarios, playing with time and devices. The purpose of the simulator is to provide immediate, concrete feedback to the students developing their applications.
 </p>
 
 <p>

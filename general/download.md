@@ -43,7 +43,7 @@ Download and unzip the [iCASA runtime teaching distribution](http://maven.dynami
 iCASA runtime is a customized felix distribution. To start the framework, use the start scripts. See [the introduction to felix](/article/for-beginners/intro-felix) to learn more on felix.
 
 {note}
-You can have and use as many iCASA distribution as you want. You only need to rename the directory.
+You can have and use as many iCASA distributions as you want. You only need to rename the directory.
 However, *you should not run two instance of iCASA at the same time* on the same computer. There will be network conflicts otherwise.
 {/note}
 

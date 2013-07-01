@@ -7,7 +7,7 @@ The learning environment is made of three integrated tools (see figure):
 
 + **An Integrated Development Environment**. This Eclipse-based IDE provides comprehensive facilities for the development in OSGi/iPOJO. Specifically, it includes a source code editor, build automation tools and automated deployment on the execution platform.
 
-+ **A smart home simulator called iCasa**. This simulator allows you to create a wide range of devices that can be used by your OSGi/iPOJO applications. It also permits the definition of scenario that can be played at various speeds. ICasa GUI can be run on any browser whereas the server part is run on OSGi (on the execution platform).
++ **A smart home simulator called iCasa**. This simulator allows you to create a wide range of devices that can be used by your OSGi/iPOJO applications. It also permits the definition of scenarios that can be played at various speeds. ICasa GUI can be run on any browser whereas the server part is run on OSGi (on the execution platform).
 
 <div style="margin:auto;width : 80%;"/>
 <img alt="the iCASA environment" src="{#img#}/getting-started/getting-started.png"/>

@@ -35,6 +35,7 @@ Exercises are divided into several themes: light management, heating management,
 			</div>
 		</div>
 
+{*
 		<div class="ca-item">
 			<div class="ca-item-main" onClick="location.href = '/article/exercises/heater';">
 				<div class="ca-icon" style="background-image:url(/img/exercises/heater.png);"></div>
@@ -57,7 +58,7 @@ Exercises are divided into several themes: light management, heating management,
 			</div>
 		</div>
 
-
+*}
 
 
 	</div>
