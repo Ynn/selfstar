@@ -2,22 +2,22 @@
 
 # Follow Me Exercises
 
-In this first series of exercises, you will build a light follow me application. As we already explained in the tutorial, a Follow Me is a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
-Here the goal is to make the light follows the users.
+In this first series of exercises, you will build a "follow me" light application. As we already explained in the tutorial, Follow Me is a context-aware application that adapts its behaviour to the movement of a person to trigger a particular action (switch on/off the light, switch on/off a speaker, ...).
+Here the goal is to make the light follow the users.
 
 <img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
 
-The exercises are dependent and must be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need.
+The exercises are have been designed to build upon each other: they should be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need to.
 
 
 ## Exercise 1: Writing the basic follow me
-In this exercise, you will learn how to write a basic light follow me. 
+In this exercise, you will learn how to write a basic "follow me" light. 
 
-<u>Question 1 - Tutorial</u>: Follow the basic binary light tutorial to implement your first binary light follow me application. 
+<u>Question 1 - Tutorial</u>: Follow the basic binary lights tutorial to implement your first follow me application with binary lights. 
 
 Use "LightFollowMe" as the name of your component and "LightFollowMeImpl" as your implementation class. The package will be "org.example.follow.me"
 
-You can skip the "play with it section". Optionally you can also read the [getting started](/article/for-beginners/getting-started) section as recommended in the tutorial.
+You can skip the "play with it section" if you would like to. Optionally you can also read the [getting started](/article/for-beginners/getting-started) section as recommended in the tutorial.
 
 <u>Question 2 - react when a light is moved:</u> The current application does not manage the change of light location. Listen to the change of location and change each light state accordingly.
 
@@ -33,7 +33,7 @@ To play a script, you need to deploy it in the iCASA **load** directory. Scripts
 {/note}
 
 
-For beginning and to ease the process of creating scripts, we will provide you a skeleton of a script for testing your light application. You will need to enhanced it to be able to test your applications.
+For beginning and to ease the process of creating scripts, we will provide you a skeleton script for testing your light application. You will need to enhance it to be able to test your applications.
 
 Download and deploy the following script : [single_bl_light_environment.bhv]() in the load directory of iCASA. 
 The script should be now available in the "Script player" in the iCASA GUI. 
@@ -58,18 +58,18 @@ Stop the running script. Use the reset environment command in the "Script Panel"
 
 Change the current implementation so that the number of light per room can be configured.
 
-We strongly recommend to store that maximum number in a member variable (you will have to reuse it later when building administration interfaces) :
+We strongly recommend you store the maximum number in a member variable (you will have to reuse it later when building the administration interfaces) :
 
 {code lang=java} 
 /** 
-* The maximum number of lights to turn on when a user enter the room :
+* The maximum number of lights to turn on when a user enters the room :
 **/
 private int maxLightsToTurnOnPerRoom = 1;
 {/code}
 
 
-<u>Question 3 - Using the dimmer lights</u>: You will now manage a new type of device called dimmer light.
-The specification of dimmer lights is given in iCASA documentation. Each dimmer light use the fr.liglab.adele.icasa.device.light.DimmerLight interface.
+<u>Question 3 - Using the dimmer lights</u>: You will now manage a new type of device called "dimmer light".
+The specification of dimmer lights is given in the iCASA documentation. Each dimmer light uses the fr.liglab.adele.icasa.device.light.DimmerLight interface.
 
 Modify the application to switch on (0%) and off(100%) the dimmer lights (as well as the binary lights) when the user is moving. 
 
@@ -82,7 +82,7 @@ Check your application is working as expected.
 
 ## Exercise 3: Providing an administration service
 
-In this exercise, you will create an administration service to allow the configuration of your application. You will also create your first small manager that will automatically configure this service.
+In this exercise, you will create an administration service to allow the configuration of your application. You will also create your first small autonomic manager that will automatically configure this service.
 
 <u>Question 1 - Providing a configuration service</u>: In the getting started section, we explain [how to provide a service](/article/for-beginners/intro-services). You will now provide a service for configuring your application.
 
@@ -92,7 +92,7 @@ The FollowMeConfiguration service interface is really simple :
 package org.example.follow.me.configuration;
 
 /**
- * The FollowMeConfiguration service allows to configure the Follow Me
+ * The FollowMeConfiguration service allows one to configure the Follow Me
  * application.
  */
 public interface FollowMeConfiguration {
@@ -118,13 +118,13 @@ public interface FollowMeConfiguration {
 
 Implement the FollowMeConfiguration interface into your main application class.
 
-Provide this interface as a service (follow the instruction given in the getting started section).
+Provide this interface as a service (follow the instructions given in the getting started section).
 
 Deploy your application and check that your service is provided in the Felix console : [http://localhost:8080/system/console/bundles](http://localhost:8080/system/console/bundles).
 
 Export the package org.example.follow.me.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
-<u>Question 2 - Implementing a small manager:</u> You will create a very basic manager to adjust the number of lights to turn on in the rooms based on administrator's decisions. 
+<u>Question 2 - Implementing a small manager:</u> You will create a very basic manager to adjust the number of lights to turn on in the rooms based on the administrator's decisions. 
 
 Your manager will understand (more) "high level goals" such as "High Illuminance", "Medium Illuminance", "Low Illuminance" and configure the number of lights accordingly. 
 
@@ -136,8 +136,8 @@ Add the dependency to the FollowMeConfiguration configuration and write a manage
 
 ![The FollowMeConfiguration service](/img/exercises/follow.me/FollowMeConfigurationService.png)
 
-For beginning the interpretation of these goals into according configuration will be hard-coded and hardwired.
-You can use the following hard-coded values :
+To begin to interpret these goals the configuration will be hand-coded and hardwired.
+You can use the following hand-coded values :
 
 {code lang="java"}
 package org.example.follow.me.manager;
@@ -180,7 +180,7 @@ public enum IlluminanceGoal {
 {/code}
 
 
-<u>Question 3 - providing an administration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express his goals. Once again, you will provide a service in that purpose.
+<u>Question 3 - providing an administration interface for your manager</u>: Your manager has to provide an administration interface to allow the administrator to express his or her goals. Once again, you will provide a service for that purpose.
 
 ![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeAdministration.png)
 
@@ -219,7 +219,7 @@ public interface FollowMeAdministration {
 Your FollowMeManager class should implement this class and provide it as a service.
 
 
-<u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose you to build a command line so as to allow administrators to configure your manager.
+<u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose that you build a command line so as to allow administrators to configure your manager.
 
 
 One again, you need to create a new component "Follow Me Command" and import and export the package "org.example.follow.me.manager".
@@ -227,7 +227,7 @@ One again, you need to create a new component "Follow Me Command" and import and
 ![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeCommand.png)
 
 
-Commands are not currently supported by the IDE. You will need to use [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html). You don't Here is an example of command using [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html) and a [provided specific handler](http://felix.apache.org/site/how-to-write-your-own-handler.html) for providing commands :
+Commands are not currently supported by the IDE. You will need to use [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html). Here is an example of command using [iPOJO annotations](http://felix.apache.org/site/how-to-use-ipojo-annotations.html) and a [provided specific handler](http://felix.apache.org/site/how-to-write-your-own-handler.html) for providing commands :
 
 
 
@@ -260,7 +260,7 @@ public class FollowMeManagerCommandImpl {
 	/**
 	 * Felix shell command implementation to sets the illuminance preference.
 	 *
-	 * @param goal the new illuminance preference ("SOFT", "MEDIUM", "HIGH")
+	 * @param goal the new illuminance preference ("SOFT", "MEDIUM", "FULL")
 	 */
 
 	// Each command should start with a @Command annotation
@@ -285,7 +285,7 @@ public class FollowMeManagerCommandImpl {
 }
 {/code}
 
-As you can notice, the component and the dependency are directly declared in the code. There is no need to do it in the IDE.
+As you may notice, the component and the dependency are directly declared in the code. There is no need to do it in the IDE.
 
 Implement the two methods to achieve the conversion of the goal from String to IlluminanceGoal. The command can be then used directly in the Felix shell :
 {code lang="bash"}
@@ -303,7 +303,7 @@ The illuminance goal is MEDIUM.
 
 ## Exercice 4: A better energy management
 
-In this exercise, you will try to add to manage the energy consumption of your system.
+In this exercise, you will try to manage the energy consumption of your system.
 
 <u>Question 1 - Extending the configuration service</u>: Extend the configuration service of your Follow Me application so that it is possible to configure a maximum power per room :
 
@@ -337,8 +337,8 @@ public interface FollowMeConfiguration {
 }
 {/code}
 
-Implements this service so that the energy consumption of a room does not exceed the given maximum.
-In that purpose, you should create a new member variable :
+Implement this service so that the energy consumption of a room does not exceed the given maximum.
+To this end, you should create a new member variable:
 {code lang="java"}
 /**
 * The maximum energy consumption allowed in a room in Watt:
@@ -348,11 +348,11 @@ private double maximumEnergyConsumptionAllowedInARoom = 100.0d;
 
 Please note that the maximumNumberOfLights (we have introduced earlier) takes precedence over the given maximum power consumption. 
 
-To simplify the implementation you can assume that each light as a 100Watt default consumption and that the lights are binary lights only. In such case the number of light is given by a simple Euclidean division.
+To simplify the implementation you can assume that each light as a default 100Watt consumption and that the lights are binary lights only. In such case the number representing light is given by a simple Euclidean division (N = Target/100)
 
-<u>Question 2 - Test:</u> Create a script (the environment should be composed by binary lights only) to test your application and checks it is working according to the specification.
+<u>Question 2 - Test:</u> Create a script to test your application and checks it is working according to the specification (the environment should be composed by binary lights only).
 
-<u>Question 3 - Manager:</u> Extend the FollowMeAdministration and your manager to add an energy saving goal :
+<u>Question 3 - Manager:</u> Extend the FollowMeAdministration interface and your manager implementation to add an energy saving goal :
 
 ![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeAdministration.png)
 
@@ -410,7 +410,7 @@ public enum EnergyGoal {
 {/code}
 
 
-<u>Question 4 - Command:</u> Extend your command to be able to configure the energy saving goal and test your work.
+<u>Question 4 - Command:</u> Write a command to be able to configure the energy saving goal and test your work.
 
 ![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeCommand.png)
 
@@ -426,7 +426,9 @@ EnergyMode = MEDIUM
 <u>Question 5 - Using DimmerLights:</u> Change your implementation to take dimmer lights into account.
 One way to achieve this is to try to turn on as many binary lights as possible and then turn the DimmerLights to reach the targeted power by adjusting their powers.
 
-<u>Question 6 (optional) - Using heterogeneous lights:</u> In the previous questions, we assumed that all the lights had the same nominal consumption. Try to write a more generic algorithm to manage heterogeneous lights.
+<u>Question 6 (optional) - Using heterogeneous lights:</u> In the previous questions, we assumed that all the lights had the same nominal power consumption. 
+
+Now, you can try to write a more generic algorithm to manage heterogeneous lights.
 
 First consider only the problem with BinaryLights. To do that, you might have to test all the combinations of BinaryLights. This can be achieved by solving the [Subset sum problem](https://en.wikipedia.org/wiki/Subset_sum_problem).
 
@@ -478,9 +480,7 @@ public final class ClosestSumAlgorithm {
 		 * The solution is thus far from being optimized.
 		 */
 		for (int i = 0; i < Math.pow(2, items.length); i++) {
-			// Get the current combination
-			// Note that the sum could be calculated without using the bitset
-			// (less clear but more memory efficient)
+			// Get the current combination 
 			double[] currentCombination = multiplyByBitset(convertToBitSet(i), items);
 			double currentSum = sum(currentCombination);
 
@@ -573,7 +573,7 @@ public static void main(String[] args) {
 }
 {/code}
 
-Then you may try to solve the problem for environment including some dimmer lights.
+Then you may try to find a general solution for environment including some dimmer lights.
 
 ## Exercise 5: A better illuminance management.
 
@@ -602,13 +602,13 @@ public final static double ONE_WATT_TO_ONE_LUMEN = 680.0d;
 {/code}
 
 The light provided by a DimmerLight depends on the configuration of the dimmer (ranging from 0.0d to 1.0d).
-Let's call :
+Let:
 
-+ &lambda; the dimmer configuration
-+ &beta; the watts to lumens factor (value 680.0)
-+ R the area of the room
-+ P the maximum power of the given light
-+ I the illuminance
++ &lambda; be the dimmer configuration
++ &beta; be the watts to lumens factor (value 680.0)
++ R be the area of the room
++ P be the maximum power of the given light
++ I be the illuminance
 
 The illuminance I given by one dimmer light is given by :
 
@@ -630,7 +630,7 @@ where :
 To simplify the problem, you can assume that every light has the same maximum power level (P(i)) : P and that the factor &lambda;(i) is the same for every light (&lambda;).
 
 
-<u>Question 3 (optional) - generic algorithm</u> Try to find a solution for the generic case : heterogeneous lights (binary lights and dimmer lights with different wattage). 
+<u>Question 3 (optional) - generic algorithm</u> Try to find a solution for the generic case of heterogeneous lights (binary lights and dimmer lights with different wattage). 
 
 To simplify the problem, you can adopt a test&amp;try approach by turning on the lights and configuring the the dimmer lights  progressively. If you choose this approach, you may cache the result of your configuration for the next time (until the targeted light is changed).
 
@@ -714,7 +714,7 @@ In particular, make sure that the lights are correctly reconfigured for each roo
 
 Now, we will try to adapt the illuminance based on User's preferences. 
 
-In this exercises, we will assume that it is possible to identify precisely who is in a given room. In that purpose we provide a LocationService that provide the ability to get a list of persons in a given room.
+In this exercise, we will assume that it is possible to identify who is in a given room. For that purpose we provide a LocationService that provides the ability to get a list of persons in a given room.
 
 The user preferences service (Preferences) is able to store a set of user preferences (via setUserPropertyValue/getUserProperties)
 
@@ -760,7 +760,7 @@ public class FollowMeManagerImpl {
 
 You will have to convert the given String "SOFT"/"MEDIUM"/"FULL" into an illuminanceGoal. You have done this before in order to implement your command.
 
-When the person has not express any preference, use the previously defined (global) preference.
+When the person has not expressed any preference, use the previously defined (global) preference.
 
 <u>Question 2 - Writing a command for the preference service </u> Extend your command implementation so as to allow to store user preferences :
 
@@ -779,7 +779,7 @@ Using this command, test that your implementation is working as expected.
 
 
 
-<u>Question 3 - More than one person:</u> When more than one person is in the flat, use an average value for the targeted illuminance. You can define another policy if you want (priority based, user-type based, ...)
+<u>Question 3 - More than one person:</u> When more than one person is in the flat, use an average value for the targeted illuminance. You can experiment with this by defining another policy (priority based, user-type based, etc.).
 
 
 
@@ -925,7 +925,7 @@ public interface MomentOfTheDayService {
 	MomentOfTheDay getMomentOfTheDay();
 
 	/**
-	 * Register a listener that will be notified each time the moment of the day
+	 * Register a listener that will be notified each time the current moment of the day
 	 * changed.
 	 * 
 	 * @param listener
@@ -971,9 +971,9 @@ public interface MomentOfTheDayListener {
 }
 {/code}
 
-Change your implementation to manage listeners. The easiest way to do the that is to maintain a list of listeners and call the momentOfTheDayHasChanged method of each listener every time the moment of the day change.
+Change your implementation to manage listeners. The easiest way to do the that is to maintain a list of listeners and call the momentOfTheDayHasChanged method of each listener every time the moment of the day changes.
 
-To simplify the concurrency management, you can add synchronize before each method (performance greedy but safe). If you are more confident, you can use a lock to prevent concurrent access of the list.
+To simplify the concurrency management, you can add synchronize before each method (performance greedy but safe). If you are more confident, you can use a lock to prevent concurrent access to the list.
 
 <u> Question 4 - A moment-aware manager:</u> Change your manager implementation to implement the listener.
 
@@ -981,18 +981,19 @@ To simplify the concurrency management, you can add synchronize before each meth
 
 The idea is to adapt the illuminance based on the moment of the day.
 
-Here are some factor suggestion, you could use to compute the SOFT, MEDIUM, FULL configuration :
+Here are some suggestion of factor you could use to compute the SOFT, MEDIUM, FULL configuration:
 {code lang="java"}
-// There is no need of full illuminance in the morning
+// There is no need of full illuminance in the morning 
 private double factor MORNING_ILLUMINANCE_FACTOR = 0.5;
 // In the afternoon the illuminance can be largely limited
 private double factor ATERNOON_ILLUMINANCE_FACTOR = 0.2;
 // In the evening, the illuminance should be the best
 private double factor EVENING_ILLUMINANCE_FACTOR = 1;
 // In the night, there is no need to use the full illuminance
-private double factor NIGHT_ILLUMINANCE_FACTOR = 1;
+private double factor NIGHT_ILLUMINANCE_FACTOR = 0.8;
 {/code}
 
+The new SOFT value would be SOFT = MOMENT_FACTOR * DEFAULT_SOFT where DEFAULT_SOFT is the value you were using before, and MOMENT_FACTOR is one of the FACTOR given above.
 
 {*
 
@@ -1019,11 +1020,11 @@ Create a filter associated to that field :
 
 *}
 
-## Exercise 8: Dealing with Flopping state
+## Exercise 8: Dealing with state flapping
 
-In this exercise, the goal is too avoid the state of lights to be change on very short periods.
+In this exercise, the goal is too avoid the state of lights to be change on very short periods (i.e., a child run over and over from one room to another causing a large amount of events to deal with)
 
-For this exercise, you will not be guided. The goal is to propose an architecture and a solution for avoiding flopping states (never-ending change due to repeating events).
+For this exercise, you will not be guided. The goal is to propose an architecture and a solution for avoiding state flapping (never-ending change due to repeating events).
 
 Hints : 
 
