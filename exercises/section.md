@@ -6,8 +6,8 @@
 <toc>
 
 + [Follow Me](/article/exercises/follow-me)
-+ [Heater Management](/article/exercises/heater)
-+ [Alarm Management](/article/exercises/alarm)
++ [Temperature Management](/article/exercises/hvac)
++ [Alarm Management](/article/exercises/energy)
 
 </toc>
 </section>

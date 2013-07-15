@@ -7,7 +7,7 @@ Here the goal is to make the light follow the users.
 
 <img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
 
-The exercises are have been designed to build upon each other: they should be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need to.
+The exercises have been designed to build upon each other: they should be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need to.
 
 
 ## Exercise 1: Writing the basic follow me

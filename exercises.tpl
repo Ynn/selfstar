@@ -35,26 +35,26 @@ Exercises are divided into several themes: light management, heating management,
 			</div>
 		</div>
 
-{*
+
 		<div class="ca-item">
-			<div class="ca-item-main" onClick="location.href = '/article/exercises/heater';">
+			<div class="ca-item-main" onClick="location.href = '/article/exercises/hvac';">
 				<div class="ca-icon" style="background-image:url(/img/exercises/heater.png);"></div>
-				<h3>Heater management</h3>
+				<h3>Temperature management</h3>
 				<h4>
-					<span> Learn to build a follow me</span>
+					<span>Maintaining the climate in the rooms</span>
 				</h4>
-					<a href="/article/exercises/heater" class="inactive-more">Exercises...</a>			
+					<a href="/article/exercises/hvac" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
-
+{*
 				<div class="ca-item">
-			<div class="ca-item-main" onClick="location.href = '/article/exercises/alarm';">
+			<div class="ca-item-main" onClick="location.href = '/article/exercises/energy';">
 				<div class="ca-icon" style="background-image:url(/img/exercises/alarm.png);"></div>
 				<h3>Alarm <br/>management</h3>
 				<h4>
 					<span> Learn to build a follow me</span>
 				</h4>
-					<a href="/article/exercises/alarm" class="inactive-more">Exercises...</a>			
+					<a href="/article/exercises/energy" class="inactive-more">Exercises...</a>			
 			</div>
 		</div>
 
