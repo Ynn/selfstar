@@ -138,7 +138,7 @@ Import the package org.example.temperature.configuration as explained in the [us
 
 Add the dependency to the TemperatureConfiguration service and write a manager so that the targeted temperature is adjusted depending on user satisfaction. 
 
-![The FollowMeAdministration service](/img/exercises/hvac/TemperatureAdministration.png)
+![The FollowMeAdministration service](/img/exercises/hvac/temperatureAdministration.png)
 
 To help user to express their satisfaction you will have to implement the TemperatureManagerAdministration interface:
 
@@ -236,7 +236,10 @@ g! tempTooLow
 {/code}
 
 
-<u> Question 5 - test:</u> Using the above command, check that your manager is working.
+<u> Question 4 - test:</u> Using the above command, check that your manager is working.
+
+
+## Exercice 3 - Tracking users
 
 </article>
 
