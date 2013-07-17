@@ -7,7 +7,7 @@ Here the goal is to make the light follow the users.
 
 <img src="img/basic-follow-me/light_follow_me.png" width = "60%"/>
 
-The exercises have been designed to build upon each other: they should be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-m) if you need to.
+The exercises have been designed to build upon each other: they should be followed in the given order. You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-me) if you need to.
 
 
 ## Exercise 1: Writing the basic follow me
@@ -222,7 +222,7 @@ Your FollowMeManager class should implement this class and provide it as a servi
 <u> Question 4 - providing a command:</u> Now that you can configure your manager, we propose that you build a command line so as to allow administrators to configure your manager.
 
 
-One again, you need to create a new component "Follow Me Command" and import and export the package "org.example.follow.me.manager".
+Once again, you need to create a new component "Follow Me Command" and import and export the package "org.example.follow.me.manager".
 
 ![The FollowMeAdministration service](/img/exercises/follow.me/FollowMeCommand.png)
 
