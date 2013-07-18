@@ -34,11 +34,9 @@ We assume you have no idea of the simulated physical temperature model. So you w
 ![Implementing the PeriodicRunnable](/img/exercises/hvac/scheduling.png)
 
 
-It should be stressed the current model is very simplistic and does not take temperature exchange between rooms into account. So don't be surprised if your system quickly reach the targeted temperature.
-
 <u>Question 2 - Scripts</u>: Write a script to check your application is working.
 
-Here are some command you should use :
+Here are some command you should use:
 {code lang=xml}
 <behavior startdate="25/12/2012-00:00:00" factor="1440">
 
@@ -171,14 +169,15 @@ public interface TemperatureManagerAdministration {
 }
 {/code}
 
-Your manager will have to figure out which is the adequate temperature for a given room (minTemperature, maxTemperature) based on user satisfaction. You can try to reduce or increase the temperature by 1 Kelvin so as to reach an adequate temperature.
+Your manager will have to figure out which is the adequate temperature for a given room (minTemperature, maxTemperature) based on user satisfaction. You can try to reduce or increase the temperature by 1 Kelvin so as to reach an adequate temperature (i.e. when users stop complaining about temperature).
 
+Stabilization could be issue and you have to consider the time factor. Your user might be complaining about the temperature before the actual targeted temperature is reached. Such complained should be ignored or your system might never be stable.
 
 <u> Question 3 - providing a command:</u> Write a command line that use the TemperatureConfiguration service so as to allow users to express their satisfaction.
 
 Create a new component "Temperature Command" that imports and exports the package "org.example.temperature.manager.administration".
 
-![The FollowMeAdministration service](/img/exercises/hvac/temperatureCommand.png)
+![The temperature command service](/img/exercises/hvac/temperatureCommand.png)
 
 Here is a skeleton of the command implementation:
 
@@ -211,7 +210,7 @@ public class TemperatureCommandImpl {
 	/**
 	 * Command implementation to express that the temperature is too high in the given room
 	 *
-	 * @param goal the given room
+	 * @param room the given room
 	 */
 
 	// Each command should start with a @Command annotation
@@ -238,8 +237,165 @@ g! tempTooLow
 
 <u> Question 4 - test:</u> Using the above command, check that your manager is working.
 
+## Exercice 3 - Room occupancy and Energy Management
+In this exercise you will build a RoomOccupancy service that computes statics on room occupancy. You will then use this service to tune the manager behavior.
 
-## Exercice 3 - Tracking users
+<u> Question 1 - RoomOccupancy service</u>: Create a new component called "RoomOccupancy" and implement the following service :
+
+{code lang="java"}
+
+package org.example.occupancy;
+
+public interface RoomOccupancy {
+
+	/**
+	 * Gets the probability (between 0 and 1) that the given room is occupied
+	 * at the given moment of the day. 
+	 *
+	 * @param hour
+	 *            a specific time in the day in minute (between 0 (=00:00) and
+	 *            1439 (=23:59))
+	 * @param room
+	 *            the room name where the occupancy value is required.
+	 * @return the room occupancy is a value between 0 and 1 where 0 indicates
+	 *         that there the room is always empty and 1 indicates that the room
+	 *         is always occupied at the given moment of the day.
+	 */
+	public double getRoomOccupancy(double minuteOfTheDay, String room);
+
+}
+
+{/code}
+
+The package "org.example.occupancy" must be provided by your component.
+
+The idea is to check periodically (using a PeriodicRunnable) if a room is occupied or not and adjust the 
+
+At the beginning, the default value of room occupancy is 0.
+
+<u> Question 3 - Script and command</u>: Create a script using the command describe in [iCASA documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/script.html) that move one or more users in the different rooms of the flat during 2 days. 
+
+<u> Question 4 - Test</u>: Based on the script you have writen, test that your RoomOccupancy service is working as expected. For this purpose you can write a command (provided by the "Room Occupancy" component).
+
+<u> Question 5 - TemperatureConfiguration</u>: Change the TemperatureConfiguration service so that the temperature management can be turn on/off in a given room:
+
+{code lang="java"}
+package org.example.temperature;
+
+/**
+ * The TemperatureConfiguration service allows one to configure the temperature
+ * controller.
+ */
+public interface TemperatureConfiguration {
+ //...
+
+	/**
+	 * Turn on the temperature management in the given room
+	 * 
+	 * @param room
+	 *            the given room
+	 */
+	public void turnOn();
+
+	/**
+	 * Turn off the temperature management in the given room
+	 * 
+	 * @param room
+	 *            the given room
+	 */
+	public void turnOff(String room);
+
+}
+{/code}
+
+<u>Question 6 - Energy management</u>: Now you will try to manage the energy.
+
+Add an energy mode to your manager:
+{code lang="java"}
+/**
+ * This interface allows to configure the temperature manager responsible for
+ * configuring the temperature controller.
+ */
+public interface TemperatureManagerAdministration {
+	
+	//...
+
+	/**
+	 * Enable the energy saving.
+	 */
+	public void turnOnEnergySaving();
+
+	/**
+	 * Disable the energy saving.
+	 */
+	public void turnOffEnergy();
+
+	/**
+	 * Checks if is energy saving is enabled.
+	 * 
+	 * @return true, if is energy saving is enabled
+	 */
+	public boolean isPowerSavingEnabled();
+
+}
+{/code}
+
+When the energy saving mode is enabled, you should try to turn off the temperature control in the room with low occupancy (e.g. <0.2). 
+
+The occupancy threshold can be setted statically to start:
+{code lang="java"}
+public static final double ROOM_OCCUPANCY_THRESHOLD = 0.2;
+{/code}
+
+In a second time, You may also reduce the number of watts being used by opting for a higher/lower temperature than the targeted one.
+
+Try to propose a consistent energy management strategy based on the room occupancy.
+
+It would be a good idea to extend the TemperatureManagerAdministration to allow the configuration of the considerated factors and thresholds depending on your strategy.
+
+Write a command to be able to trigger the energy saving mode:
+Add a command to test your work:
+{code lang="bash"}
+g! temperature:enableEnergySaving
+g! temperature:disableEnergySaving
+{/code}
+
+<u> Question 7 - maximum amout of power</u>: Finally, you may consider the time factor by reducing the power of the AC. Your system will take more time to reach the targetted temperature but will momentarilly use less energy. That is useful if your system is available amout of power at a given time is limited.
+
+Modify the configuration service of your controller so that the maximum amount of available power per room can be configured.
+
+{code lang="java"}
+public interface TemperatureConfiguration {
+
+    /**
+     * Sets the maximum allowed energy consumption in Watts in each room
+     * 
+     * @param maximumEnergy
+     *            the maximum allowed energy consumption in Watts in each room
+     */
+    public void setMaximumAllowedEnergyInRoom(double maximumEnergy);
+}
+{/code}
+
+Modify the administration interface and your manager configuration to allow the expression of an Energy Goal (on the same model as in the follow-me exercices)
+
+![The FollowMeAdministration service](/img/exercises/hvac/temperatureAdministration.png)
+
+Add a command to test your work:
+{code lang="bash"}
+g! temperature:setEnergyGoal LOW
+{/code}
+
+## Exercice 4 - Time and Users dependant preferences
+
+Question 1 - Using moment of the day
+
+Question 2 - Tracking users
+
+Question 3 - Building a User based profile
+
+Question 4 - 
+
 
 </article>
 
