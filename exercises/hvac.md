@@ -230,8 +230,8 @@ public class TemperatureCommandImpl {
 
 Implement the two methods. The commands can be then used directly in the Felix shell :
 {code lang="bash"}
-g! tempTooHigh
-g! tempTooLow
+g! tempTooHigh kitchen
+g! tempTooLow livingRoom
 {/code}
 
 
@@ -310,6 +310,12 @@ public interface TemperatureConfiguration {
 
 <u>Question 6 - Energy management</u>: Now you will try to manage the energy.
 
+Your manager will depend on the room occupancy component:
+![The room occupancy service](/img/exercises/hvac/roomOccupancy.png)
+
+
+
+
 Add an energy mode to your manager:
 {code lang="java"}
 /**
@@ -321,19 +327,19 @@ public interface TemperatureManagerAdministration {
 	//...
 
 	/**
-	 * Enable the energy saving.
+	 * Enable the energy saving mode.
 	 */
-	public void turnOnEnergySaving();
+	public void turnOnEnergySavingMode();
 
 	/**
-	 * Disable the energy saving.
+	 * Disable the energy saving mode.
 	 */
-	public void turnOffEnergy();
+	public void turnOffEnergySavingMode();
 
 	/**
-	 * Checks if is energy saving is enabled.
+	 * Checks if the energy saving mode is enabled.
 	 * 
-	 * @return true, if is energy saving is enabled
+	 * @return true, if the energy saving mode is enabled
 	 */
 	public boolean isPowerSavingEnabled();
 
@@ -377,25 +383,118 @@ public interface TemperatureConfiguration {
 }
 {/code}
 
-Modify the administration interface and your manager configuration to allow the expression of an Energy Goal (on the same model as in the follow-me exercices)
+Modify the administration interface and your manager implementation to allow the expression of an Energy Goal (on the same model as in the follow-me exercices)
 
-![The FollowMeAdministration service](/img/exercises/hvac/temperatureAdministration.png)
+![The TemperatureAdministration service](/img/exercises/hvac/temperatureAdministration.png)
+
 
 Add a command to test your work:
 {code lang="bash"}
 g! temperature:setEnergyGoal LOW
 {/code}
+where LOW stands for a given maximum power.
+
 
 ## Exercice 4 - Time and Users dependant preferences
 
-Question 1 - Using moment of the day
+In this exercise, you will try to improve the configuration of the temperature depending on time and user preferences criteria. 
 
-Question 2 - Tracking users
+<u>Question 1 - Using moment of the day</u>: Users might prefer a colder temperature during the day than at night. Using the moment of the day component, you have written in the follow-me exercises, try to build different temperature profiles based on the moment of the day.
 
-Question 3 - Building a User based profile
+Your manager will have to register a listener to the MomentOfTheDay service and configure the temperature based on the moment of the day. 
 
-Question 4 - 
+![Configuration based on the moment of the day](/img/exercises/hvac/momentOfTheDay.png)
 
+The configuration of the temperature will now depends on both the location (room) and the moment of the day.
+
+<u>Question 2 - Tracking users</u>: In the following, we will try to base the reasonning not only on time factors but also on user preferences. The idea is to customized the temperature of a room based to the user that are mostly in a given room.
+
+To do so, you need to collect information on which users will be in a room at a given time. This requires to use to location service provided by iCASA to locate users precisely. 
+
+![The room occupancy service](/img/exercises/hvac/roomOccupancy2.png)
+
+Extend the room occupancy service so that you can get the likehood of someone to be in a given room at a given time:
+
+{code lang="java"}
+
+package org.example.occupancy;
+
+public interface RoomOccupancy {
+
+	//..
+
+	/**
+	 * Gets the probability (between 0 and 1) that the given user will be in the given room
+	 * at the given moment of the day. 
+	 *
+	 * @param hour
+	 *            a specific time in the day in minute (between 0 (=00:00) and
+	 *            1439 (=23:59)).
+	 * @param room
+	 *            the room name where the occupancy value is required.
+	 * @param user
+	 *			  the given user.
+	 * @return the room occupancy is a value between 0 and 1 where 0 indicates
+	 *         that there the room is always empty and 1 indicates that the room
+	 *         is always occupied at the given moment of the day.
+	 */
+	public double getRoomOccupancy(double minuteOfTheDay, String room, String user);
+
+}
+
+{/code}
+
+You will have to choose the best accuracy of this service so as not to raise memory issues.
+
+
+<u>Question 3 - Building a User preference based profile</u> We will now assume that each user is connected to as specific device (smartphone, computer, etc.) when configuring the temperature. Modify the command implementation accordingly:
+
+{code lang="bash"}
+g! tempTooHigh bathroom Alice
+g! tempTooLow bathroom Bob
+{/code}
+
+Then modify your manager implementation to support this modification:
+{code lang="java"}
+package org.example.temperature.manager.administration;
+
+/**
+ * This interface allows to configure the temperature manager responsible for
+ * configuring the temperature controller.
+ */
+public interface TemperatureManagerAdministration {
+
+	/**
+	 * This method is called every time a user think the temperature is too high
+	 * in a given room.
+	 * 
+	 * @param roomName
+	 *            the room where the temperature should be reconfigured
+	 * @param userName
+	 *            the user who expressed that preference
+	 */
+	public void temperatureIsTooHigh(String roomName, String username);
+
+	/**
+	 * This method is called every time a user think the temperature is too high
+	 * in a given room.
+	 * 
+	 * @param roomName
+	 *            the room where the temperature should be reconfigured
+	 * @param userName
+	 *            the user who expressed that preference
+	 */
+	public void temperatureIsTooLow(String roomName, String username);
+}
+{/code}
+
+The temperature preference has too be store for each users. We assume that the set of visitor is stable and limited (a typical familly of 4 or 5 users).
+
+<u>Question 4 - Configuring the temperature based on these multiple sources of information</u> Using the room occupancy service and the user based profiles try to configure the temperature to match the best user prefences at a moment of the day. 
+
+This problem has many solutions. You will have to deal with state flapping when more that one user is in the room. You should find a give some user more priority than an other (the probability of being in a room is one of the factors to consider). 
+
+There is a chance that a temperature might not be perfect for one or more user of a given room. You will probably have to ignore some of their complaints.
 
 </article>
 
