@@ -8,7 +8,7 @@
 + [Follow Me Tutorial](/article/for-beginners/basic-follow-me)
 + [Follow Me Exercices](/article/exercises/follow-me)
 + [Temperature Management Exercises](/article/exercises/hvac)
-+ [Alarm Management Exercises](/article/exercises/energy)
++ [Various Management Exercises](/article/exercises/various)
 
 </toc>
 </section>

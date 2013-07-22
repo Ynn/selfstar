@@ -2,12 +2,12 @@
 
 # Temperature management
 
-In this first series of exercises, you will build a naive temperature system. Such system is often part of an HVAC (Heating, Ventilating, and Air Conditioning) system. An HVAC system manages the temperature, humidity, air flow and air quality of a given building. In this set of exercices we will solely focus on the temperature management. 
+In this first series of exercises, you will build a naive temperature system. Such system is often part of an HVAC (Heating, Ventilating, and Air Conditioning) system. An HVAC system manages the temperature, humidity, air flow and air quality of a given building. In this set of exercises we will solely focus on the temperature management. 
 
 <img src="img/exercises/heater_big.png" width = "60%"/>
 
 Once again, the exercises have been designed to build upon each other: they should be followed in the given order.
-We assume that you have completed the set of [follow me exercices](/article/exercises/follow-me) before starting this series.
+We assume that you have completed the set of [follow me exercises](/article/exercises/follow-me) before starting this series.
  You can refer to the [getting started](article/for-beginners/getting-started) section and the [tutorial](article/for-beginners/basic-follow-me) if you need to. 
 
 
@@ -237,7 +237,7 @@ g! tempTooLow livingRoom
 
 <u> Question 4 - test:</u> Using the above command, check that your manager is working.
 
-## Exercice 3 - Room occupancy and Energy Management
+## Exercise 3 - Room occupancy and Energy Management
 In this exercise you will build a RoomOccupancy service that computes statics on room occupancy. You will then use this service to tune the manager behavior.
 
 <u> Question 1 - RoomOccupancy service</u>: Create a new component called "RoomOccupancy" and implement the following service :
@@ -383,7 +383,7 @@ public interface TemperatureConfiguration {
 }
 {/code}
 
-Modify the administration interface and your manager implementation to allow the expression of an Energy Goal (on the same model as in the follow-me exercices)
+Modify the administration interface and your manager implementation to allow the expression of an Energy Goal (on the same model as in the follow-me exercises)
 
 ![The TemperatureAdministration service](/img/exercises/hvac/temperatureAdministration.png)
 
@@ -395,7 +395,7 @@ g! temperature:setEnergyGoal LOW
 where LOW stands for a given maximum power.
 
 
-## Exercice 4 - Time and Users dependant preferences
+## Exercise 4 - Time and Users dependant preferences
 
 In this exercise, you will try to improve the configuration of the temperature depending on time and user preferences criteria. 
 
