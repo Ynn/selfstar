@@ -3,7 +3,7 @@
 # Various Exercises
 
 This section contains a set of various exercises that provides less guidance regarding the architecture and the implementation. In a first exercise, you will be propose to build an alarm and presence simulation application. 
-Then in a second exercise, you will try to manager of managers. This top-manager will be responsible for managing the different applications on the platform. Finally, you will be asked to modify the follow-me application and the temperature manager to introduce utility functions so as to improve the management.
+Then in a second exercise, you will try to manager of managers. This manager in chief will be responsible for managing the different applications on the platform. Finally, you will be asked to modify the follow-me application and the temperature manager to introduce utility functions so as to improve the management.
 
 <img src="img/exercises/alarm_big.png" width = "60%"/>
 
@@ -20,7 +20,7 @@ Both alarm and occupancy simulation application are two well known proactive/rea
 Your system should be able to automatically turn on the alarm when all the users are leaving. You can also disable the system using the location service when legitimate users are entering the house.
 
 
-<u>Question 2 - Building an occupancy simulation application</u>: Propose an architecture and implement an application for simulating occupancy. The goal is to mimick the users activities by the turning your lights on and off just as if they were in the home.
+<u>Question 2 - Building an occupancy simulation application</u>: Propose an architecture and implement an application for simulating occupancy. The goal is to mimic the users activities by the turning your lights on and off just as if they were in the home.
 
 To this end, it would be a good idea to reuse previously written services (e.g., room occupancy service). It would also be interesting to know which particular device is used at a given moment of the day. 
 
