@@ -24,7 +24,7 @@ Your system should be able to automatically turn on the alarm when all the users
 
 To this end, it would be a good idea to reuse previously written services (e.g., room occupancy service). It would also be interesting to know which particular device is used at a given moment of the day. 
 
-##Exercise 2: Manager's collaboration
+##Exercise 2: Managers' collaboration
 
 ##Exercise 3: Towards using utility functions
 
