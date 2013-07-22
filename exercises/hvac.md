@@ -130,7 +130,7 @@ Export the package org.example.temperature.configuration as explained in the [us
 
 The goal is to allow users to express satisfaction. Your manager will have to learned based on user satisfaction which temperature is expected.
 
-Create a new project "temperature.manager" and add a main component TemperatureManager. The implementation class should be named TemperatureManagerImpl.java and put into the **org.example.temperature.manager.impl** package.
+Create a new project "temperature.manager" and add a main component TemperatureManager. The implementation class should be named TemperatureManagerImpl.java and put it into the **org.example.temperature.manager.impl** package.
 
 Import the package org.example.temperature.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
 
@@ -169,7 +169,7 @@ public interface TemperatureManagerAdministration {
 }
 {/code}
 
-Your manager will have to figure out which is the adequate temperature for a given room (minTemperature, maxTemperature) based on user satisfaction. You can try to reduce or increase the temperature by 1 Kelvin so as to reach an adequate temperature (i.e. when users stop complaining about temperature).
+Your manager will have to figure out which is the adequate temperature for a given room (minTemperature, maxTemperature) based on users satisfaction. You can try to reduce or increase the temperature by 1 Kelvin so as to reach an adequate temperature (i.e. when users stop complaining about temperature).
 
 Stabilization could be issue and you have to consider the time factor. Your user might be complaining about the temperature before the actual targeted temperature is reached. Such complained should be ignored or your system might never be stable.
 
@@ -275,7 +275,7 @@ At the beginning, the default value of room occupancy is 0.
 
 <u> Question 3 - Script and command</u>: Create a script using the command describe in [iCASA documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/script.html) that move one or more users in the different rooms of the flat during 2 days. 
 
-<u> Question 4 - Test</u>: Based on the script you have writen, test that your RoomOccupancy service is working as expected. For this purpose you can write a command (provided by the "Room Occupancy" component).
+<u> Question 4 - Test</u>: Based on the script you have written, test that your RoomOccupancy service is working as expected. For this purpose you can write a command (provided by the "Room Occupancy" component).
 
 <u> Question 5 - TemperatureConfiguration</u>: Change the TemperatureConfiguration service so that the temperature management can be turn on/off in a given room:
 
@@ -357,7 +357,7 @@ In a second time, You may also reduce the number of watts being used by opting f
 
 Try to propose a consistent energy management strategy based on the room occupancy.
 
-It would be a good idea to extend the TemperatureManagerAdministration to allow the configuration of the considerated factors and thresholds depending on your strategy.
+It would be a good idea to extend the TemperatureManagerAdministration to allow the configuration of the factors you are considering as well as the thresholds - it will depend on your strategy.
 
 Write a command to be able to trigger the energy saving mode:
 Add a command to test your work:
@@ -366,7 +366,7 @@ g! temperature:enableEnergySaving
 g! temperature:disableEnergySaving
 {/code}
 
-<u> Question 7 - maximum amout of power</u>: Finally, you may consider the time factor by reducing the power of the AC. Your system will take more time to reach the targetted temperature but will momentarilly use less energy. That is useful if your system is available amout of power at a given time is limited.
+<u> Question 7 - maximum amount of power</u>: Finally, you may consider the time factor by reducing the power of the AC. Your system will take more time to reach the targeted temperature but will momentarily use less energy. That is useful if your system is available amount of power at a given time is limited.
 
 Modify the configuration service of your controller so that the maximum amount of available power per room can be configured.
 
@@ -395,7 +395,7 @@ g! temperature:setEnergyGoal LOW
 where LOW stands for a given maximum power.
 
 
-## Exercise 4 - Time and Users dependant preferences
+## Exercise 4 - Time and Users dependent preferences
 
 In this exercise, you will try to improve the configuration of the temperature depending on time and user preferences criteria. 
 
@@ -407,13 +407,13 @@ Your manager will have to register a listener to the MomentOfTheDay service and 
 
 The configuration of the temperature will now depends on both the location (room) and the moment of the day.
 
-<u>Question 2 - Tracking users</u>: In the following, we will try to base the reasonning not only on time factors but also on user preferences. The idea is to customized the temperature of a room based to the user that are mostly in a given room.
+<u>Question 2 - Tracking users</u>: In the following, we will try to base the reasoning not only on time factors but also on user preferences. The idea is to customized the temperature of a room based to the user that are mostly in a given room.
 
 To do so, you need to collect information on which users will be in a room at a given time. This requires to use to location service provided by iCASA to locate users precisely. 
 
 ![The room occupancy service](/img/exercises/hvac/roomOccupancy2.png)
 
-Extend the room occupancy service so that you can get the likehood of someone to be in a given room at a given time:
+Extend the room occupancy service so that you can get the probability of someone to be in a given room at a given time:
 
 {code lang="java"}
 
@@ -488,9 +488,9 @@ public interface TemperatureManagerAdministration {
 }
 {/code}
 
-The temperature preference has too be store for each users. We assume that the set of visitor is stable and limited (a typical familly of 4 or 5 users).
+The temperature preference has too be store for each users. We assume that the set of visitor is stable and limited (e.g., a typical family of 4 or 5 users).
 
-<u>Question 4 - Configuring the temperature based on these multiple sources of information</u> Using the room occupancy service and the user based profiles try to configure the temperature to match the best user prefences at a moment of the day. 
+<u>Question 4 - Configuring the temperature based on these multiple sources of information</u> Using the room occupancy service and the user based profiles try to configure the temperature to match the best user preferences at a moment of the day. 
 
 This problem has many solutions. You will have to deal with state flapping when more that one user is in the room. You should find a give some user more priority than an other (the probability of being in a room is one of the factors to consider). 
 
