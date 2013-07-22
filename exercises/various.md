@@ -10,7 +10,7 @@ Then in a second exercise, you will try to manager of managers. This top-manager
 The exercises are relatively independant but the complexity is progressive.
 We assume that you have completed the set of [follow me exercises](/article/exercises/follow-me) and [temperature management exercises](/article/exercises/hvac) before starting this series.
 
-##Exercise 1: Building an occupancy simulation and an alarm application.
+##Exercise 1: Building an occupancy simulator and an alarm application.
 
 Both alarm and occupancy simulation application are two well known proactive/reactive systems for protection against system. 
 
