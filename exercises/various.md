@@ -35,7 +35,7 @@ The goal of this exercise is to enhance the management of energy by configuring 
 
 ### Hierarchical approach
 
-<u>Question 1 - Cost of energy<:/u> Build an external service "EnergyCost" that provides the cost of energy in euros for 1 Watts/hours. Try to use realistic values: generally the cost of energy depends on the moment of the day and the period of year.
+<u>Question 1 - Cost of energy:</u> Build an external service "EnergyCost" that provides the cost of energy in euros for 1 Watts/hours. Try to use realistic values: generally the cost of energy depends on the moment of the day and the period of year.
 
 <u>Question 2 - Amount of available energy:</u> Based on the cost of energy, build an an autonomic manager (let's call it the general/top/platform manager) that will be able to estimate the cost of the current consumption of energy.
 
