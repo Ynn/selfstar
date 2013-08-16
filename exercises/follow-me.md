@@ -323,7 +323,7 @@ public interface FollowMeConfiguration {
     /**
      * Gets the maximum allowed energy consumption in Watts in each room
      * 
-     * @return the maximum allowed energy consumption in Watts
+     * @return the maximum allowed energy consumption in Watts/hours
      */
     public double getMaximumAllowedEnergyInRoom();
  
@@ -331,7 +331,7 @@ public interface FollowMeConfiguration {
      * Sets the maximum allowed energy consumption in Watts in each room
      * 
      * @param maximumEnergy
-     *            the maximum allowed energy consumption in Watts in each room
+     *            the maximum allowed energy consumption in Watts/hours in each room
      */
     public void setMaximumAllowedEnergyInRoom(double maximumEnergy);
 }
@@ -470,7 +470,7 @@ public final class ClosestSumAlgorithm {
 	public static double[] greadySubSetClosestSum(final double maximalSum, final double[] items) {
 
 		// the current best results :
-		double bestSum = 0;
+		double bestSum = 0.0d;
 		double[] bestCombination = new double[0];
 
 		/*
