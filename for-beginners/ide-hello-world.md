@@ -95,12 +95,12 @@ We suggest to put a greeting message. Change the code to the following :
 
 /** Component Lifecycle Method */
 public void stop(){
-	System.out.println("Hello World !");
+       System.out.println("Good bye World !");
 }
 
 /** Component Lifecycle Method */
 public void start(){
-	System.out.println("Good bye World !");
+       System.out.println("Hello World !");
 }
 
 {/code}
