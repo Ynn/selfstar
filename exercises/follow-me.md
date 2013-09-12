@@ -26,7 +26,7 @@ You can skip the "play with it section" if you would like to. Optionally you can
 {note}
 ### About scripts
 
-The iCASA environment can be created and modified using scripts. A script is an XML file with a specific extension (.bhv) that contains sequentially executed instructions. The list of available commands can be found in the [iCASA scripts documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.0.0/script.html).
+The iCASA environment can be created and modified using scripts. A script is an XML file with a specific extension (.bhv) that contains sequentially executed instructions. The list of available commands can be found in the [iCASA scripts documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.1/script.html).
 
 To play a script, you need to deploy it in the iCASA **load** directory. Scripts can then be run using the "Script Player" panel, you then can select and start your script in the "Script" section. At any time, only one script can be played.
 
