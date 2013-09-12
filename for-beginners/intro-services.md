@@ -145,7 +145,7 @@ The "Property dialog" ask for :
 
 + the **name** of the property : this name is the public name of the property registered in the registry. The property is retrieved by this name.
 
-+ the corresponding **field** in the implementation class. This is the field in which the property is injected at startup. This information is implementation dependent. It works exactly the same as the configuration property we have presented [before](component-properties). It is sometimes used to change the property of the service depending on the context. See the [service property propagation](http://felix.apache.org/site/providing-osgi-services.html#ProvidingOSGiservices-ServicePropertyPropagation) section in the iPOJO documentation for more information.
++ the corresponding **field** in the implementation class. This is the field in which the property is injected at startup. This information is implementation dependent. It works exactly the same as the configuration property we have presented [before](/article/for-beginners/component-properties). It is sometimes used to change the property of the service depending on the context. See the [service property propagation](http://felix.apache.org/site/providing-osgi-services.html#ProvidingOSGiservices-ServicePropertyPropagation) section in the iPOJO documentation for more information.
 
 + the **default value** is the value given to the property if you do not configure it in the instance configuration.
 
