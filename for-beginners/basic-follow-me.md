@@ -257,7 +257,7 @@ public class BinaryLightFollowMeImpl {
 public class PresenceSensorListener implements DeviceListener{
 
     @Override
-	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
 		/...
     }
 ...
