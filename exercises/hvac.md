@@ -20,7 +20,7 @@ fr.liglab.adele.icasa.device.temperature.Thermometer
 fr.liglab.adele.icasa.device.temperature.Heater
 {/code}
 
-The devices interfaces is described in the [iCASA Heater/Cooler documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/heater.html).
+The devices interfaces is described in the [iCASA Heater/Cooler documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.1/heater.html).
 
 <u>Question 1 - Component</u>: Create a new component nammed "TemperatureController".
 Use "TemperatureControllerImpl" as your implementation class. The package will be "org.example.temperature.Controller".
@@ -124,7 +124,7 @@ Implement the TemperatureConfiguration interface and provide this interface as a
 
 Deploy your application and check that your service is provided in the Felix console : [http://localhost:8080/system/console/bundles](http://localhost:8080/system/console/bundles).
 
-Export the package org.example.temperature.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
+Export the package org.example.temperature.configuration as explained in the [using multiple bundles](/article/for-beginners/multiple-bundles) tutorial.
 
 <u>Question 2 - Implementing a manager:</u> You will now add a "Temperature Manager" component that will be responsible for configuring the service.
 
@@ -132,7 +132,7 @@ The goal is to allow users to express satisfaction. Your manager will have to le
 
 Create a new project "temperature.manager" and add a main component TemperatureManager. The implementation class should be named TemperatureManagerImpl.java and put it into the **org.example.temperature.manager.impl** package.
 
-Import the package org.example.temperature.configuration as explained in the [using multiple bundles](http://local.self-star.net:8888/article/for-beginners/multiple-bundles) tutorial.
+Import the package org.example.temperature.configuration as explained in the [using multiple bundles](/article/for-beginners/multiple-bundles) tutorial.
 
 Add the dependency to the TemperatureConfiguration service and write a manager so that the targeted temperature is adjusted depending on user satisfaction. 
 
@@ -273,7 +273,7 @@ The idea is to check periodically (using a PeriodicRunnable) if a room is occupi
 
 At the beginning, the default value of room occupancy is 0.
 
-<u> Question 3 - Script and command</u>: Create a script using the command describe in [iCASA documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/script.html) that move one or more users in the different rooms of the flat during 2 days. 
+<u> Question 3 - Script and command</u>: Create a script using the command describe in [iCASA documentation](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.1/script.html) that move one or more users in the different rooms of the flat during 2 days. 
 
 <u> Question 4 - Test</u>: Based on the script you have written, test that your RoomOccupancy service is working as expected. For this purpose you can write a command (provided by the "Room Occupancy" component).
 
