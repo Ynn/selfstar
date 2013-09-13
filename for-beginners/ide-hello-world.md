@@ -12,7 +12,7 @@ In this simple tutorial, we will have one bundle containing one iPOJO component.
 
 ### Project Creation
 
-Install the iCASA ide and configure it as explain in [the download section](?p=download&s=introduction). We will use first-runtime as our runtime directory (the same runtime than before). 
+Install the iCASA ide and configure it as explain in [the download section](/article/general/download). We will use first-runtime as our runtime directory (the same runtime than before). 
 
 Open the project wizard and create a new iPOJO project as shown on the picture below :
 
