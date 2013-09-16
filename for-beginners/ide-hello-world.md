@@ -126,7 +126,7 @@ Our work is now done. The instance of the component will be created when the bun
 
 ### Deployment 
 
-Make sure your {#runtime#} is started as explained in [the previous section](?p=intro-runtime&s=introduction).
+Make sure your {#runtime#} is started as explained in [the previous section](/article/for-beginners/intro-felix).
 
 To test your work, right-click on the project and select "iCASA Bundle Deployment" in the iCASA submenu.
 

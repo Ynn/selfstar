@@ -207,7 +207,7 @@ If you don't see the lifecycle messages, you must have done something wrong. Ret
 
 Now we can check the binding/unbinding methods :
 
-+ Put the SetupEnvironmentsBinaryFollowMe.bhv file in the load directory of your iCASA runtime.
++ Put the [single_bl_light_environment.bhv](/bin/single_bl_light_environment.bhv) file in the load directory of your iCASA runtime.
 + Start iCASA runtime and the simulator
 + Go to <http://localhost:9000> 
 + Select the default house.
