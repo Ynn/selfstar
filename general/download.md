@@ -38,7 +38,7 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 
 ### Download the runtime
 
-Download and unzip the [iCASA runtime teaching distribution](http://maven.dynamis-technologies.com/artifactory/adele-repos/fr/liglab/adele/icasa/icasa.teaching.distribution/1.1.0/icasa.teaching.distribution-1.1.0.zip). You can rename the directory if you want.
+Download and unzip the [iCASA runtime teaching distribution](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.1/). You can rename the directory if you want.
 
 iCASA runtime is a customized felix distribution. To start the framework, use the start scripts. See [the introduction to felix](/article/for-beginners/intro-felix) to learn more on felix.
 
@@ -47,13 +47,22 @@ You can have and use as many iCASA distributions as you want. You only need to r
 However, *you should not run two instance of iCASA at the same time* on the same computer. There will be network conflicts otherwise.
 {/note}
 
-###Web Server Part Launch
+
+### How to run iCASA gateway ?
+
 Go to the root of your iCASA runtime directory.
 
-Execute startGUI script on Unix systems or startGUI.bat script on Windows systems.
+Run the startGateway script (.sh on UNIX, .bat on WINDOWS).
 
-By default, the web server port is set to 9000. The simulator home page is available at <http://localhost:9000/>
+### How to run the Web Server Part ?
 
+Even if the gateway does not need the GUI part to run, we strongly advise you to use the GUI to get a feedback from the simulator.
+
+Go to the root of your iCASA runtime directory.
+
+Execute startGUI.sh script on Unix systems or startGUI.bat script on Windows systems.
+
+By default, the web server port is set to 9000. The simulator home page is available at <http://localhost:9000/> using your browser (Firefox is strongly recommanded).
 
 </section>
 
@@ -103,7 +112,7 @@ If you use different distribution of iCASA (or the same version but in different
 Download last releases:
 
 + [iCASA-IDE website](http://adeleresearchgroup.github.com/iCasa-IDE/distributions/update-site/)
-+ [iCASA-runtime](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.0/)
++ [iCASA-runtime](http://adeleresearchgroup.github.io/iCasa-Simulator/1.1.1/)
 
 Documentation:
 
