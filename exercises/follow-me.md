@@ -35,7 +35,7 @@ To play a script, you need to deploy it in the iCASA **load** directory. Scripts
 
 For beginning and to ease the process of creating scripts, we will provide you a skeleton script for testing your light application. You will need to enhance it to be able to test your applications.
 
-Download and deploy the following script : [single_bl_light_environment.bhv]() in the load directory of iCASA. 
+Download and deploy the following script : [single_bl_light_environment.bhv](/bin/single_bl_light_environment.bhv) in the load directory of iCASA. 
 The script should be now available in the "Script player" in the iCASA GUI. 
 
 Run the script and check that the application is working as expected.

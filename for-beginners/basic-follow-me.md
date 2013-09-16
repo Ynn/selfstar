@@ -210,6 +210,7 @@ Now we can check the binding/unbinding methods :
 + Put the SetupEnvironmentsBinaryFollowMe.bhv file in the load directory of your iCASA runtime.
 + Start iCASA runtime and the simulator
 + Go to <http://localhost:9000> 
++ Select the default house.
 + Click on "Scenarios and Scripts" then "install" in "iCASA Scenarios".
 + Check that the application has seen the light. It should start writing message in the console.
 
@@ -440,8 +441,10 @@ Finally we will test the state of the sensor (presence or not) and change the li
  *            is the name of the modified property.
  * @param oldValue
  *            is the old value of the property
+ * @param oldValue
+ *            is the new value of the property
  */
-public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
   PresenceSensor changingSensor = (PresenceSensor) device;
   // check the change is related to presence sensing
   if (propertyName.equals(PresenceSensor.PRESENCE_SENSOR_SENSED_PRESENCE)) {

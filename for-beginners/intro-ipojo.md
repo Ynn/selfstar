@@ -117,7 +117,7 @@ One core functionality of iPOJO is the dependency management. This section gives
 
 ### Required services :
 The most difficult task managed by iPOJO is the service requirement.
-The service providing is described in details in the [iPOJO service requiring documentation](http://felix.apache.org/site/service-requirement-handler.html). In short a dependency can be :
+The service providing is described in details in the [iPOJO service requiring documentation](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo/apache-felix-ipojo-userguide/describing-components/service-requirement-handler.html). In short a dependency can be :
 
 + **mandatory**/**optional**  : When the dependency is mandatory, iPOJO don't start the component until one matching service is found. If the service leaves, the component is stopped until a substitute can be found. Conversely, some service may be declared optional (e.g. a log service). In such case, when no service is found, the injected value is null (or a Nullable object) but the component lifecycle is not affected.
 + **simple/multiple** : When the dependency is simple, only one service is provided to the component. This dependency will remain the same until it leaves (dynamic policy) or a better substitute is found (dynamic-priority policy). When the dependency is multiple, iPOJO provides the component with the list of matching services.
@@ -158,7 +158,7 @@ Different policies may be applied for the creation of a service :
 + **instance** : the service is never shared. A new service will be created each time the service is required.
 + **customized** : you can provide a class extending the CreationStrategy one so as to customized the way the instance are created. 
 
-More details on the service requirement can be found in the [iPOJO service providing documentation](http://felix.apache.org/site/providing-osgi-services.html).
+More details on the service requirement can be found in the [iPOJO service providing documentation](http://felix.apache.org/documentation/subprojects/apache-felix-ipojo/apache-felix-ipojo-userguide/describing-components/providing-osgi-services.html).
 
 ## Conclusion
 
@@ -166,7 +166,7 @@ In this section, you have learned what a iPOJO component is and how to write you
 
 What you should remember is that iPOJO components and bundle are complementary. Bundles deal with *how to hide and share the code* and components deal with *how to instantiate and use the functionalities*.
 
-In the [next section](?p=component-properties&s=introduction), you will learn how to add properties to components and how to configure the instances.
+In the [next section](/article/for-beginners/component-properties), you will learn how to add properties to components and how to configure the instances.
 
 
 </article>

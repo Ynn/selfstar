@@ -30,8 +30,6 @@ After the JDK installation, you have to set the JAVA_HOME environment variable t
 
 </section>
 
-</section>
-
 <section id="runtime"  markdown="1"/>
 ## Download and configure the iCASA runtime
 
