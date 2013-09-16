@@ -12,7 +12,7 @@ In this simple tutorial, we will have one bundle containing one iPOJO component.
 
 ### Project Creation
 
-Install the iCASA ide and configure it as explain in [the download section](?p=download&s=introduction). We will use first-runtime as our runtime directory (the same runtime than before). 
+Install the iCASA ide and configure it as explain in [the download section](/article/general/download). We will use first-runtime as our runtime directory (the same runtime than before). 
 
 Open the project wizard and create a new iPOJO project as shown on the picture below :
 
@@ -95,12 +95,12 @@ We suggest to put a greeting message. Change the code to the following :
 
 /** Component Lifecycle Method */
 public void stop(){
-	System.out.println("Hello World !");
+       System.out.println("Good bye World !");
 }
 
 /** Component Lifecycle Method */
 public void start(){
-	System.out.println("Good bye World !");
+       System.out.println("Hello World !");
 }
 
 {/code}

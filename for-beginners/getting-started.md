@@ -23,7 +23,7 @@ Developing applications in the environment you have downloaded requires a minimu
 
 The environment also includes an IDE facilitating the development and deployment of iPOJO applications. The following articles teach you how to use this IDE effectively : 
 
-+ [Your first iPOJO component](/article/for-beginners/basic-hello-world): This article shows how to create and deploy a simple "Hello World" component with IDE. 
++ [Your first iPOJO component](/article/for-beginners/ide-hello-world): This article shows how to create and deploy a simple "Hello World" component with IDE. 
 
 + [iPOJO component instances](/article/for-beginners/component-properties): This article shows how to improve the "Hello World" component through the use of configuration properties, which allows to specialize the behaviour of component instances.
 

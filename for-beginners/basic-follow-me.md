@@ -27,7 +27,7 @@ First [install and set-up your environment](/article/general/download).
 
 Then copy the iCASA runtime into an accessible directory. In this tutorial, we assume that you will use {$workdir}.
 
-You will need to configure the IDE to work with that particular distribution (see [how to configure iCASA IDE](/article/general/download#ide))
+You will need to configure the IDE to work with that particular distribution (see [how to install and configure iCASA IDE](/article/general/download#ide))
 
 
 ### Project creation and skeleton generation
@@ -36,10 +36,10 @@ Open the iCASA-IDE.
 
 This application will contain an unique class. To generate the skeleton of the class follow these steps :
 
-1. Create a new iPOJO project called BinaryLightFollowMe.
+1. Create a new iPOJO project called BinaryLightFollowMe. You don't have to modify the bundle configuration as shown below:
 ![iPOJO project creation](img/basic-follow-me/create_project.png)
 
-2. Open the metadata.xml file with the iPOJO Metadata Editor. The IDE is described in details in the [background section](/article/for-beginners/getting-started). See for instance [the hello world example](/for-beginners/basic-hello-world)
+2. Open the metadata.xml file with the iPOJO Metadata Editor. The IDE is described in details in the [background section](/article/for-beginners/getting-started). See for instance [the hello world example](/article/for-beginners/ide-hello-world)
 ![iPOJO project creation](img/basic-follow-me/metadataxml.png)
 
 
@@ -188,7 +188,7 @@ Go to "Component Configuration" and create an instance for your "Follow" compone
 Now we can test that this very basic project is working
 
 + Run iCASA.
-+ Click on project > iCASA> Bundle Deployment.
++ Right-click on project > iCASA> Bundle Deployment.
 ![create an instance](img/basic-follow-me/deploy.png)
 + Check that the bundle is correctly deployed (using lb).
 {code}
@@ -257,7 +257,7 @@ public class BinaryLightFollowMeImpl {
 public class PresenceSensorListener implements DeviceListener{
 
     @Override
-	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue) {
+	public void devicePropertyModified(GenericDevice device, String propertyName, Object oldValue, Object newValue) {
 		/...
     }
 ...
