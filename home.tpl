@@ -100,7 +100,7 @@ The IDE allows the rapid and simplified development of iPOJO applications. It pr
 				<div class="ca-icon" style="background-image:url(/img/home/simulator.png);"></div>
 				<h3>Test with iCASA simulator</h3>
 				<h4>
-					<span>This simulator is made of a web-based GUI and a simulated devices.</span>
+					<span>This simulator is made of a web-based GUI and simulated devices.</span>
 				</h4>
 					<a href="#" class="ca-more">more...</a>
 			</div>

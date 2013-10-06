@@ -22,7 +22,7 @@ This site has been designed and developed by Dr. Yoann Maurel.
 
 Exercises have been designed and implemented by Dr. Yoann Maurel, Dr. Stéphanie Chollet and Jérémy Savonet.
 
-iCasa has been designed and implemented by Dr. Thomas Lévêque, Dr. Gabriel Pedraza and Dr. Issac Garcia under the supervision of Dr. Catherine Hamon. Thomàs Perez Segovia has been involved in many usefull discussions. iCASA graphics have been designed by Dominique Bouchot.
+iCasa has been designed and implemented by Dr. Thomas Lévêque, Dr. Gabriel Pedraza and Dr. Issac Garcia under the supervision of Dr. Catherine Hamon. Tomas Perez-Segovia has been involved in many usefull discussions. iCASA graphics have been designed by Dominique Bouchot.
 
 # Contact
 
